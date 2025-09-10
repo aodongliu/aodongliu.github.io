@@ -962,6 +962,8 @@ about:
     - { class: "iconfont icon-mail", link: "mailto:aodongliu777@gmail.com", tip: "Email"}
     - { class: "iconfont icon-wechat-fill", qrcode: "/images/wechatQR.jpg", tip: "WeChat"}
     - { class: "iconfont icon-linkedin-fill", link: "https://www.linkedin.com/in/aodongliu/", tip: "LinkedIn"}
+    - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/adaaaaaaaaam777/?next=%2F", tip: "Instagram"}
+    - { class: "iconfont icon-pen", link: "https://scholar.google.com/citations?user=P6BLL58AAAAJ&hl=en", tip: "GoogleScholar"}
 
 
 
