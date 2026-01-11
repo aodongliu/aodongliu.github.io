@@ -342,6 +342,7 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "Stranger Stats", link: "/strangerStats/", icon: "iconfont icon-codeforces" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
@@ -428,7 +429,7 @@ footer:
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
   statistics:
-    enable: false
+    enable: true
 
     # 统计数据来源，使用 leancloud 需要设置 `web_analytics: leancloud` 中的参数；使用 busuanzi 不需要额外设置，但是有时不稳定，另外本地运行时 busuanzi 显示统计数据很大属于正常现象，部署后会正常
     # Data source. If use leancloud, you need to set the parameter in `web_analytics: leancloud`
@@ -475,7 +476,7 @@ index:
 
     # 为空则按 hexo config.subtitle 显示
     # If empty, text based on `subtitle` in hexo config
-    text: "千里之行，始于足下"
+    text: "千里之行，始于足下 --- A journey of a thousand miles begins with a single step"
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
@@ -953,7 +954,8 @@ about:
   banner_mask_alpha: 0.3
   avatar: /images/headshot_lincolnPark.png
   name: "Aodong Liu"
-  intro: "Hi, I'm Aodong. I'm a theoretical chemistry Ph.D Candidate at University of Washington. My research interests are developing scalable algorithms."
+  intro: "Hi, I'm Aodong. I'm a theoretical chemistry Ph.D. candidate at the University of Washington. My research focuses on developing scalable algorithms for large-scale electronic structure theory and quantum dynamics.<br><br>In my spare time, I watch way too much NBA and Premier League. I'm fascinated by sports statistics (though I'm not a data scientist by training), so I occasionally share fun and unexpected findings in <a href='/strangerStats/' style='font-weight: 600; color: #337ab7;'>Stranger Stats</a>."
+
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
