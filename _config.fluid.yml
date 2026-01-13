@@ -953,18 +953,19 @@ about:
   banner_mask_alpha: 0.3
   avatar: /images/headshot_lincolnPark.png
   name: "Aodong Liu"
-  intro: "Hi, I'm Aodong. I'm a theoretical chemistry Ph.D. candidate at the University of Washington. My research focuses on developing scalable algorithms for large-scale electronic structure theory and quantum dynamics.<br><br>In my spare time, I watch way too much NBA and Premier League. I'm fascinated by sports statistics (though I'm not a data scientist by training), so I occasionally share fun and unexpected findings in <a href='/strangerStats/' style='font-weight: 600; color: #337ab7;'>Stranger Stats</a>."
+  intro: " "
+  #intro: "Hi, I'm Aodong. I'm a theoretical chemistry Ph.D. candidate at the University of Washington. My research focuses on developing scalable algorithms for large-scale electronic structure theory and quantum dynamics.<br><br>In my spare time, I watch way too much NBA and Premier League. I'm fascinated by sports statistics (though I'm not a data scientist by training), so I occasionally share fun and unexpected findings in <a href='/strangerStats/' style='font-weight: 600; color: #337ab7;'>Stranger Stats</a>."
 
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com/aodongliu/aodongliu", tip: "GitHub" }
     #- { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
+    - { class: "iconfont icon-linkedin-fill", link: "https://www.linkedin.com/in/aodongliu/", tip: "LinkedIn"}
     - { class: "iconfont icon-mail", link: "mailto:aodongliu777@gmail.com", tip: "Email"}
     - { class: "iconfont icon-wechat-fill", qrcode: "/images/wechatQR.jpg", tip: "WeChat"}
-    - { class: "iconfont icon-linkedin-fill", link: "https://www.linkedin.com/in/aodongliu/", tip: "LinkedIn"}
-    - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/adaaaaaaaaam777/?next=%2F", tip: "Instagram"}
     - { class: "iconfont icon-pen", link: "https://scholar.google.com/citations?user=P6BLL58AAAAJ&hl=en", tip: "GoogleScholar"}
+    - { class: "iconfont icon-github-fill", link: "https://github.com/aodongliu", tip: "GitHub" }
+    - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/adaaaaaaaaam777/?next=%2F", tip: "Instagram"}
 
 
 
