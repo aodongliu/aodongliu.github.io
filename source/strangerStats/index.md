@@ -1,11 +1,15 @@
 ---
 title: Stranger Stats
 layout: page
+banner_img: /images/strangerStats_chatgpt3.png
+banner_img_height: 70
+banner_mask_alpha: 0.3
+
 ---
 
 <div style="text-align: center; margin-bottom: 3rem;">
   <p style="font-size: 1.1rem; color: var(--sec-text-color); max-width: 600px; margin: 0 auto;">
-    Welcome to <strong><em>Stranger Stats</em></strong>, where we track down the <strong><em>unusual suspects</em></strong> who somehow hold the most unexpected records. Some of these stats are so shocking, you'll think they came straight from the Upside Down.
+    Welcome to <strong><em>Stranger Stats</em></strong>, where we track down the <strong><em>unusual suspects</em></strong> who somehow hold the <strong><em>most unexpected records</em></strong>. Some of these stats are so shocking, you'll think they came straight from the Upside Down.
   </p>
   </p>
   <p style="font-size: 1.1rem; color: var(--sec-text-color); max-width: 600px; margin: 1.5rem auto 0 auto;">

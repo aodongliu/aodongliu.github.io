@@ -5,8 +5,6 @@ tags: [computational chemistry, high performance computing, quantum dynamics, pe
 sticky: 1
 ---
 
-Hi, I'm Aodong. I'm a theoretical chemistry Ph.D. candidate at the University of Washington. My research focuses on developing scalable algorithms for large-scale electronic structure theory and quantum dynamics.<br><br>In my spare time, I watch way too much NBA and Premier League. 
-
 Hi, I’m **Aodong Liu**, a PhD candidate in theoretical chemistry at the University of Washington.  
 My work focuses on **large-scale electronic structure theory** and **quantum dynamics**. My research focuses on developing scalable algorithms for large-scale electronic structure theory and quantum dynamics that can efficiently run on modern supercomputers.
 
