@@ -44,7 +44,7 @@ Specifically, I combine numerical methods with modern high-performance computing
 
 ## Curriculum Vitae
 
-Download my full CV (updated Jan. 2026) [here](/files/aodongliu_CV.pdf).
+Download my full CV (updated Jan. 2026) [here](/files/aodongliu_cv.pdf).
 
 ## Beyond Research
 
