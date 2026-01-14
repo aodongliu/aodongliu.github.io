@@ -12,6 +12,8 @@ My research focuses on incorporating nuclear quantum effects into electronic str
 
 Specifically, I combine numerical methods with modern high-performance computing architectures to enable calculations at system sizes that are otherwise computationally prohibitive. These efficient implementations allow me to investigate ultrafast dynamics in chemically relevant systems from first principles.
 
+I develop in [Gaussian](https://gaussian.com) and [ChronusQuantum](https://github.com/xsligroup/chronusq_public) computational chemistry softwares.
+
 ## Education
 
 <div style='margin: 1.6rem 0 1.0rem 0;'>
@@ -48,6 +50,6 @@ Download my full CV (updated Jan. 2026) [here](/files/aodongliu_cv.pdf).
 
 ## Beyond Research
 
-When I'm not doing research, I'm probably watching the NBA or Premier League. I'm fascinated by sports analytics and occasionally write about interesting statistical findings in [Stranger Stats](/strangerStats/).
+I like to work out and play basketball, and probably watching way too much NBA. I'm fascinated by sports analytics so I occasionally write about interesting statistical findings in [Stranger Stats](/strangerStats/).
 
 ---

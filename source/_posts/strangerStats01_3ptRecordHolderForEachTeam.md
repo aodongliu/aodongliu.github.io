@@ -1,5 +1,5 @@
 ---
-title: "Stranger Stats #1: The Most Unexpected Players Who Hold Franchise Single-Game 3-Point Records"
+title: "Stranger Stats #1: NBA Franchise Single-Game 3-Point Records Are Held by These Guys??"
 
 date: 2026-01-05
 comment: disqus

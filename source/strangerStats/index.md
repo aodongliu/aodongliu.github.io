@@ -13,7 +13,7 @@ banner_mask_alpha: 0.3
   </p>
   </p>
   <p style="font-size: 1.1rem; color: var(--sec-text-color); max-width: 600px; margin: 1.5rem auto 0 auto;">
-    I plan to post here every Monday till I run out of "Stranger ideas". What stats do you want to see? Reach out to <a href="/about/" style="font-weight: 600; color: #337ab7; text-decoration: none;">me</a>.
+    Starting from Jan. 2026, I plan to post here every Monday till I run out of "Stranger ideas". What stats do you want to see? Reach out to <a href="/about/" style="font-weight: 600; color: #337ab7; text-decoration: none;">me</a>.
   </p>
 </div>
 
