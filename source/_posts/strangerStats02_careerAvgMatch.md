@@ -45,8 +45,9 @@ To investivate this, I compared the career average stats for each NBA player (ro
 Let's first look at other all-time great players besides **LeBron James**. In 2022, ESPN ranked the [**top 76 Players**](https://www.espn.com/nba/story/_/id/33297498/the-nba-75th-anniversary-team-ranked-where-76-basketball-legends-check-our-list) to ever play in the NBA. Taking that list and running through the test, we find a surprisingly even split: **39** players have recorded a game exactly matching their career averages at least once, while **37** have never done so**. That’s almost a perfect 50–50 divide — a remarkable coincidence.
 
 Some of the most iconic names in basketball history, **Michael Jordan**, **Kareem Abdul-Jabbar**, **Kobe Bryant**, and **Bill Russell**, *never* recorded a game that matched their career-average stat line. On the other hand, **Hakeem Olajuwon** accomplished this feat **six** times. **Magic Johnson**, **Stephen Curry**, and **Kevin Durant** each did it on **two** separate occasions.
-
+kaggleNBADataset_01102026
 <style>
+
 .two-panels {
   display: flex;
   gap: 0;
@@ -57,6 +58,22 @@ Some of the most iconic names in basketball history, **Michael Jordan**, **Karee
 .panel {
   flex: 1;
   padding: 0 1.5rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-title {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+
+  /* key: force both titles to take same vertical space on desktop */
+  min-height: 3.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sep {
@@ -72,14 +89,15 @@ Some of the most iconic names in basketball history, **Michael Jordan**, **Karee
 
 .player-card {
   text-align: center;
-  height: 190px;        /* key: fixed card height so rows align */
+  height: 190px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  min-width: 0;
 }
 
 .player-card.blank {
-  visibility: hidden;   /* keeps layout but hides placeholders */
+  visibility: hidden;
 }
 
 .avatar {
@@ -103,7 +121,12 @@ Some of the most iconic names in basketball history, **Michael Jordan**, **Karee
   font-size: 0.7em;
   font-weight: 600;
   line-height: 1.15;
-  min-height: 2.3em; /* allow up to ~2 lines */
+  min-height: 2.3em;
+
+  /* avoid breaking every letter on narrow screens */
+  word-break: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 .player-stats {
@@ -116,14 +139,51 @@ Some of the most iconic names in basketball history, **Michael Jordan**, **Karee
   font-size: 0.7em;
   color: #777;
   margin-top: 0.25rem;
-  min-height: 1.2em; /* reserve space even when empty */
+  min-height: 1.2em;
+}
+
+/* ✅ Responsive: stack panels + control mobile columns */
+@media (max-width: 768px) {
+  .two-panels {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sep {
+    display: none;
+  }
+
+  .panel {
+    padding: 0;
+  }
+
+  /* titles don't need forced height when stacked */
+  .panel-title {
+    min-height: 0;
+    margin-bottom: 1rem;
+  }
+
+  .player-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .player-card {
+    height: 170px;
+  }
+
+  .player-name,
+  .player-stats,
+  .player-matches {
+    font-size: 0.78em;
+  }
 }
 
 </style>
 
 <div class='two-panels'>
 <div class='panel'>
-<div style='text-align:center; font-size:1.4em; font-weight:600; margin-bottom:1.5rem;'>✅ Matched Their Career Average</div>
+<div class='panel-title'>✅ Matched Their Career Average</div>
 <div class='player-grid'>
 <div class='player-card'>
 <div class='avatar'>
@@ -438,10 +498,11 @@ Some of the most iconic names in basketball history, **Michael Jordan**, **Karee
 <div class='player-matches'>1 match</div>
 </div>
 <div class='player-card blank'></div>
-</div></div>
+</div>
+</div>
 <div class='sep'></div>
 <div class='panel'>
-<div style='text-align:center; font-size:1.4em; font-weight:600; margin-bottom:1.5rem;'>❌ Never Matched Their Career Average</div>
+<div class='panel-title'>❌ Never Matched Their Career Average</div>
 <div class='player-grid'>
 <div class='player-card'>
 <div class='avatar'>
@@ -742,12 +803,13 @@ Some of the most iconic names in basketball history, **Michael Jordan**, **Karee
 <div class='player-card blank'></div>
 <div class='player-card blank'></div>
 <div class='player-card blank'></div>
-</div></div>
+</div>
+</div>
 </div>
 
-### Who Has Done it the Most Throught the History?
+### Who Has Done it the Most Throughout the History?
 
-If we look at all the players who played in the NBA, then **Adonal Foyle** is the champ based on this criterion, who has recorded exactly his rounded-off career average (4/5/0)**16 times** during his **728**-game NBA career: 
+If we look at all the players who played in the NBA, then **Adonal Foyle** is the champ based on this criterion. He recorded his rounded-off career average (4/5/0) **16 times** during his **728**-game NBA career: 
 
 <div style="
   margin: 2rem auto;
@@ -781,7 +843,7 @@ If we look at all the players who played in the NBA, then **Adonal Foyle** is th
   </div>
 </div>
 
-We can refine the results better by imposing an arbitrary constraint where the **sum of pts, rebs and assists must exeed 15** and **the player must have played a minimum of 50 games**. This filters out players with limited careers or had extremely low-usage roles, and leave us with some more recognizable names. It turns under this restriction, it's big Ben who wins! **Ben Wallace** record his career average **9** times in his **1082**-game career.
+We can refine the results by imposing an arbitrary constraint where the **sum of pts, rebs and assists must exeed 15** and **the player must have played a minimum of 50 games**. This filters out players with limited careers or had extremely low-usage roles, and leave us with some more recognizable names. It turns under this restriction, it's big Ben who wins! **Ben Wallace** record his career average **9** times in his **1082**-game career.
 
 <div style="
   margin: 2rem auto;

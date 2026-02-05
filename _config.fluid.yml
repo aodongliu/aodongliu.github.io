@@ -10,6 +10,28 @@
 # You can get more detailed help from the guide
 #---------------------------
 
+inject:
+  head:
+    - '<link rel="canonical" href="https://aodongliu.github.io/">'
+    - |
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aodong Liu",
+        "url": "https://aodongliu.github.io/",
+        "image": "https://aodongliu.github.io/images/headshot_lincolnPark.png",
+        "affiliation": { "@type": "Organization", "name": "University of Washington" },
+        "jobTitle": "PhD Candidate",
+        "sameAs": [
+          "https://github.com/aodongliu",
+          "https://scholar.google.com/citations?user=P6BLL58AAAAJ&hl=en",
+          "https://www.linkedin.com/in/aodongliu/"
+        ]
+      }
+      </script>
+
+
 
 #---------------------------
 # 全局
@@ -476,7 +498,10 @@ index:
 
     # 为空则按 hexo config.subtitle 显示
     # If empty, text based on `subtitle` in hexo config
-    text: "千里之行，始于足下 --- A journey of a thousand miles begins with a single step"
+    #text: "千里之行，始于足下 --- A journey of a thousand miles begins with a single step"
+    text: "Aodong Liu, Theoretical Chemistry PhD Candidate @ UW · 千里之行，始于足下 — A journey of a thousand miles begins with a single step"
+
+
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation

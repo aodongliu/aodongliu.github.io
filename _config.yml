@@ -5,8 +5,8 @@
 # Site
 title: Aodong Liu's Personal Website
 subtitle: ''
-description: ''
-keywords:
+description: "Aodong Liu — PhD candidate in theoretical chemistry at the University of Washington. Research: nuclear quantum effects (NEO), scalable electronic structure algorithms, quantum dynamics. Blog + Stranger Stats (NBA)."
+keywords: [Aodong Liu, theoretical chemistry, computational chemistry, nuclear quantum effects, NEO, quantum dynamics, high performance computing, NBA, Stranger Stats]
 author: Aodong Liu
 language: en
 timezone: ''
@@ -17,8 +17,8 @@ url: https://aodongliu.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -97,6 +97,9 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: fluid
+
+sitemap:
+  path: sitemap.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
