@@ -6,3 +6,6 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+
+# Obsidian: keep shared settings, ignore per-device UI state
+.obsidian/workspace.json
