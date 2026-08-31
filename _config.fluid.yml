@@ -365,6 +365,7 @@ navbar:
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "Stranger Stats", link: "/strangerStats/", icon: "iconfont icon-codeforces" }
+    - { key: "Impact Lab", link: "/impact-echo/" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }

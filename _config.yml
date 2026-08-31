@@ -29,6 +29,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - impact-echo/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -106,3 +107,4 @@ sitemap:
 deploy:
   type: git
   repo: https://github.com/aodongliu/aodongliu.github.io.git
+  branch: master
