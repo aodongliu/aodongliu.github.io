@@ -1,0 +1,10 @@
+{
+  "name": "Powerlifting Physics Lab",
+  "short_name": "Physics Lab",
+  "description": "Explore modeled force and leverage changes in the squat, bench press, and deadlift.",
+  "start_url": "/powerlifting-physics-lab/",
+  "scope": "/powerlifting-physics-lab/",
+  "display": "standalone",
+  "background_color": "#151715",
+  "theme_color": "#151715"
+}
