@@ -1,0 +1,959 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/al_logo.png">
+  <link rel="icon" href="/images/al_logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Aodong Liu">
+  <meta name="keywords" content="Aodong Liu,theoretical chemistry,computational chemistry,nuclear quantum effects,NEO,quantum dynamics,high performance computing,NBA,Stranger Stats">
+  
+    <meta name="description" content="You ever watch a game and see a guy out there running around for 20+ minutes? Clapping his hands, calling for the ball, playing hard defense… then you check the box score and it’s 0 points, 0 rebounds">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stranger Stats #7: Out There Doing Cardio, 20 Minutes of NBA Basketball With Nothing to Show for It">
+<meta property="og:url" content="https://aodongliu.github.io/2026/08/31/strangerStats07_cardio/">
+<meta property="og:site_name" content="Aodong Liu | PhD Candidate in Theoretical Chemistry">
+<meta property="og:description" content="You ever watch a game and see a guy out there running around for 20+ minutes? Clapping his hands, calling for the ball, playing hard defense… then you check the box score and it’s 0 points, 0 rebounds">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/203503.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/201202.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/76733.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/1630245.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/203138.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/1477.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/1477.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/77420.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/1628398.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/779.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/203501.png">
+<meta property="og:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/2399.png">
+<meta property="article:published_time" content="2026-08-31T07:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-05T01:44:02.536Z">
+<meta property="article:author" content="Aodong Liu">
+<meta property="article:tag" content="nba">
+<meta property="article:tag" content="data">
+<meta property="article:tag" content="basketball">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.nba.com/headshots/nba/latest/260x190/203503.png">
+  
+  
+  
+  <title>Stranger Stats #7: Out There Doing Cardio, 20 Minutes of NBA Basketball With Nothing to Show for It - Aodong Liu | PhD Candidate in Theoretical Chemistry</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"aodongliu.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":55,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Aodong Liu&#39;s Personal Website</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/strangerStats/" target="_self">
+                <i class="iconfont icon-codeforces"></i>
+                <span>Stranger Stats</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Stranger Stats #7: Out There Doing Cardio, 20 Minutes of NBA Basketball With Nothing to Show for It"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-08-31 00:00" pubdate>
+          August 31, 2026 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          484 words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Stranger Stats #7: Out There Doing Cardio, 20 Minutes of NBA Basketball With Nothing to Show for It</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>You ever watch a game and see a guy out there running around for 20+ minutes? Clapping his hands, calling for the ball, playing hard defense… then you check the box score and it’s 0 points, 0 rebounds, 0 assists, 0 steals, 0 blocks? Just absolutely nothing in every column?</p>
+<p>If you are like me, you are picturing Tony Snell, right? </p>
+<p>I call it a <strong>cardio game</strong>. Just out there running suicides basically. If you are like me, you are picturing Tony Snell, right?  He is the poster child for this type of games. Well it turns out it happens to plenty of other players too. Let’s find these guys.</p>
+<hr>
+<h3 id="By-the-Numbers"><a href="#By-the-Numbers" class="headerlink" title="By the Numbers"></a>By the Numbers</h3><p>Since the NBA started tracking steals and blocks in the <strong>1973-74 season</strong>, there have been <strong>31 games</strong> where a player logged 20+ minutes with 0&#x2F;0&#x2F;0&#x2F;0&#x2F;0:</p>
+<ul>
+<li><strong>25</strong> regular season games · <strong>6</strong> playoff games</li>
+<li><strong>6</strong> games at the 25+ minute mark.</li>
+<li><strong>1</strong> player has done it twice: <strong>Bruce Bowen</strong> (more on him later 👀)</li>
+</ul>
+<p>If we count the pre-1974 era (where steals&#x2F;blocks weren’t tracked yet), there are 8 more games, including <strong>Andy Phillip</strong> playing <strong>33 minutes</strong> with zero across the board in 1956. But let not count those here.</p>
+<hr>
+<h3 id="Top-5-Cardio-Performances-Modern-Era"><a href="#Top-5-Cardio-Performances-Modern-Era" class="headerlink" title="Top 5 Cardio Performances (Modern Era)"></a>Top 5 Cardio Performances (Modern Era)</h3><p>Ranked by minutes. These are the all-time greats at doing absolutely nothing for an extended period of time.</p>
+<p><strong>#1 · Tony Snell: 28 minutes</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/203503.png" srcset="/img/loading.gif" lazyload alt="Tony Snell" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Tony Snell</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2017-02-24</strong> — Milwaukee Bucks vs Utah Jazz (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK 🏆</span><br><span style="color: #555;">Regular Season · <strong>28</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>28</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/2</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-9</strong></span>
+  </div>
+</div>
+
+<p>The undisputed GOAT of cardio games. A full <strong>28 minutes</strong> of NBA basketball without registering a single counting stat. He did take 2 shots though (missed both), so at least there was intent. Tony Snell gets made fun of too much, and we definitely want to show some love crowning him the “cardio king”.</p>
+<p><strong>#2 · Joel Anthony: 28 minutes</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/201202.png" srcset="/img/loading.gif" lazyload alt="Joel Anthony" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Joel Anthony</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2011-01-09</strong> — Miami Heat @ Portland Trail Blazers (W)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK 🏆</span><br><span style="color: #555;">Regular Season · <strong>28</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>28</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>4</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-9</strong></span>
+  </div>
+</div>
+
+<p>Zero field goal attempts. Zero free throw attempts. Joel didn’t even pretend to be involved in the offense. The Heat’s defensive specialist put up 28 minutes of nothing against Portland while committing 4 fouls just to remind you he was physically present. Peak Joel Anthony.</p>
+<p><strong>#3 · Chris Ford: 27 minutes</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/76733.png" srcset="/img/loading.gif" lazyload alt="Chris Ford" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Chris Ford</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>1981-02-04</strong> — Boston Celtics @ Philadelphia 76ers (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Regular Season · <strong>27</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>27</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/5</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>+0</strong></span>
+  </div>
+</div>
+
+<p>0-for-5 from the field. Even zero fouls, zero turnovers, zero everything. Chris Ford said “if I’m not gonna contribute, I’m not gonna hurt the team either.” A perfectly clean, perfectly useless 27 minutes. You have to respect the discipline.</p>
+<p><strong>#4 · Ayo Dosunmu: 26 minutes</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/1630245.png" srcset="/img/loading.gif" lazyload alt="Ayo Dosunmu" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Ayo Dosunmu</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2023-12-11</strong> — Chicago Bulls @ Milwaukee Bucks (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Regular Season · <strong>26</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>26</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/6</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>+2</strong></span>
+  </div>
+</div>
+
+<p>Ayo Dosunmu balled out for the Wolves in the 2026 playoffs, and got paid big bucks. But did you know he was also the most recent player to pull off a cardio game? Back in 2023 he played 26 minutes against Milwaukee, went 0-for-6 from the field. Well he did have a positive +&#x2F;-, so I call that effective cardio.</p>
+<p><strong>#5 · Hollis Thompson: 25 minutes</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/203138.png" srcset="/img/loading.gif" lazyload alt="Hollis Thompson" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Hollis Thompson</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2014-03-02</strong> — Philadelphia 76ers @ Orlando Magic (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Regular Season · <strong>25</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>25</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/3</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-4</strong></span>
+  </div>
+</div>
+
+<p>The Process-era Sixers, everybody. Hollis Thompson rounds out the top 5 with a clean 0-for-3 across 25 minutes against the Magic.</p>
+<hr>
+<h3 id="The-Two-Time-Champ-Bruce-Bowen-👑"><a href="#The-Two-Time-Champ-Bruce-Bowen-👑" class="headerlink" title="The Two-Time Champ: Bruce Bowen 👑"></a>The Two-Time Champ: Bruce Bowen 👑</h3><p>There’s only one player in NBA history who has pulled off the cardio game <strong>multiple times</strong> in the modern era. Bruce Bowen: 8-time All-Defensive selection, 3-time NBA champion, and apparently, a cardio enthusiast.</p>
+<p><strong>Game 1 · 2005 Regular Season · 25 minutes</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/1477.png" srcset="/img/loading.gif" lazyload alt="Bruce Bowen" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Bruce Bowen</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2005-11-05</strong> — San Antonio Spurs @ Dallas Mavericks (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Regular Season · <strong>25</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>25</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/4</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>2</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-12</strong></span>
+  </div>
+</div>
+
+<p>A routine cardio performance in November 2005: 25 minutes, 0-for-4 from the field, 2 fouls, 1 turnover, -12. Nothing special by cardio standards. But Bruce wasn’t done.</p>
+<p><strong>Game 2 · 2008 Playoffs · 20 minutes</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/1477.png" srcset="/img/loading.gif" lazyload alt="Bruce Bowen" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Bruce Bowen</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2008-04-27</strong> — San Antonio Spurs @ Phoenix Suns (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Playoffs · <strong>20</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>20</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/3</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-33</strong></span>
+  </div>
+</div>
+
+<p>This is the one that makes him a legend. <strong>2008 playoffs</strong>, Spurs at Phoenix, first round. Bruce Bowen plays 20 minutes, goes 0-for-3, and posts a <strong>-33</strong> plus-minus. Minus thirty-three! In 20 minutes! The Spurs lost by 19 and Bowen’s -33 was by far the worst mark on the team. When your box score says 0&#x2F;0&#x2F;0&#x2F;0&#x2F;0 and your +&#x2F;- is -33, you were not having a good day.</p>
+<p>Two cardio games, one in the playoffs, and the worst plus-minus on the entire list. Bruce Bowen: the only man to visit the cardio club twice, and he made the second visit count.</p>
+<hr>
+<h3 id="Some-Notable-Names-You-Might-Know"><a href="#Some-Notable-Names-You-Might-Know" class="headerlink" title="Some Notable Names You Might Know"></a>Some Notable Names You Might Know</h3><p>Here I list more guys who’s done it. Some of these guys are All-Stars, champions, legends of the game. And even they had a night where they did absolutely nothing for 20+ minutes.</p>
+<p><strong>#1 · Maurice Lucas: 14.8 PPG &#x2F; 9.0 RPG &#x2F; 2.4 APG career</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/77420.png" srcset="/img/loading.gif" lazyload alt="Maurice Lucas" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Maurice Lucas</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>1986-05-18</strong> — Los Angeles Lakers @ Houston Rockets (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Playoffs · <strong>21</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>21</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/4</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>5</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>2</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>+0</strong></span>
+  </div>
+</div>
+
+<p>A 4-time All-Star who averaged a near double-double for his career. In the 1986 Western Conference Finals, playing for the Showtime Lakers, Luke put up 21 minutes of nothing while going 0-for-4. And he picked up 5 fouls. Gotta respect the hustle.</p>
+<p><strong>#2 · Kyle Kuzma: 16.7 PPG &#x2F; 6.2 RPG &#x2F; 2.7 APG career</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/1628398.png" srcset="/img/loading.gif" lazyload alt="Kyle Kuzma" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Kyle Kuzma</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2025-04-19</strong> — Milwaukee Bucks @ Indiana Pacers (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Playoffs · <strong>21.34</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>21.34</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/5</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/2</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>2</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-24</strong></span>
+  </div>
+</div>
+
+<p>This man once was a central piece of a Lakers championship team. He’s a legitimate NBA scorer who can get hot any given night. And yet, in a 2025 playoff game for the Bucks, he played 21 minutes, went 0-for-5 (0-for-2 from the line), and posted a brutal <strong>-24</strong> plus-minus. Thank you for your service, Kyle, I guess?</p>
+<p><strong>#3 · Glen Rice: 18.5 PPG &#x2F; 4.4 RPG &#x2F; 2.1 APG career</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/779.png" srcset="/img/loading.gif" lazyload alt="Glen Rice" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Glen Rice</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2001-11-23</strong> — Houston Rockets @ Seattle SuperSonics (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Regular Season · <strong>23</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>23</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/3</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>4</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-14</strong></span>
+  </div>
+</div>
+
+<p>A 3-time All-Star, 1995 All-Star Game MVP, and NBA champion. Career <strong>18.5 points per game</strong>. And one random November night in 2001, playing for the Rockets, he put up 23 minutes of silence going 0-for-3 from the field. One of those nights.</p>
+<p><strong>#4 · Tim Hardaway Jr.: 13.9 PPG &#x2F; 2.9 RPG &#x2F; 1.8 APG career</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/203501.png" srcset="/img/loading.gif" lazyload alt="Tim Hardaway Jr." style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Tim Hardaway Jr.</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2024-11-30</strong> — Detroit Pistons vs Philadelphia 76ers (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Regular Season · <strong>20.34</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>20.34</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/6</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>-18</strong></span>
+  </div>
+</div>
+
+<p>Oh no, he’s here again! You might remember Tim Hardaway Jr. from <a href="/2026/01/19/strangerStats03_0forX_FGA/">Stranger Stats #3</a>, where both he and his dad appeared as the only father-son duo to each shoot 0-for-X from the field in a game. Now he’s back, solo this time, with a 0-for-6 cardio special in Detroit. Tim Jr. logged 20 minutes against the 76ers, missed all six of his shots, and racked up a -18. Collecting Stranger Stats appearances like infinity stones.</p>
+<p><strong>#5 · Mike Dunleavy: 11.6 PPG &#x2F; 4.4 RPG &#x2F; 2.3 APG career</strong></p>
+<div style="margin: 1.75rem auto; max-width: 520px; padding: 1.25rem 1.5rem; border: 1px solid #e6e6e6; border-radius: 14px; background: #fbfbfb; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+  <div style="display: flex; gap: 14px; align-items: center;">
+    <img src="https://cdn.nba.com/headshots/nba/latest/260x190/2399.png" srcset="/img/loading.gif" lazyload alt="Mike Dunleavy" style="width: 92px; height: 92px; border-radius: 14px; object-fit: cover; border: 1px solid #e6e6e6; background: #fff;">
+    <div style="flex: 1;">
+      <div style="font-size: 1.15em; font-weight: 700; line-height: 1.15;">Mike Dunleavy</div>
+      <div style="margin-top: 0.25rem; font-size: 0.9em; color: #555;"><strong>2015-04-27</strong> — Chicago Bulls vs Milwaukee Bucks (L)</div>
+      <div style="margin-top: 0.65rem; font-size: 0.98em; color: #222;">
+        <span style="color: #e63946; font-weight: 800; font-size: 1.1em;">0 PTS · 0 REB · 0 AST · 0 STL · 0 BLK</span><br><span style="color: #555;">Playoffs · <strong>21</strong> MIN</span>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #ededed; display: flex; flex-wrap: nowrap; gap: 10px; font-size: 0.92em; color: #333; white-space: nowrap; overflow-x: auto;">
+<span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">MIN <strong>21</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FG <strong>0/3</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">FT <strong>0/0</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">PF <strong>4</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">TOV <strong>1</strong></span><span style="background: #f3f3f3; border: 1px solid #e8e8e8; padding: 0.28rem 0.55rem; border-radius: 999px;">+/- <strong>+5</strong></span>
+  </div>
+</div>
+
+<p>Mike Dunleavy is now the Warriors’ GM. The guy’s making big trades, shaping the franchise, running the show. But back in 2015 he was just a dude playing 21 playoff minutes for the Bulls and putting up the quietest stat line you’ll ever see: 0-for-3 from the field, 4 fouls, one lonely turnover. And the wild part? The Bulls actually won that game and he was <strong>+5</strong>. Went from playoff cardio to running an NBA franchise. Not a bad career arc.</p>
+<hr>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Stranger-Stats/" class="category-chain-item">Stranger Stats</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/nba/" class="print-no-link">#nba</a>
+      
+        <a href="/tags/data/" class="print-no-link">#data</a>
+      
+        <a href="/tags/basketball/" class="print-no-link">#basketball</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Stranger Stats #7: Out There Doing Cardio, 20 Minutes of NBA Basketball With Nothing to Show for It</div>
+      <div>https://aodongliu.github.io/2026/08/31/strangerStats07_cardio/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Aodong Liu</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>August 31, 2026</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/02/09/strangerStats06_careerHighInDebut/" title="Stranger Stats #6: Bro Drove 5.5 Hours After Being Traded and Dropped a Career High! A Look at Career-High Performances in Debuts">
+                        <span class="hidden-mobile">Stranger Stats #6: Bro Drove 5.5 Hours After Being Traded and Dropped a Career High! A Look at Career-High Performances in Debuts</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script>
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          Fluid.utils.createCssLink('https://lib.baomitu.com/disqusjs/1.3.0/disqusjs.css');
+          Fluid.utils.createScript('https://lib.baomitu.com/disqusjs/1.3.0/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'fluid',
+              apikey: ''
+            });
+          });
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
