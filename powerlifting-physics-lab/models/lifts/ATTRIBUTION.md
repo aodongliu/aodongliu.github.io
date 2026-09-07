@@ -22,7 +22,8 @@ were checked from true side and three-quarter cameras at standing, bottom, and
 return positions. The exported GLB was re-imported and checked again at the
 bottom frame for planted feet and intact skinning.
 
-This is a motion-ready exterior shell, not an anatomical atlas or measured
-athlete capture. The separate Anatomy mode retains the Z-Anatomy muscle,
-skeleton, and connective-tissue layers. The squat is a configurable reference
-movement—not a universal optimum, coaching assessment, or injury-risk model.
+This is the Force Lab's motion-ready exterior shell, not an anatomical atlas or
+measured athlete capture. It is display-only: retargeting the OpenSim body poses
+onto this skin never changes the reported mechanics. The authored squat action
+is retained as build provenance for the shared character asset, not as a
+separate application mode or universal form prescription.
