@@ -1,0 +1,115 @@
+{
+  "schema": "powerlifting-physics-lab/simulation-index",
+  "schema_version": "0.1.0",
+  "lift": "bench",
+  "variants": [
+    {
+      "id": "flat-40kg",
+      "file": "flat-40kg.json",
+      "label": "Flat bench press, 40 kg \u00b7 contact v2",
+      "result_class": "simulation",
+      "bar_mass_kg": 40.0,
+      "bar_placement": "hands",
+      "duration_s": 3.6,
+      "frame_count": 361,
+      "sha256": "0e2a9a99a4a13c90a08883cb2c1e16d0001b72f2f6f7e576ea474ae8dfb79871",
+      "generated_at": "2026-09-22T05:28:22+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 1242.0853762771017,
+        "peak_moments_nm": {
+          "shoulder_flexion_r": 37.9016786239672,
+          "shoulder_flexion_l": 37.9016786239672,
+          "shoulder_adduction_r": 49.79622175071675,
+          "shoulder_adduction_l": 49.79622175071675,
+          "shoulder_internal_rotation_r": 11.92578532573223,
+          "shoulder_internal_rotation_l": 11.92578532573223,
+          "elbow_extension_r": 9.807147424251676,
+          "elbow_extension_l": 9.807147424251676,
+          "lumbar_extension": 57.60941979928822
+        },
+        "angles_at_bottom_deg": {
+          "arm_flex_r": -60.19256411102944,
+          "arm_add_r": -41.16202905079867,
+          "arm_rot_r": -58.57603813929934,
+          "elbow_flex_r": 128.33547387496606,
+          "hip_flexion_r": -0.1785103074771521,
+          "knee_angle_r": 78.50810583761694
+        },
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "flat-80kg",
+      "file": "flat-80kg.json",
+      "label": "Flat bench press, 80 kg \u00b7 contact v2",
+      "result_class": "simulation",
+      "bar_mass_kg": 80.0,
+      "bar_placement": "hands",
+      "duration_s": 3.6,
+      "frame_count": 361,
+      "sha256": "59eeb3e7b582f31b02e5b6b595f10a1b7f817ee9d4602fd0f1004d878fd595ef",
+      "generated_at": "2026-09-22T05:27:03+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 1730.8035726609485,
+        "peak_moments_nm": {
+          "shoulder_flexion_r": 71.5914102258721,
+          "shoulder_flexion_l": 71.5914102258721,
+          "shoulder_adduction_r": 94.80852095238049,
+          "shoulder_adduction_l": 94.80852095238049,
+          "shoulder_internal_rotation_r": 23.372621142477247,
+          "shoulder_internal_rotation_l": 23.372621142477247,
+          "elbow_extension_r": 19.2583001274454,
+          "elbow_extension_l": 19.2583001274454,
+          "lumbar_extension": 78.02105850332492
+        },
+        "angles_at_bottom_deg": {
+          "arm_flex_r": -60.19256411102944,
+          "arm_add_r": -41.16202905079867,
+          "arm_rot_r": -58.57603813929934,
+          "elbow_flex_r": 128.33547387496606,
+          "hip_flexion_r": -0.1785103074771521,
+          "knee_angle_r": 78.50810583761694
+        },
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "flat-120kg",
+      "file": "flat-120kg.json",
+      "label": "Flat bench press, 120 kg \u00b7 contact v2",
+      "result_class": "simulation",
+      "bar_mass_kg": 120.0,
+      "bar_placement": "hands",
+      "duration_s": 3.6,
+      "frame_count": 361,
+      "sha256": "124ee5add1de6068988c7cd15158f7bd05a15b024dd530376f6824f572c7ab29",
+      "generated_at": "2026-09-22T05:28:28+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 2219.5617831510535,
+        "peak_moments_nm": {
+          "shoulder_flexion_r": 105.28114182777699,
+          "shoulder_flexion_l": 105.28114182777699,
+          "shoulder_adduction_r": 139.82082015404427,
+          "shoulder_adduction_l": 139.82082015404427,
+          "shoulder_internal_rotation_r": 34.81945695922227,
+          "shoulder_internal_rotation_l": 34.81945695922227,
+          "elbow_extension_r": 28.70945283063912,
+          "elbow_extension_l": 28.70945283063912,
+          "lumbar_extension": 98.43390503212044
+        },
+        "angles_at_bottom_deg": {
+          "arm_flex_r": -60.19256411102944,
+          "arm_add_r": -41.16202905079867,
+          "arm_rot_r": -58.57603813929934,
+          "elbow_flex_r": 128.33547387496606,
+          "hip_flexion_r": -0.1785103074771521,
+          "knee_angle_r": 78.50810583761694
+        },
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    }
+  ]
+}
