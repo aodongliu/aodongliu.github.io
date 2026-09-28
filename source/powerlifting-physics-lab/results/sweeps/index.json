@@ -1,0 +1,176 @@
+{
+  "schema": "powerlifting-physics-lab/simulation-sweep-index",
+  "schema_version": "0.1.0",
+  "sweeps": [
+    {
+      "id": "bench-flare",
+      "file": "bench-flare.json",
+      "lift": "bench",
+      "label": "Elbow flare at 80 kg",
+      "description": "Upper-arm angle from the torso at the touch: 90\u00b0 is flared out, 45\u00b0 is tucked toward the feet.",
+      "x": "elbow_flare_deg",
+      "series": [
+        "flat"
+      ],
+      "point_count": 5,
+      "sha256": "c8ecf19f63ed93c097e6bc2b7e6fda6ce4cf3aa1f2020018e38f52a302bead3c",
+      "generated_at": "2026-09-04T21:54:12+00:00"
+    },
+    {
+      "id": "bench-grip",
+      "file": "bench-grip.json",
+      "lift": "bench",
+      "label": "Grip width at 80 kg",
+      "description": "Palm distance from the bar centre and its effect on shoulder and elbow demands (0.405 m is the competition maximum).",
+      "x": "grip_half_width_m",
+      "series": [
+        "flat"
+      ],
+      "point_count": 5,
+      "sha256": "dccf63cc6065dae100e0c0a37039de94bf7764ec92cedf1f99531325155e44c7",
+      "generated_at": "2026-09-04T21:54:19+00:00"
+    },
+    {
+      "id": "bench-load",
+      "file": "bench-load.json",
+      "lift": "bench",
+      "label": "Load",
+      "description": "Peak shoulder and elbow demands of a flat bench press as the bar gets heavier (grip half-width 0.40 m, elbows at 60\u00b0).",
+      "x": "bar_mass_kg",
+      "series": [
+        "flat"
+      ],
+      "point_count": 7,
+      "sha256": "4d9f3ed1cc2569d07103be5e999bceace7fbaf66b607eaae4b05502ccb864344",
+      "generated_at": "2026-09-04T21:54:28+00:00"
+    },
+    {
+      "id": "bench-touch",
+      "file": "bench-touch.json",
+      "lift": "bench",
+      "label": "Touch point at 80 kg",
+      "description": "Where the bar touches along the body, from the lower-chest reference toward the feet.",
+      "x": "touch_offset_x_m",
+      "series": [
+        "flat"
+      ],
+      "point_count": 5,
+      "sha256": "5ebc7d5a17f3065243a71baf32a6212051f85dcf3344a20f37133180a620984a",
+      "generated_at": "2026-09-04T21:54:35+00:00"
+    },
+    {
+      "id": "deadlift-hip-timing",
+      "file": "deadlift-hip-timing.json",
+      "lift": "deadlift",
+      "label": "Hip timing at 150 kg",
+      "description": "Trunk-extension timing exponent: low values extend the trunk early (upright pull), high values keep it inclined until late (hips shoot up).",
+      "x": "lean_power",
+      "series": [
+        "conventional"
+      ],
+      "point_count": 5,
+      "sha256": "a6537b9231dae4f5891f84a0b5b5dabe44a67aa752bfe30526d652e2ab306448",
+      "generated_at": "2026-09-03T11:35:15+00:00"
+    },
+    {
+      "id": "deadlift-load",
+      "file": "deadlift-load.json",
+      "lift": "deadlift",
+      "label": "Load",
+      "description": "Peak hip, knee, ankle, and lumbar demands of a conventional deadlift as the bar gets heavier (start knee 80\u00b0).",
+      "x": "bar_mass_kg",
+      "series": [
+        "conventional"
+      ],
+      "point_count": 6,
+      "sha256": "3126b8a8c3c70e3ce94b465d722a55622b18253e5adaec19392c43bd83e734eb",
+      "generated_at": "2026-09-03T11:35:34+00:00"
+    },
+    {
+      "id": "deadlift-start-knee",
+      "file": "deadlift-start-knee.json",
+      "lift": "deadlift",
+      "label": "Start position (knee angle) at 150 kg",
+      "description": "Hips-high versus hips-low setups: knee flexion in the start position for a 150 kg conventional deadlift.",
+      "x": "start_knee_deg",
+      "series": [
+        "conventional"
+      ],
+      "point_count": 5,
+      "sha256": "a43c41e79031b89412b0dbacd7a0cee6f9f0714ff322bd2f52737e0289f26616",
+      "generated_at": "2026-09-03T11:35:46+00:00"
+    },
+    {
+      "id": "deadlift-tempo",
+      "file": "deadlift-tempo.json",
+      "lift": "deadlift",
+      "label": "Tempo at 150 kg",
+      "description": "Faster or slower pull/lowering (multiplier on the reference 1.8 s pull and 1.3 s lowering) and the resulting peak demands and ground reaction.",
+      "x": "tempo",
+      "series": [
+        "conventional"
+      ],
+      "point_count": 5,
+      "sha256": "350f3e2571caf2949bcfd3d77ea26f9222c46c5d1a47ecc759706a52af6e78a0",
+      "generated_at": "2026-09-03T11:35:59+00:00"
+    },
+    {
+      "id": "squat-depth",
+      "file": "squat-depth.json",
+      "lift": "squat",
+      "label": "Depth (peak knee flexion) at 100 kg",
+      "description": "How hip, knee, ankle, and lumbar demands change with squat depth for a 100 kg low-bar and high-bar squat.",
+      "x": "knee_flexion_peak_deg",
+      "series": [
+        "low-bar",
+        "high-bar"
+      ],
+      "point_count": 10,
+      "sha256": "e85785700b55685ea3affb1c759e44aa8729833f6a31eead34ba8b1920ae1850",
+      "generated_at": "2026-09-03T11:41:09+00:00"
+    },
+    {
+      "id": "squat-load-placement",
+      "file": "squat-load-placement.json",
+      "lift": "squat",
+      "label": "Load \u00d7 bar placement",
+      "description": "Peak net joint demands as the bar gets heavier, for low-bar and high-bar placement at each placement's reference depth and trunk lean.",
+      "x": "bar_mass_kg",
+      "series": [
+        "low-bar",
+        "high-bar"
+      ],
+      "point_count": 12,
+      "sha256": "bc0e25a041bce8a66ca1d3809c263cb0ee58626ebde7c3372a8a4f8b1d1e575d",
+      "generated_at": "2026-09-03T11:41:38+00:00"
+    },
+    {
+      "id": "squat-tempo",
+      "file": "squat-tempo.json",
+      "lift": "squat",
+      "label": "Tempo at 100 kg low-bar",
+      "description": "Slower or faster descent/ascent (multiplier on the reference 1.6 s descent and 1.4 s ascent) and its effect on peak demands and ground reaction.",
+      "x": "tempo",
+      "series": [
+        "low-bar"
+      ],
+      "point_count": 5,
+      "sha256": "be25321422a59c3ff366987f2c4373dfea6474e367d348ce80308c6d2356c941",
+      "generated_at": "2026-09-03T11:41:52+00:00"
+    },
+    {
+      "id": "squat-trunk-lean",
+      "file": "squat-trunk-lean.json",
+      "lift": "squat",
+      "label": "Trunk lean at 100 kg low-bar",
+      "description": "Trading hip for knee demand: peak trunk inclination at the bottom of a 100 kg low-bar squat at fixed depth.",
+      "x": "trunk_lean_peak_deg",
+      "series": [
+        "low-bar"
+      ],
+      "point_count": 6,
+      "sha256": "3580d5d8b789409e5252af334aadab5269d2a34511c336de965b5c7883c59770",
+      "generated_at": "2026-09-03T11:42:05+00:00"
+    }
+  ]
+}

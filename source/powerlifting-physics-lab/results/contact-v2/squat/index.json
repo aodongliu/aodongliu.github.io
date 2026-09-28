@@ -1,0 +1,187 @@
+{
+  "schema": "powerlifting-physics-lab/simulation-index",
+  "schema_version": "0.1.0",
+  "lift": "squat",
+  "variants": [
+    {
+      "id": "lowbar-20kg",
+      "file": "lowbar-20kg.json",
+      "label": "Low-bar back squat, 20 kg \u00b7 contact-v2 experiment",
+      "result_class": "simulation",
+      "bar_mass_kg": 20.0,
+      "bar_placement": "low-bar",
+      "knee_flexion_peak_deg": 120.0,
+      "trunk_lean_peak_deg": 50.0,
+      "duration_s": 4.2,
+      "frame_count": 421,
+      "sha256": "41d63c6c7a77123f0ed2924d2450a189d512e5494f97fce44e679fc0f5c4e03d",
+      "generated_at": "2026-09-22T05:52:17+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 1107.3520332354324,
+        "peak_moments_nm": {
+          "hip_extension_r": 86.2623405334794,
+          "hip_extension_l": 86.2623405334794,
+          "knee_extension_r": 98.1122010690791,
+          "knee_extension_l": 98.11220106921292,
+          "ankle_plantarflexion_r": 22.420269039821033,
+          "ankle_plantarflexion_l": 22.420269039713872,
+          "lumbar_extension": 142.13448033388508
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 113.58497534282847,
+          "knee_angle_r": 119.99999999999999,
+          "ankle_angle_r": 37.437705738659126,
+          "pelvis_tilt": -29.999999999999996,
+          "lumbar_extension": -20.0
+        },
+        "trunk_inclination_at_bottom_deg": 49.99999999999999,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "lowbar-100kg",
+      "file": "lowbar-100kg.json",
+      "label": "Low-bar back squat, 100 kg \u00b7 contact-v2 experiment",
+      "result_class": "simulation",
+      "bar_mass_kg": 100.0,
+      "bar_placement": "low-bar",
+      "knee_flexion_peak_deg": 120.0,
+      "trunk_lean_peak_deg": 50.0,
+      "duration_s": 4.2,
+      "frame_count": 421,
+      "sha256": "0a7d0d8cbc999bcae6e37bb7544e43945a02e78b4df7fd82ad717b55e542ed86",
+      "generated_at": "2026-09-22T05:48:58+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 2073.910823354792,
+        "peak_moments_nm": {
+          "hip_extension_r": 207.6303721475906,
+          "hip_extension_l": 207.6303721475906,
+          "knee_extension_r": 173.7859136118155,
+          "knee_extension_l": 173.78591361208365,
+          "ankle_plantarflexion_r": 43.79420462732587,
+          "ankle_plantarflexion_l": 43.79420462711134,
+          "lumbar_extension": 344.77447920643675
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 116.15717304555724,
+          "knee_angle_r": 119.99999999999999,
+          "ankle_angle_r": 34.74570636567803,
+          "pelvis_tilt": -29.999999999999996,
+          "lumbar_extension": -20.0
+        },
+        "trunk_inclination_at_bottom_deg": 49.99999999999999,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "lowbar-100kg-forward-lean",
+      "file": "lowbar-100kg-forward-lean.json",
+      "label": "Low-bar 100 kg \u00b7 more forward torso (60\u00b0)",
+      "result_class": "simulation",
+      "bar_mass_kg": 100.0,
+      "bar_placement": "low-bar",
+      "knee_flexion_peak_deg": 120.0,
+      "trunk_lean_peak_deg": 60.0,
+      "duration_s": 4.2,
+      "frame_count": 421,
+      "sha256": "8aaac57b1079a0eb220ba5f6f0e9bb5d555bd84801e33e84ddeafa4bb5bbda35",
+      "generated_at": "2026-09-22T05:52:29+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 2101.0235753926554,
+        "peak_moments_nm": {
+          "hip_extension_r": 262.86751366225826,
+          "hip_extension_l": 262.86751366225826,
+          "knee_extension_r": 129.08314610096883,
+          "knee_extension_l": 129.08314610129528,
+          "ankle_plantarflexion_r": 46.63981498004454,
+          "ankle_plantarflexion_l": 46.6398149798618,
+          "lumbar_extension": 425.52040730740214
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 130.38318771670632,
+          "knee_angle_r": 119.99999999999999,
+          "ankle_angle_r": 26.10629758573239,
+          "pelvis_tilt": -36.0,
+          "lumbar_extension": -24.000000000000004
+        },
+        "trunk_inclination_at_bottom_deg": 60.00000000000001,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "lowbar-150kg",
+      "file": "lowbar-150kg.json",
+      "label": "Low-bar back squat, 150 kg \u00b7 contact-v2 experiment",
+      "result_class": "simulation",
+      "bar_mass_kg": 150.0,
+      "bar_placement": "low-bar",
+      "knee_flexion_peak_deg": 120.0,
+      "trunk_lean_peak_deg": 50.0,
+      "duration_s": 4.2,
+      "frame_count": 421,
+      "sha256": "fac73b5ab8b3068dc90d108d7228c21b03a3a027889d98e1606227128f8cacd2",
+      "generated_at": "2026-09-22T05:52:23+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 2678.502818397639,
+        "peak_moments_nm": {
+          "hip_extension_r": 283.5224912368065,
+          "hip_extension_l": 283.5224912368065,
+          "knee_extension_r": 221.05251043906614,
+          "knee_extension_l": 221.0525104394189,
+          "ankle_plantarflexion_r": 57.009087070878905,
+          "ankle_plantarflexion_l": 57.009087070594354,
+          "lumbar_extension": 471.49493234684167
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 116.81185562354057,
+          "knee_angle_r": 119.99999999999999,
+          "ankle_angle_r": 34.05990726015264,
+          "pelvis_tilt": -29.999999999999996,
+          "lumbar_extension": -20.0
+        },
+        "trunk_inclination_at_bottom_deg": 49.99999999999999,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "highbar-100kg",
+      "file": "highbar-100kg.json",
+      "label": "High-bar back squat, 100 kg \u00b7 contact-v2 experiment",
+      "result_class": "simulation",
+      "bar_mass_kg": 100.0,
+      "bar_placement": "high-bar",
+      "knee_flexion_peak_deg": 128.0,
+      "trunk_lean_peak_deg": 38.0,
+      "duration_s": 4.2,
+      "frame_count": 421,
+      "sha256": "80f305d5000cba8c98bb6b9fd749e4f77b98acd6a696bd8ecad6e4ee97d06d34",
+      "generated_at": "2026-09-22T05:52:11+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 2096.0864524045737,
+        "peak_moments_nm": {
+          "hip_extension_r": 160.3626147803541,
+          "hip_extension_l": 160.3626147803541,
+          "knee_extension_r": 222.9572214648542,
+          "knee_extension_l": 222.95722146509132,
+          "ankle_plantarflexion_r": 43.142286250763014,
+          "ankle_plantarflexion_l": 43.14228625049207,
+          "lumbar_extension": 284.3705297412606
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 108.12140110660293,
+          "knee_angle_r": 128.0,
+          "ankle_angle_r": 44.03970378085702,
+          "pelvis_tilt": -22.8,
+          "lumbar_extension": -15.200000000000003
+        },
+        "trunk_inclination_at_bottom_deg": 38.0,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    }
+  ]
+}

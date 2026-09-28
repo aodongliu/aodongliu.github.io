@@ -1,0 +1,55 @@
+{
+  "schema": "powerlifting-physics-lab/human-asset-manifest",
+  "version": 1,
+  "captured": "2026-09-12",
+  "status": "local candidate; requires visual acceptance",
+  "source_url": "https://github.com/makehumancommunity/mpfb2",
+  "source_commit": "437dd513888a92399d1d3200d2e80859fae55abc",
+  "asset_license": "CC0-1.0",
+  "software_license": "GPL-3.0-or-later",
+  "blender_version": "4.4.1",
+  "blender_build_hash": "d8845b3bb572",
+  "source_files": {
+    "LICENSE.md": "5cefb60680cb9efd4550a2e65d719021cfbec9dad3658481d11d48ae863ce04d",
+    "LICENSE.ASSETS.md": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
+    "src/mpfb/data/3dobjs/base.obj": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "src/mpfb/data/rigs/standard/rig.default.json": "8b949de35c2dd70dbb5094e57a8586c3b9a9f650775a293212581a8f67be6797",
+    "src/mpfb/data/rigs/standard/weights.default.json": "154b866774a8c2b055a8e86419f22a87b76c60440fdcb70bcb78345f00924e89"
+  },
+  "analytical_neutral_sha256": "d9dcdbce83402eb61519f1066a5be36bdb05c9adae7cea76f4df5f0820be4f19",
+  "builder_sha256": "0ce207309c66da28d14d04bacdf08024ad454e2ff82dd3bb71f90e53ad5721f9",
+  "editable_source": {
+    "path": "scripts/human-redesign/athlete-fitted.blend",
+    "sha256": "eb0a62c3e3aeafafbba0b26b0d4872fac5ffd05b458b137518d68cee974fd446",
+    "bytes": 3252073
+  },
+  "output_files": {
+    "athlete.glb": {
+      "sha256": "36277b9b53770d8fa2178cea222a9fba9a4b8c68a9b647728ed061292e9f20d2",
+      "bytes": 1124640
+    },
+    "athlete-bind.json": {
+      "sha256": "a365f74d2fbc4973b6ea3cf77d4fe8a4474b46abc3a5fd353dbcaf42f522e8f9",
+      "bytes": 12124
+    }
+  },
+  "transformations": [
+    "MPFB macro morphology",
+    "collapse unused facial weights into head/spine",
+    "static segment rest fitting",
+    "fit foot sole and ankle in rest geometry",
+    "normalize four skin weights",
+    "remove MPFB helper geometry",
+    "assign original opaque sportswear material regions",
+    "export Three.js-compatible glTF skin",
+    "embed immutable analytical bind metadata"
+  ],
+  "no_runtime_body_projection": true,
+  "no_bar_mask": true,
+  "static_hand_rest_fit_scale": 0.8,
+  "metadata_correction": {
+    "proof": "docs/redesign/2026-09-12/HAND_FIT_METADATA_CORRECTION.json",
+    "change": "Correct handScale label from 1.0 to 0.8; binary geometry and all rig transforms are identical.",
+    "editable_blend_note": "The preserved .blend contains the unchanged geometry; use the corrected builder/sidecar for canonical export metadata."
+  }
+}

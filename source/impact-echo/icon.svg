@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Impact Echo">
+  <defs>
+    <radialGradient id="plate" cx="46%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#e9f2f5"/>
+      <stop offset="0.52" stop-color="#7f969f"/>
+      <stop offset="1" stop-color="#283238"/>
+    </radialGradient>
+    <linearGradient id="shot" x1="0" x2="1">
+      <stop stop-color="#ffb15d"/>
+      <stop offset="1" stop-color="#fff5db"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#080b0e"/>
+  <path d="M74 20h24a10 10 0 0 1 10 10v68a10 10 0 0 1-10 10H74z" fill="url(#plate)" stroke="#b8c7cc" stroke-width="3"/>
+  <path d="M18 64h48" stroke="url(#shot)" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="75" cy="64" r="10" fill="#0d1317" stroke="#ffb15d" stroke-width="4"/>
+  <path d="m78 53 11-10m-6 14 15-3m-19 21 11 10m-6-14 15 3" stroke="#ff8f3d" stroke-width="4" stroke-linecap="round"/>
+</svg>

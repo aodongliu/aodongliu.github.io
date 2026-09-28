@@ -1,0 +1,1046 @@
+{
+  "tool_version": "export_catelli_geometry/1.0.0",
+  "source_package": {
+    "project_url": "https://simtk.org/projects/high-hip-flex",
+    "simtk_file_id": 5815,
+    "sha256": "8cc79a4ac9b7bcd5bc4ddf205f4325483313111e17ce2ddbc64a109f8289431e"
+  },
+  "license": {
+    "name": "MIT",
+    "copyright": "Copyright (c) 2016, Stanford University",
+    "notice_path": "public/models/analytical/LICENSE.txt",
+    "attribution_path": "public/models/analytical/ATTRIBUTION.md"
+  },
+  "source_model": {
+    "path": "biomechanics/models/catelli/v4.0-marker-enabled/Catelli-V4.0.osim",
+    "sha256": "2bdaaf92fdbae963405c4859ab4e8d4870899853e83b163a9c21d76098ad1bfb"
+  },
+  "geometry_dir": {
+    "path": "biomechanics/models/catelli/v4.0-marker-enabled/Geometry",
+    "file_count": 81,
+    "ordered_aggregate_sha256": "1d67479e39ced8bee7562bd2053c399cc4e700d71f70270519ca4561bea82295"
+  },
+  "frame_convention": "vertices in OpenSim body frames, metres, right-handed, y-up; pose nodes with body transforms from a simulation bundle",
+  "root_node": "catelli_v4",
+  "bodies": [
+    {
+      "body": "pelvis",
+      "vertex_count": 436,
+      "triangle_count": 872,
+      "winding_agreement": 0.995413,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "r_pelvis.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 122,
+          "triangle_count": 246
+        },
+        {
+          "mesh_file": "l_pelvis.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 122,
+          "triangle_count": 246
+        },
+        {
+          "mesh_file": "sacrum.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 192,
+          "triangle_count": 380
+        }
+      ]
+    },
+    {
+      "body": "femur_r",
+      "vertex_count": 456,
+      "triangle_count": 908,
+      "winding_agreement": 0.997797,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "r_femur.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 456,
+          "triangle_count": 908
+        }
+      ]
+    },
+    {
+      "body": "tibia_r",
+      "vertex_count": 308,
+      "triangle_count": 630,
+      "winding_agreement": 0.965079,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "r_tibia.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 186,
+          "triangle_count": 390
+        },
+        {
+          "mesh_file": "r_fibula.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 122,
+          "triangle_count": 240
+        }
+      ]
+    },
+    {
+      "body": "patella_r",
+      "vertex_count": 72,
+      "triangle_count": 140,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "r_patella.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 72,
+          "triangle_count": 140
+        }
+      ]
+    },
+    {
+      "body": "talus_r",
+      "vertex_count": 99,
+      "triangle_count": 194,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "r_talus.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 99,
+          "triangle_count": 194
+        }
+      ]
+    },
+    {
+      "body": "calcn_r",
+      "vertex_count": 1000,
+      "triangle_count": 1955,
+      "winding_agreement": 0.997442,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "r_foot.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 1000,
+          "triangle_count": 1955
+        }
+      ]
+    },
+    {
+      "body": "toes_r",
+      "vertex_count": 958,
+      "triangle_count": 1860,
+      "winding_agreement": 0.991935,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "r_bofoot.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 958,
+          "triangle_count": 1860
+        }
+      ]
+    },
+    {
+      "body": "femur_l",
+      "vertex_count": 456,
+      "triangle_count": 908,
+      "winding_agreement": 0.997797,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "l_femur.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 456,
+          "triangle_count": 908
+        }
+      ]
+    },
+    {
+      "body": "tibia_l",
+      "vertex_count": 308,
+      "triangle_count": 630,
+      "winding_agreement": 0.968254,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "l_tibia.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 186,
+          "triangle_count": 390
+        },
+        {
+          "mesh_file": "l_fibula.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 122,
+          "triangle_count": 240
+        }
+      ]
+    },
+    {
+      "body": "patella_l",
+      "vertex_count": 72,
+      "triangle_count": 140,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "l_patella.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 72,
+          "triangle_count": 140
+        }
+      ]
+    },
+    {
+      "body": "talus_l",
+      "vertex_count": 99,
+      "triangle_count": 194,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "l_talus.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 99,
+          "triangle_count": 194
+        }
+      ]
+    },
+    {
+      "body": "calcn_l",
+      "vertex_count": 1000,
+      "triangle_count": 1955,
+      "winding_agreement": 0.998465,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "l_foot.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 1000,
+          "triangle_count": 1955
+        }
+      ]
+    },
+    {
+      "body": "toes_l",
+      "vertex_count": 958,
+      "triangle_count": 1860,
+      "winding_agreement": 0.991935,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "l_bofoot.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 958,
+          "triangle_count": 1860
+        }
+      ]
+    },
+    {
+      "body": "torso",
+      "vertex_count": 15089,
+      "triangle_count": 29951,
+      "winding_agreement": 0.98344,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "hat_spine.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 5434,
+          "triangle_count": 10738
+        },
+        {
+          "mesh_file": "hat_jaw.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 1459,
+          "triangle_count": 2916
+        },
+        {
+          "mesh_file": "hat_skull.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 3305,
+          "triangle_count": 6617
+        },
+        {
+          "mesh_file": "hat_ribs_scap.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 4891,
+          "triangle_count": 9680
+        }
+      ]
+    },
+    {
+      "body": "humerus_r",
+      "vertex_count": 340,
+      "triangle_count": 676,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "humerus_rv.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 340,
+          "triangle_count": 676
+        }
+      ]
+    },
+    {
+      "body": "ulna_r",
+      "vertex_count": 198,
+      "triangle_count": 392,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "ulna_rv.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 198,
+          "triangle_count": 392
+        }
+      ]
+    },
+    {
+      "body": "radius_r",
+      "vertex_count": 194,
+      "triangle_count": 384,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "radius_rv.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 194,
+          "triangle_count": 384
+        }
+      ]
+    },
+    {
+      "body": "hand_r",
+      "vertex_count": 4150,
+      "triangle_count": 8199,
+      "winding_agreement": 0.998902,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "pisiform_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 34,
+          "triangle_count": 64
+        },
+        {
+          "mesh_file": "lunate_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 68,
+          "triangle_count": 132
+        },
+        {
+          "mesh_file": "scaphoid_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 73,
+          "triangle_count": 142
+        },
+        {
+          "mesh_file": "triquetrum_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 83,
+          "triangle_count": 162
+        },
+        {
+          "mesh_file": "hamate_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 76,
+          "triangle_count": 148
+        },
+        {
+          "mesh_file": "capitate_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 90,
+          "triangle_count": 176
+        },
+        {
+          "mesh_file": "trapezoid_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 65,
+          "triangle_count": 126
+        },
+        {
+          "mesh_file": "trapezium_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 105,
+          "triangle_count": 206
+        },
+        {
+          "mesh_file": "metacarpal2_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 227,
+          "triangle_count": 448
+        },
+        {
+          "mesh_file": "index_proximal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 116,
+          "triangle_count": 227
+        },
+        {
+          "mesh_file": "index_medial_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 134,
+          "triangle_count": 264
+        },
+        {
+          "mesh_file": "index_distal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 127,
+          "triangle_count": 250
+        },
+        {
+          "mesh_file": "metacarpal3_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 320,
+          "triangle_count": 636
+        },
+        {
+          "mesh_file": "middle_proximal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 133,
+          "triangle_count": 262
+        },
+        {
+          "mesh_file": "middle_medial_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 166,
+          "triangle_count": 328
+        },
+        {
+          "mesh_file": "middle_distal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 142,
+          "triangle_count": 280
+        },
+        {
+          "mesh_file": "metacarpal4_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 347,
+          "triangle_count": 694
+        },
+        {
+          "mesh_file": "ring_proximal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 132,
+          "triangle_count": 260
+        },
+        {
+          "mesh_file": "ring_medial_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 174,
+          "triangle_count": 344
+        },
+        {
+          "mesh_file": "ring_distal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 125,
+          "triangle_count": 246
+        },
+        {
+          "mesh_file": "metacarpal5_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 384,
+          "triangle_count": 768
+        },
+        {
+          "mesh_file": "little_proximal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 137,
+          "triangle_count": 270
+        },
+        {
+          "mesh_file": "little_medial_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 120,
+          "triangle_count": 236
+        },
+        {
+          "mesh_file": "little_distal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 159,
+          "triangle_count": 316
+        },
+        {
+          "mesh_file": "metacarpal1_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 296,
+          "triangle_count": 588
+        },
+        {
+          "mesh_file": "thumb_proximal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 143,
+          "triangle_count": 282
+        },
+        {
+          "mesh_file": "thumb_distal_rvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 174,
+          "triangle_count": 344
+        }
+      ]
+    },
+    {
+      "body": "humerus_l",
+      "vertex_count": 340,
+      "triangle_count": 676,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "humerus_lv.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 340,
+          "triangle_count": 676
+        }
+      ]
+    },
+    {
+      "body": "ulna_l",
+      "vertex_count": 198,
+      "triangle_count": 392,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "ulna_lv.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 198,
+          "triangle_count": 392
+        }
+      ]
+    },
+    {
+      "body": "radius_l",
+      "vertex_count": 194,
+      "triangle_count": 384,
+      "winding_agreement": 1.0,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "radius_lv.vtp",
+          "scale_factors": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertex_count": 194,
+          "triangle_count": 384
+        }
+      ]
+    },
+    {
+      "body": "hand_l",
+      "vertex_count": 4150,
+      "triangle_count": 8199,
+      "winding_agreement": 0.998902,
+      "winding_flipped": false,
+      "meshes": [
+        {
+          "mesh_file": "pisiform_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 34,
+          "triangle_count": 64
+        },
+        {
+          "mesh_file": "lunate_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 68,
+          "triangle_count": 132
+        },
+        {
+          "mesh_file": "scaphoid_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 73,
+          "triangle_count": 142
+        },
+        {
+          "mesh_file": "triquetrum_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 83,
+          "triangle_count": 162
+        },
+        {
+          "mesh_file": "hamate_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 76,
+          "triangle_count": 148
+        },
+        {
+          "mesh_file": "capitate_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 90,
+          "triangle_count": 176
+        },
+        {
+          "mesh_file": "trapezoid_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 65,
+          "triangle_count": 126
+        },
+        {
+          "mesh_file": "trapezium_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 105,
+          "triangle_count": 206
+        },
+        {
+          "mesh_file": "metacarpal2_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 227,
+          "triangle_count": 448
+        },
+        {
+          "mesh_file": "index_proximal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 116,
+          "triangle_count": 227
+        },
+        {
+          "mesh_file": "index_medial_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 134,
+          "triangle_count": 264
+        },
+        {
+          "mesh_file": "index_distal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 127,
+          "triangle_count": 250
+        },
+        {
+          "mesh_file": "metacarpal3_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 320,
+          "triangle_count": 636
+        },
+        {
+          "mesh_file": "middle_proximal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 133,
+          "triangle_count": 262
+        },
+        {
+          "mesh_file": "middle_medial_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 166,
+          "triangle_count": 328
+        },
+        {
+          "mesh_file": "middle_distal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 142,
+          "triangle_count": 280
+        },
+        {
+          "mesh_file": "metacarpal4_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 347,
+          "triangle_count": 694
+        },
+        {
+          "mesh_file": "ring_proximal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 132,
+          "triangle_count": 260
+        },
+        {
+          "mesh_file": "ring_medial_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 174,
+          "triangle_count": 344
+        },
+        {
+          "mesh_file": "ring_distal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 125,
+          "triangle_count": 246
+        },
+        {
+          "mesh_file": "metacarpal5_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 384,
+          "triangle_count": 768
+        },
+        {
+          "mesh_file": "little_proximal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 137,
+          "triangle_count": 270
+        },
+        {
+          "mesh_file": "little_medial_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 120,
+          "triangle_count": 236
+        },
+        {
+          "mesh_file": "little_distal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 159,
+          "triangle_count": 316
+        },
+        {
+          "mesh_file": "metacarpal1_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 296,
+          "triangle_count": 588
+        },
+        {
+          "mesh_file": "thumb_proximal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 143,
+          "triangle_count": 282
+        },
+        {
+          "mesh_file": "thumb_distal_lvs.vtp",
+          "scale_factors": [
+            0.85,
+            0.85,
+            0.85
+          ],
+          "vertex_count": 174,
+          "triangle_count": 344
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "body_count": 22,
+    "mesh_count": 81,
+    "vertex_count": 31075,
+    "triangle_count": 61499
+  },
+  "glb": {
+    "path": "public/models/analytical/catelli-v4-skeleton.glb",
+    "sha256": "00a8d37b5a3d100dfedd697a0603b4852902397659c47b43afa6ae274b13ef89",
+    "byte_size": 1133320
+  }
+}

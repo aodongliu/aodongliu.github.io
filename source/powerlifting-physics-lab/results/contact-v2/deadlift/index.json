@@ -1,0 +1,121 @@
+{
+  "schema": "powerlifting-physics-lab/simulation-index",
+  "schema_version": "0.1.0",
+  "lift": "deadlift",
+  "variants": [
+    {
+      "id": "conventional-100kg",
+      "file": "conventional-100kg.json",
+      "label": "Conventional deadlift, 100 kg \u00b7 contact v2 experiment",
+      "result_class": "simulation",
+      "bar_mass_kg": 100.0,
+      "bar_placement": "hands",
+      "duration_s": 4.4,
+      "frame_count": 441,
+      "sha256": "fffe550535b5ced80aa4fdcba13560afdbb5fbbd44e066ff20c7b62943c368d0",
+      "generated_at": "2026-09-22T05:27:12+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 2534.5890766906027,
+        "peak_moments_nm": {
+          "hip_extension_r": 426.7642435850399,
+          "hip_extension_l": 426.7642435850399,
+          "knee_extension_r": 22.40867145144569,
+          "knee_extension_l": 22.408671451716444,
+          "ankle_plantarflexion_r": 82.51673575270983,
+          "ankle_plantarflexion_l": 82.51673575245869,
+          "lumbar_extension": 634.9711944295002,
+          "shoulder_extension_r": 36.15355566117044
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 123.504716013973,
+          "knee_angle_r": 79.99993643708017,
+          "ankle_angle_r": 10.497936498169741,
+          "pelvis_tilt": -54.42009081221372,
+          "lumbar_extension": -18.140030270737906
+        },
+        "trunk_inclination_at_bottom_deg": 72.56012108295162,
+        "start_knee_flexion_deg": 80.0,
+        "start_bar_x_m": 0.03703215594354283,
+        "min_bar_shin_clearance_m": 0.014752704549038279,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "conventional-150kg",
+      "file": "conventional-150kg.json",
+      "label": "Conventional deadlift, 150 kg \u00b7 contact v2 experiment",
+      "result_class": "simulation",
+      "bar_mass_kg": 150.0,
+      "bar_placement": "hands",
+      "duration_s": 4.4,
+      "frame_count": 441,
+      "sha256": "ca1093f8e839d320f51d2912e0790325a871127ef53fbf35c8bb4d6672631df9",
+      "generated_at": "2026-09-22T05:26:30+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 3299.127304908965,
+        "peak_moments_nm": {
+          "hip_extension_r": 583.1774229653321,
+          "hip_extension_l": 583.1774229653321,
+          "knee_extension_r": 16.25895405950089,
+          "knee_extension_l": 16.25895405984841,
+          "ankle_plantarflexion_r": 120.54262943850767,
+          "ankle_plantarflexion_l": 120.5426294381842,
+          "lumbar_extension": 870.1607716724499,
+          "shoulder_extension_r": 53.62722454096583
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 123.504716013973,
+          "knee_angle_r": 79.99993643708017,
+          "ankle_angle_r": 10.497936498169741,
+          "pelvis_tilt": -54.42009081221372,
+          "lumbar_extension": -18.140030270737906
+        },
+        "trunk_inclination_at_bottom_deg": 72.56012108295162,
+        "start_knee_flexion_deg": 80.0,
+        "start_bar_x_m": 0.03703215594354283,
+        "min_bar_shin_clearance_m": 0.014752704549038279,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    },
+    {
+      "id": "conventional-200kg",
+      "file": "conventional-200kg.json",
+      "label": "Conventional deadlift, 200 kg \u00b7 contact v2 experiment",
+      "result_class": "simulation",
+      "bar_mass_kg": 200.0,
+      "bar_placement": "hands",
+      "duration_s": 4.4,
+      "frame_count": 441,
+      "sha256": "7041c09c5e80f7b9cbce8722e54783d77d0b445ab4ac087ce4c0ccbea9f757d6",
+      "generated_at": "2026-09-22T05:27:36+00:00",
+      "summary": {
+        "peak_vertical_grf_n": 4063.665533127326,
+        "peak_moments_nm": {
+          "hip_extension_r": 739.5906023456239,
+          "hip_extension_l": 739.5906023456239,
+          "knee_extension_r": 10.110250241863787,
+          "knee_extension_l": 10.110250242288421,
+          "ankle_plantarflexion_r": 159.12734594891526,
+          "ankle_plantarflexion_l": 159.12734594851972,
+          "lumbar_extension": 1105.3503489153995,
+          "shoulder_extension_r": 71.10089342076121
+        },
+        "angles_at_bottom_deg": {
+          "hip_flexion_r": 123.504716013973,
+          "knee_angle_r": 79.99993643708017,
+          "ankle_angle_r": 10.497936498169741,
+          "pelvis_tilt": -54.42009081221372,
+          "lumbar_extension": -18.140030270737906
+        },
+        "trunk_inclination_at_bottom_deg": 72.56012108295162,
+        "start_knee_flexion_deg": 80.0,
+        "start_bar_x_m": 0.03703215594354283,
+        "min_bar_shin_clearance_m": 0.014752704549038279,
+        "residual_pass": true,
+        "path_screen_pass": true
+      }
+    }
+  ]
+}
