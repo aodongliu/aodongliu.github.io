@@ -7,6 +7,13 @@ tags: [nba, data, basketball]
 categories:
   - Stranger Stats
 
+card_title: "The unexpected three-point kings"
+summary: "A trip through every franchise’s single-game three-point record."
+series_number: 1
+cover: /images/strangerStats01/cover.png
+cover_alt: "Marcus Smart, Robert Covington and Kelly Oubre Jr. in a three-panel basketball portrait."
+featured: true
+featured_order: 1
 ---
 
 What's the first thing that you think about when I mention these names: **Robert Covington, Marcus Smart, and Trevor Ariza, Kelly Oubre Jr., Danny Green, Wesley Matthews**?  

@@ -1,10 +1,17 @@
 ---
 title: "Stranger Stats #7: Out There Doing Cardio, 20 Minutes of NBA Basketball With Nothing to Show for It"
-date: 2026-06-29
+date: 2026-08-31
 comment: disqus
 tags: [nba, data, basketball]
 categories:
   - Stranger Stats
+card_title: "All cardio. No box score."
+summary: "Twenty minutes on an NBA court. Nothing in the five major stat columns."
+series_number: 7
+featured: true
+featured_order: 3
+cover: "/images/strangerStats07/cover.png"
+cover_alt: "Two people in Milwaukee Bucks workout gear using cardio machines."
 ---
 
 You ever watch a game and see a guy out there running around for 20+ minutes? Clapping his hands, calling for the ball, playing hard defense... then you check the box score and it's 0 points, 0 rebounds, 0 assists, 0 steals, 0 blocks? Just absolutely nothing in every column?

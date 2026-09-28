@@ -1,0 +1,3 @@
+<header class="article-header site-wrap"><h1><%= page.category ? page.category : page.tag ? '#' + page.tag : 'Writing' %></h1></header>
+<section class="site-wrap writing-list" aria-label="Articles"><% page.posts.each(function(post) { %><article class="writing-row"><time datetime="<%= date(post.date, 'YYYY-MM-DD') %>"><%= date(post.date, 'MMM D, YYYY') %></time><h2><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2><span aria-hidden="true">↗</span></article><% }); %></section>
+<% if (page.total > 1) { %><nav class="site-wrap pagination" aria-label="Pagination"><%- paginator({prev_text: '← Previous', next_text: 'Next →'}) %></nav><% } %>

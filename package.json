@@ -5,8 +5,13 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "deploy": "node tools/publish.cjs",
+    "server": "hexo server",
+    "preview": "node tools/preview.cjs server",
+    "preview:build": "node tools/preview.cjs build",
+    "check:content": "node tools/check-content.cjs",
+    "check:preview": "node tools/check-preview.cjs",
+    "check:production": "node tools/check-preview.cjs public --production"
   },
   "hexo": {
     "version": "7.1.1"

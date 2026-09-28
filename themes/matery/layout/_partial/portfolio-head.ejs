@@ -1,0 +1,19 @@
+<% const cleanDescription = strip_html(page.description || page.summary || (page.paper && page.paper.summary) || config.description).slice(0, 220); const canonicalPath = (page.path || '').replace(/index\.html$/, ''); const canonicalUrl = new URL(canonicalPath, config.url).href; %>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= page.title ? page.title + ' | ' : '' %>Aodong Liu</title>
+<meta name="description" content="<%= cleanDescription %>">
+<% if (config.portfolio_preview) { %><meta name="robots" content="noindex, nofollow"><% } %>
+<link rel="canonical" href="<%= canonicalUrl %>">
+<meta property="og:title" content="<%= page.title || 'Aodong Liu · Research & exploration' %>">
+<meta property="og:description" content="<%= cleanDescription %>">
+<meta property="og:url" content="<%= canonicalUrl %>">
+<meta property="og:type" content="<%= page.__post ? 'article' : 'website' %>">
+<meta property="og:image" content="<%= new URL(page.cover || (page.paper && page.paper.image) || '/images/headshot_lincolnPark.png', config.url).href %>">
+<meta name="theme-color" content="#f3efe7">
+<link rel="icon" type="image/png" href="/images/al_logo.png">
+<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/article.css">
+</head>

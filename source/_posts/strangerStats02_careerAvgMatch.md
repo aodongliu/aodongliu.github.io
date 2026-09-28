@@ -6,6 +6,13 @@ tags: [nba, data, basketball]
 math: true
 categories:
   - Stranger Stats
+card_title: "The game LeBron has never played"
+summary: "Who has actually finished a game with their career-average stat line?"
+series_number: 2
+featured: false
+featured_order: 100
+cover: "/images/strangerStats02/cover.jpg"
+cover_alt: "Basketball player beneath a red cross over the stat line 27/7/7."
 ---
 
 ![LeBron James](https://cdn.nba.com/headshots/nba/latest/260x190/2544.png)

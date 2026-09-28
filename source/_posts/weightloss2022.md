@@ -1,4 +1,5 @@
 ---
+categories: [Training]
 title: My 2022 Weight Loss Journey
 date: 2025-8-20
 tags: [personal, fitness, weight loss, transformation]

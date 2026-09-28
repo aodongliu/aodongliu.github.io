@@ -1,0 +1,2 @@
+<header class="article-header site-wrap"><p class="eyebrow">Explore the writing</p><h1>Tags</h1></header>
+<div class="site-wrap topic-list"><% site.tags.sort('name').each(function(topic) { %><a href="<%- url_for(topic.path) %>"><%= topic.name %><span><%= topic.length %></span></a><% }); %></div>

@@ -1,0 +1,12 @@
+<% const statsPage = page.path.replace(/index\.html$/, '').replace(/\/$/, '') === 'strangerStats'; %>
+<% if (statsPage) { const statsPosts = ordered_stats_posts(); %>
+<header class="article-header site-wrap"><h1>Stranger Stats</h1><p class="article-intro">Unexpected NBA records. Unusual players. A closer look at what the numbers actually say.</p><p class="article-meta"><%= statsPosts.length %> published stories</p></header>
+<section class="site-wrap stats-grid" aria-label="Stranger Stats articles"><% statsPosts.forEach(function(post) { %><%- partial('_partial/stats-card', {post: post}) %><% }); %></section>
+<% } else { %>
+<header class="article-header site-wrap"><h1><%= page.title %></h1></header>
+<article class="article-body standalone-page site-wrap"><%- page.content %></article>
+<% } %>
+<% if (page.math || page.mathjax) { %>
+<script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}, options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+<% } %>

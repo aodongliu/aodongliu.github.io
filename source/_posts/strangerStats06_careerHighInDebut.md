@@ -6,6 +6,13 @@ tags: [nba, data, basketball]
 math: true
 categories:
   - Stranger Stats
+card_title: "New team. Career night."
+summary: "The players who set career highs in their team debuts."
+series_number: 6
+featured: false
+featured_order: 100
+cover: "/images/strangerStats06/cover.png"
+cover_alt: "A person in Atlanta Hawks gear beside the words Monster Debut."
 ---
 
 NBA trade deadline chaos always brings excitement around the league, and this past 2026 deadline was no exception.

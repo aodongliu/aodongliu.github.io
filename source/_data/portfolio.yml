@@ -1,0 +1,30 @@
+# Editorial settings for the Matery preview. See docs/content-authoring.md.
+homepage:
+  research_limit: 3
+  post_limit: 3
+stranger_stats:
+  # Shared existing series artwork, used only when a post has no cover.
+  default_cover: /images/strangerStats_chatgpt3.png
+  default_cover_alt: Stranger Stats series artwork
+
+# Public contact links restored from the original site's About configuration.
+contact_links:
+  - label: Email
+    url: mailto:aodongliu77@gmail.com
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/aodongliu/
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=P6BLL58AAAAJ&hl=en
+  - label: GitHub
+    url: https://github.com/aodongliu
+  - label: Instagram
+    url: https://www.instagram.com/adaaaaaaaaam777/
+  - label: WeChat
+    url: /images/wechatQR.jpg
+  - label: ORCID
+    url: https://orcid.org/0000-0003-2287-2216
+
+research:
+  # Landscape banner; crop is presentation-only in CSS.
+  banner_image: /images/north-cascades.jpg
+  banner_alt: Mountain slopes and autumn foliage in the North Cascades.

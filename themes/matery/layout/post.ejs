@@ -1,0 +1,16 @@
+<% const stats = page.categories && page.categories.toArray().some(c => c.name === 'Stranger Stats'); const training = page.categories && page.categories.toArray().some(c => c.name === 'Training'); const backPath = stats ? '/strangerStats/' : training ? '/training/' : '/archives/'; const backLabel = stats ? 'Stranger Stats' : training ? 'Training' : 'Writing'; const contents = String(page.toc) === 'false' ? '' : toc(page.content, {list_number: false}); %>
+<header class="article-header site-wrap">
+  <a class="eyebrow" href="<%- url_for(backPath) %>">← <%= backLabel %></a>
+  <h1><%= page.title %></h1>
+  <p class="article-meta"><time datetime="<%= date(page.date, 'YYYY-MM-DD') %>"><%= date(page.date, 'MMMM D, YYYY') %></time> · <%= config.author %></p>
+</header>
+<div class="article-layout site-wrap <%= contents ? '' : 'without-toc' %>">
+  <article class="article-body"><% if (page.cover) { %><figure class="post-cover"><img src="<%= page.cover %>" alt="<%= page.cover_alt || '' %>"></figure><% } %><%- page.content %>
+    <footer class="article-end"><a href="<%- url_for(backPath) %>">← More <%= backLabel %></a></footer>
+  </article>
+  <% if (contents) { %><aside class="article-toc"><nav aria-label="On this page"><p class="eyebrow">On this page</p><%- contents %></nav></aside><% } %>
+</div>
+<% if (page.math || page.mathjax) { %>
+<script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}, options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+<% } %>

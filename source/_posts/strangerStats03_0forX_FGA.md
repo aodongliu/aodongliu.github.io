@@ -6,6 +6,13 @@ tags: [nba, data, basketball]
 math: true
 categories:
   - Stranger Stats
+card_title: "Like father, like son. Unfortunately."
+summary: "A closer look at some unforgettable nights without a made field goal."
+series_number: 3
+featured: true
+featured_order: 2
+cover: "/images/strangerStats03/cover.png"
+cover_alt: "Two basketball players shooting, with 0/17 and 0/12 displayed below them."
 ---
 
 While watching Lakers vs. Bucks on the night of January 15, 2026, I witnessed two rough shooting lines unfold in real time: **Kevin Porter Jr.** went **0-for-8** for the Bucks, and **Gabe Vincent** finished **0-for-7** for the Lakers. Tough nights, no doubt.

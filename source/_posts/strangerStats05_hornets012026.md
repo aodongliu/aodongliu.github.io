@@ -6,6 +6,13 @@ tags: [nba, data, basketball]
 math: true
 categories:
   - Stranger Stats
+card_title: "A very different kind of Hornets season"
+summary: "Looking back at Charlotte’s historic January."
+series_number: 5
+featured: false
+featured_order: 100
+cover: "/images/strangerStats05/cover.png"
+cover_alt: "Four people in Charlotte basketball jerseys riding in a convertible with the city skyline behind them."
 ---
 
 

@@ -1,0 +1,7 @@
+<% const trainingPosts = site.posts.sort('date', -1).toArray().filter(post => post.categories.toArray().some(category => category.name === 'Training')); %>
+<header class="article-header site-wrap"><h1>Training</h1><p class="article-intro">Weight loss, strength training, and powerlifting.</p></header>
+<section class="site-wrap writing-list" aria-label="Training posts">
+  <% trainingPosts.forEach(function(post) { %>
+  <article class="writing-row"><time datetime="<%= date(post.date, 'YYYY-MM-DD') %>"><%= date(post.date, 'MMM D, YYYY') %></time><h2><a href="<%- url_for(post.path) %>"><%= post.card_title || post.title %></a></h2><span aria-hidden="true">↗</span></article>
+  <% }); %>
+</section>

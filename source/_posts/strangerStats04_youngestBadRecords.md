@@ -6,6 +6,13 @@ tags: [nba, data, basketball]
 math: true
 categories:
   - Stranger Stats
+card_title: "Too young for the record books?"
+summary: "The youngest players to set records they probably didn’t want."
+series_number: 4
+featured: false
+featured_order: 100
+cover: "/images/strangerStats04/cover.png"
+cover_alt: "A toddler holding a basketball on an outdoor court."
 ---
 
 Earlier this month, on **January 7th, 2026**, **Ayden Heaven** of **Manchester United** scored an **own goal** off an unfortunate deflection against Burnley, making him the **youngest ever** to score an Premier League own goal in Manchester United History, at **19 years and 107 days old**.
