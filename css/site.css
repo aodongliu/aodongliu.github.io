@@ -115,3 +115,12 @@ h1,h2,h3{font-weight:600;letter-spacing:-.035em}
    around a cover that has not been converted yet. Paper figures sit on white inside it. */
 .stats-thumb,.research-card .publication-visual{aspect-ratio:13/7}
 .stats-thumb{background:#1d1b19}
+/* Paper pages: plain-language overview between the publication card and the abstract. */
+.paper-overview{max-width:1000px;margin-top:48px;padding-top:34px;border-top:1px solid var(--line)}.paper-overview>h2{font-size:26px;margin-bottom:22px}
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.overview-grid>div{background:var(--panel);border-radius:12px;padding:20px 22px;box-shadow:0 1px 2px #3b2c1e0f,0 6px 20px #3b2c1e0d}
+:root[data-theme=dark] .overview-grid>div{box-shadow:0 1px 2px #0003,0 6px 20px #0002}
+.overview-grid h3{font:600 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.overview-grid p{font-size:15.5px;line-height:1.7}
+@media(max-width:900px){.overview-grid{grid-template-columns:1fr}}
+

@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta name="google-site-verification" content="a5flzZpVfwVDvjWjzh97peCzB-SgDucm7psmiDh6qxU">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Solving for electrons and protons together | Aodong Liu</title>
+<title>Solving for electrons and protons at the same time | Aodong Liu</title>
 <meta name="description" content="Electrons and protons influence one another, making their joint quantum description expensive to converge. Optimizing both together reduces the computational work compared with updating them in separate steps.">
 
 <link rel="canonical" href="https://aodongliu.github.io/research/simultaneous-neo-optimization/">
-<meta property="og:title" content="Solving for electrons and protons together">
+<meta property="og:title" content="Solving for electrons and protons at the same time">
 <meta property="og:site_name" content="Aodong Liu">
 <meta property="og:description" content="Electrons and protons influence one another, making their joint quantum description expensive to converge. Optimizing both together reduces the computational work compared with updating them in separate steps.">
 <meta property="og:url" content="https://aodongliu.github.io/research/simultaneous-neo-optimization/">
@@ -52,7 +52,15 @@
   <ol id="search-dialog-results" class="search-results"></ol>
 </dialog>
 <main id="main" class="site-main">
-<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Numerical optimization / 2022</p><h1>Solving for electrons and protons together</h1><p class="paper-summary">Electrons and protons influence one another, making their joint quantum description expensive to converge. Optimizing both together reduces the computational work compared with updating them in separate steps.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/simultaneous-neo-optimization.png" aria-label="View full-size image for Simultaneous Optimization of Nuclear–Electronic Orbitals"><img src="/portfolio/papers/simultaneous-neo-optimization.png" alt="Computational cost of simultaneous and stepwise orbital optimization for four water clusters."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Simultaneous Optimization of Nuclear–Electronic Orbitals</h2><p class="paper-authors">Aodong Liu, Mathew Chow, Andrew Wildman, Michael J. Frisch, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>The Journal of Physical Chemistry A</em><br>126 (39), 7033–7039 (2022)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jpca.2c05172">Read the published paper</a><p class="doi">DOI: 10.1021/acs.jpca.2c05172</p></section></div>
+<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Numerical optimization / 2022</p><h1>Solving for electrons and protons at the same time</h1><p class="paper-summary">Electrons and protons influence one another, making their joint quantum description expensive to converge. Optimizing both together reduces the computational work compared with updating them in separate steps.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/simultaneous-neo-optimization.png" aria-label="View full-size image for Simultaneous Optimization of Nuclear–Electronic Orbitals"><img src="/portfolio/papers/simultaneous-neo-optimization.png" alt="Computational cost of simultaneous and stepwise orbital optimization for four water clusters."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Simultaneous Optimization of Nuclear–Electronic Orbitals</h2><p class="paper-authors">Aodong Liu, Mathew Chow, Andrew Wildman, Michael J. Frisch, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>The Journal of Physical Chemistry A</em><br>126 (39), 7033–7039 (2022)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jpca.2c05172">Read the published paper</a><p class="doi">DOI: 10.1021/acs.jpca.2c05172</p></section></div>
+
+<section class="paper-overview" aria-labelledby="overview-heading">
+  <h2 id="overview-heading">Overview</h2>
+  <div class="overview-grid">
+    <div><h3>The problem</h3><p>Treating protons as quantum particles captures effects such as zero-point energy and tunneling, but the electrons and protons then depend on each other. Finding a converged solution is already demanding for electrons alone and harder when they are coupled to quantum protons.</p></div><div><h3>The approach</h3><p>Instead of alternating between updating the electrons and the protons, this method converges both at once, using a standard convergence accelerator (direct inversion in the iterative subspace) on the combined problem.</p></div><div><h3>What it found</h3><p>Benchmark studies show that solving for both together can significantly reduce the computational cost compared with the conventional step-by-step approach.</p></div>
+  </div>
+</section>
+
 
 <section class="paper-abstract article-body" aria-labelledby="abstract-heading">
   <h2 id="abstract-heading">Abstract</h2>

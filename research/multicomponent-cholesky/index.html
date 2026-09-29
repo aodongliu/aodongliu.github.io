@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta name="google-site-verification" content="a5flzZpVfwVDvjWjzh97peCzB-SgDucm7psmiDh6qxU">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reducing the memory cost of quantum chemistry | Aodong Liu</title>
+<title>Shrinking the memory that quantum chemistry needs | Aodong Liu</title>
 <meta name="description" content="Quantum calculations can spend enormous amounts of memory storing interactions between particles. This work adapts matrix factorization to electron–proton calculations and checks its accuracy and computational cost on wa">
 
 <link rel="canonical" href="https://aodongliu.github.io/research/multicomponent-cholesky/">
-<meta property="og:title" content="Reducing the memory cost of quantum chemistry">
+<meta property="og:title" content="Shrinking the memory that quantum chemistry needs">
 <meta property="og:site_name" content="Aodong Liu">
 <meta property="og:description" content="Quantum calculations can spend enormous amounts of memory storing interactions between particles. This work adapts matrix factorization to electron–proton calculations and checks its accuracy and computational cost on wa">
 <meta property="og:url" content="https://aodongliu.github.io/research/multicomponent-cholesky/">
@@ -52,7 +52,15 @@
   <ol id="search-dialog-results" class="search-results"></ol>
 </dialog>
 <main id="main" class="site-main">
-<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Numerical algorithms / 2023</p><h1>Reducing the memory cost of quantum chemistry</h1><p class="paper-summary">Quantum calculations can spend enormous amounts of memory storing interactions between particles. This work adapts matrix factorization to electron–proton calculations and checks its accuracy and computational cost on water clusters.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/multicomponent-cholesky.png" aria-label="View full-size image for Multicomponent Cholesky Decomposition: Application to Nuclear–Electronic Orbital Theory"><img src="/portfolio/papers/multicomponent-cholesky.png" alt="Electronic and nuclear resolution-of-identity expressions surrounding a water cluster."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Multicomponent Cholesky Decomposition: Application to Nuclear–Electronic Orbital Theory</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>Journal of Chemical Theory and Computation</em><br>19 (18), 6255–6262 (2023)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jctc.3c00686">Read the published paper</a><p class="doi">DOI: 10.1021/acs.jctc.3c00686</p></section></div>
+<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Numerical algorithms / 2023</p><h1>Shrinking the memory that quantum chemistry needs</h1><p class="paper-summary">Quantum calculations can spend enormous amounts of memory storing interactions between particles. This work adapts matrix factorization to electron–proton calculations and checks its accuracy and computational cost on water clusters.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/multicomponent-cholesky.png" aria-label="View full-size image for Multicomponent Cholesky Decomposition: Application to Nuclear–Electronic Orbital Theory"><img src="/portfolio/papers/multicomponent-cholesky.png" alt="Electronic and nuclear resolution-of-identity expressions surrounding a water cluster."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Multicomponent Cholesky Decomposition: Application to Nuclear–Electronic Orbital Theory</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>Journal of Chemical Theory and Computation</em><br>19 (18), 6255–6262 (2023)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jctc.3c00686">Read the published paper</a><p class="doi">DOI: 10.1021/acs.jctc.3c00686</p></section></div>
+
+<section class="paper-overview" aria-labelledby="overview-heading">
+  <h2 id="overview-heading">Overview</h2>
+  <div class="overview-grid">
+    <div><h3>The problem</h3><p>Quantum chemistry calculations store huge tables of interactions between pairs of particles. Cholesky decomposition is a standard way to compress them, but treating protons as quantum particles adds mixed electron–proton interactions that break the symmetry the standard approach relies on.</p></div><div><h3>The approach</h3><p>This work proposes several ways to extend Cholesky decomposition to calculations that treat electrons and protons quantum mechanically together, and analyzes the error that each part of the compression introduces.</p></div><div><h3>What it found</h3><p>Benchmarks on water clusters, up to 27 water molecules with all 54 protons treated quantum mechanically, show the accuracy and computational cost of the approach.</p></div>
+  </div>
+</section>
+
 
 <section class="paper-abstract article-body" aria-labelledby="abstract-heading">
   <h2 id="abstract-heading">Abstract</h2>

@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta name="google-site-verification" content="a5flzZpVfwVDvjWjzh97peCzB-SgDucm7psmiDh6qxU">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Making quantum simulations fit across many computers | Aodong Liu</title>
+<title>Spreading huge quantum calculations across many computers | Aodong Liu</title>
 <meta name="description" content="Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication ">
 
 <link rel="canonical" href="https://aodongliu.github.io/research/neo-at-scale/">
-<meta property="og:title" content="Making quantum simulations fit across many computers">
+<meta property="og:title" content="Spreading huge quantum calculations across many computers">
 <meta property="og:site_name" content="Aodong Liu">
 <meta property="og:description" content="Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication ">
 <meta property="og:url" content="https://aodongliu.github.io/research/neo-at-scale/">
@@ -52,7 +52,15 @@
   <ol id="search-dialog-results" class="search-results"></ol>
 </dialog>
 <main id="main" class="site-main">
-<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Distributed computing / 2026</p><h1>Making quantum simulations fit across many computers</h1><p class="paper-summary">Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication costs.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/neo-at-scale.jpg" aria-label="View full-size image for Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach"><img src="/portfolio/papers/neo-at-scale.jpg" alt="Distributed Cholesky tensors across MPI ranks and a water cluster containing 500 quantum protons."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Eleftherios Lambros, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>APL Computational Physics</em><br>2, 026109 (2026)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1063/5.0318199">Read the published paper</a><p class="doi">DOI: 10.1063/5.0318199</p></section></div>
+<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Distributed computing / 2026</p><h1>Spreading huge quantum calculations across many computers</h1><p class="paper-summary">Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication costs.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/neo-at-scale.jpg" aria-label="View full-size image for Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach"><img src="/portfolio/papers/neo-at-scale.jpg" alt="Distributed Cholesky tensors across MPI ranks and a water cluster containing 500 quantum protons."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Eleftherios Lambros, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>APL Computational Physics</em><br>2, 026109 (2026)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1063/5.0318199">Read the published paper</a><p class="doi">DOI: 10.1063/5.0318199</p></section></div>
+
+<section class="paper-overview" aria-labelledby="overview-heading">
+  <h2 id="overview-heading">Overview</h2>
+  <div class="overview-grid">
+    <div><h3>The problem</h3><p>Protons are light enough to behave as quantum particles, not just points. Methods that treat protons quantum mechanically alongside the electrons must store an enormous number of particle–particle interactions, and even after compression that data can outgrow a single computer&#39;s memory.</p></div><div><h3>The approach</h3><p>This work spreads the compressed data (Cholesky vectors) across many processors in two stages. Each kind of data is arranged in the layout that lets the key step run without processors constantly exchanging data.</p></div><div><h3>What it found</h3><p>On water clusters with every proton treated quantum mechanically, the method scales well and keeps the work evenly balanced. One key step for 250 water molecules with 500 quantum protons, the largest calculation of this kind reported, took about 96 seconds on 104 processes. Full calculations on clusters of up to 100 water molecules give a binding energy that extrapolates to a value in excellent agreement with water&#39;s measured vaporization enthalpy.</p></div>
+  </div>
+</section>
+
 
 <section class="paper-abstract article-body" aria-labelledby="abstract-heading">
   <h2 id="abstract-heading">Abstract</h2>
