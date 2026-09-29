@@ -2,17 +2,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><%= page.title ? page.title + ' | ' : '' %>Aodong Liu</title>
+<title><%= page.title ? page.title + ' | ' + config.title : config.title + ' | ' + config.subtitle %></title>
 <meta name="description" content="<%= cleanDescription %>">
 <% if (config.portfolio_preview) { %><meta name="robots" content="noindex, nofollow"><% } %>
 <link rel="canonical" href="<%= canonicalUrl %>">
-<meta property="og:title" content="<%= page.title || 'Aodong Liu · Research & exploration' %>">
+<meta property="og:title" content="<%= page.title || config.title + ' | ' + config.subtitle %>">
+<meta property="og:site_name" content="<%= config.title %>">
 <meta property="og:description" content="<%= cleanDescription %>">
 <meta property="og:url" content="<%= canonicalUrl %>">
 <meta property="og:type" content="<%= page.__post ? 'article' : 'website' %>">
 <meta property="og:image" content="<%= new URL(page.cover || (page.paper && page.paper.image) || '/images/headshot_lincolnPark.png', config.url).href %>">
 <meta name="theme-color" content="#f3efe7">
 <link rel="icon" type="image/png" href="/images/al_logo.png">
+<% if (!page.path || page.path === 'index.html') { %>
+<script type="application/ld+json"><%- JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:config.title,url:config.url}).replace(/</g, '\\u003c') %></script>
+<% } %>
 <script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">

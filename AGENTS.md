@@ -42,3 +42,7 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
   Paper images themselves open full-size; do not add source/full-size caption links.
 - Preserve the original logo/favicon, color portrait, 2020–2026 PhD dates, all contact
   links and the CV preview/download. Footer: `Hexo · Matery`.
+
+- Stranger Stats cards use the exact Markdown `title`, with no summary/subheading. Remove all diagonal arrows from website UI, including navigation, banners and contact links.
+
+Homepage exception: Stranger Stats cards omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged; collection and article titles retain the full title.

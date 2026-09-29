@@ -37,6 +37,7 @@ for (const file of htmlFiles) {
   if (exportRoots.some(dir => relative.startsWith(dir + '/'))) continue; // Independently built apps retain their own document metadata.
   check(production ? !doc.noindex : doc.noindex, `${route}: incorrect robots policy for ${production ? 'production' : 'preview'}`);
   check(!/author[- ]supplied|placeholder|TODO/i.test(doc.html.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<!--[^]*?-->/g, '')), `${route}: internal editorial label leaked into output`);
+  check(!/[↗↖↘↙]/.test(doc.html), `${route}: diagonal arrow in website UI`);
   check(doc.canonicals.length === 1, `${route}: expected one canonical`);
   check(doc.canonicals[0] === 'https://aodongliu.github.io' + route, `${route}: incorrect canonical ${doc.canonicals[0]}`);
   check(!/{%\s*htmlblock/.test(doc.html), `${route}: unresolved HTML block tag`);
@@ -53,6 +54,10 @@ for (const doc of documents.values()) for (const href of doc.links) {
 }
 const papers = JSON.parse(fs.readFileSync(path.join(root, 'source/_data/research.json'), 'utf8')).papers;
 for (const paper of papers) check(fs.existsSync(path.join(output, 'research', paper.id, 'index.html')), `Missing research page ${paper.id}`);
+const sitemap = fs.readFileSync(path.join(output, 'sitemap.xml'), 'utf8');
+for (const route of ['research/', ...papers.map(paper => `research/${paper.id}/`)]) {
+  check(sitemap.includes(`<loc>${new URL(route, config.url).href}</loc>`), `Research URL missing from sitemap: ${route}`);
+}
 const stats = JSON.parse(fs.readFileSync(path.join(output, 'stranger-stats-posts.json'), 'utf8'));
 const sourcePosts = walk(path.join(root, 'source/_posts')).filter(file => file.endsWith('.md')).map(file => {
   const text = fs.readFileSync(file, 'utf8');
@@ -60,6 +65,25 @@ const sourcePosts = walk(path.join(root, 'source/_posts')).filter(file => file.e
   return { ...yaml.load(match[1]), body: text.slice(match[0].length) };
 });
 const expectedStats = sourcePosts.filter(post => post.published !== false && [].concat(post.categories || []).includes('Stranger Stats'));
+for (const doc of documents.values()) {
+  let card = false, heading = false, title = '';
+  const parser = new Parser({
+    onopentag(name, attrs) {
+      if (name === 'article' && (attrs.class || '').split(' ').includes('stats-card')) card = true;
+      if (card && name === 'h3') { heading = true; title = ''; }
+      if (card && name === 'p') check(false, `${doc.route}: Stranger Stats card subtitle`);
+    },
+    ontext(text) { if (heading) title += text; },
+    onclosetag(name) {
+      if (name === 'h3' && heading) {
+        check(expectedStats.some(post => (doc.route === '/' ? post.title.replace(/^Stranger Stats\s*#\d+:\s*/i, '') : post.title) === title), `${doc.route}: card title differs from Markdown: ${title}`);
+        heading = false;
+      }
+      if (name === 'article') card = false;
+    }
+  });
+  parser.write(doc.html); parser.end();
+}
 check(stats.length === expectedStats.length, `Expected ${expectedStats.length} Stranger Stats from source, found ${stats.length}`);
 for (const post of stats) check(fs.existsSync(path.join(output, post.path, 'index.html')) || fs.existsSync(path.join(output, post.path)), `Missing post ${post.path}`);
 const searchable = [...documents.values()].map(d => d.html).join('\n') + JSON.stringify(stats) + fs.readFileSync(path.join(output, 'sitemap.xml'), 'utf8');

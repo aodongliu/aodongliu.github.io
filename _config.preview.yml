@@ -1,7 +1,5 @@
 # Local preview: same Matery theme, isolated output, noindex and deployment disabled.
 theme: matery
-title: Aodong Liu
-description: Computational chemistry, quantum dynamics, and data stories. Research and independent work by Aodong Liu.
 public_dir: .preview/public
 render_drafts: false
 portfolio_preview: true

@@ -25,8 +25,8 @@ hexo.extend.helper.register('post_card', function (post) {
   const categoryNames = post.categories?.toArray?.().map(category => category.name) || [];
   return {
     number: stats ? post.series_number || (post.title.match(/#(\d+)/) || [])[1] || '' : '',
-    title: post.card_title || post.title,
-    summary: post.summary || this.strip_html(post.excerpt || '').trim().slice(0, 180),
+    title: stats ? post.title : post.card_title || post.title,
+    summary: stats ? '' : post.summary || this.strip_html(post.excerpt || '').trim().slice(0, 180),
     cover: post.cover || (stats ? defaults.default_cover : '') || '',
     cover_alt: post.cover_alt || (stats ? defaults.default_cover_alt : '') || '',
     label: stats ? 'Stranger Stats' : categoryNames[0] || 'Writing',
@@ -43,4 +43,18 @@ hexo.extend.filter.register('after_generate', function () {
   for (const route of hexo.route.list()) {
     if (/^(medias\/|libs\/|css\/|js\/)/.test(route) && !/^(css\/(site|article)\.css|js\/(site|article)\.js)$/.test(route)) hexo.route.remove(route);
   }
+});
+
+// The stock sitemap only sees posts/pages, not generated research routes.
+hexo.extend.filter.register('after_generate', async function () {
+  const stream = hexo.route.get('sitemap.xml');
+  if (!stream) return;
+  let xml = '';
+  for await (const chunk of stream) xml += chunk.toString();
+  const escapeXml = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const routes = hexo.route.list().filter(route => /^research\/(?:[^/]+\/)?index\.html$/.test(route));
+  const entries = routes.map(route => escapeXml(new URL(route.replace(/index\.html$/, ''), hexo.config.url).href))
+    .filter(url => !xml.includes(`<loc>${url}</loc>`))
+    .map(url => `  <url><loc>${url}</loc></url>`).join('\n');
+  hexo.route.set('sitemap.xml', xml.replace('</urlset>', entries + '\n</urlset>'));
 });

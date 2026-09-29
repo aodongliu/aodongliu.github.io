@@ -12,14 +12,14 @@
       <a href="/strangerStats/" <%- page.path && page.path.startsWith('strangerStats/') ? 'aria-current="page"' : '' %>>Stranger Stats</a>
       <a href="/training/" <%- page.path && page.path.startsWith('training/') ? 'aria-current="page"' : '' %>>Training</a>
       <a href="/about/" <%- page.path && page.path.startsWith('about/') ? 'aria-current="page"' : '' %>>About</a>
-      <a class="nav-cv" href="/cv/">CV <span aria-hidden="true">↗</span></a>
+      <a class="nav-cv" href="/cv/">CV </a>
     </nav>
     <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
   </div>
 </header>
 <main id="main" class="site-main"><%- body %></main>
 <footer class="site-footer site-wrap">
-  <nav class="contact-links" aria-label="Contact and profiles"><% (site.data.portfolio.contact_links || []).forEach(link => { %><a href="<%= link.url %>"><%= link.label %> ↗</a><% }); %></nav>
+  <nav class="contact-links" aria-label="Contact and profiles"><% (site.data.portfolio.contact_links || []).forEach(link => { %><a href="<%= link.url %>"><%= link.label %></a><% }); %></nav>
   <div class="footer-bottom"><span>© <%= new Date().getFullYear() %> Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
 </footer>
 <script src="/js/site.js" defer></script>

@@ -1,6 +1,6 @@
 # Adding and featuring content
 
-Current rules, September 28, 2026. This is the shared handbook for Aodong and future agents.
+Current rules, September 29, 2026. This is the shared handbook for Aodong and future agents.
 Update it when behavior changes. The customized Matery theme is selected in `_config.yml`
 for production. The isolated preview uses the same theme and content with local URLs and
 `noindex`; building or editing does not itself deploy.
@@ -42,7 +42,6 @@ categories:
 tags: [nba, data, basketball]
 comment: disqus
 series_number: 16
-card_title: "A short, accurate card headline"
 summary: "One or two sentences explaining the question and why a reader might care."
 cover: ""
 cover_alt: ""
@@ -82,8 +81,8 @@ may need a server restart. Ordinary post metadata changes do not.
 | `title` | Full article title. Required. |
 | `date` | Actual publication date. Required for posts. Keep it stable after publication. |
 | `categories` | Exact `Stranger Stats` membership adds the article to that collection. |
-| `card_title` | Optional shorter headline for cards; falls back to `title`. |
-| `summary` | Plain-text card description; falls back to a stripped excerpt, then is omitted. Recommended for new posts. |
+| `card_title` | Optional shorter headline for other categories. Stranger Stats always uses the exact Markdown `title`. |
+| `summary` | Description metadata; can appear on other category cards. Stranger Stats cards never display summaries or subtitles. |
 | `cover` | Optional local `/images/...` path or HTTPS image URL. Stranger Stats falls back to its existing series artwork; other posts show no image if absent. |
 | `cover_alt` | Describe the meaningful image content. Required when specifying `cover`. |
 | `series_number` | Positive integer for Stranger Stats; legacy titles containing `#N` still supply a fallback. |
@@ -187,7 +186,7 @@ grayscale redrawings or AI substitutes.
   infer contributions from author position or invent benchmarks, capabilities or results.
 - Stranger Stats should sound conversational, curious and succinct. Posts #1–#7 are
   the voice reference. Bold key names and numbers. No em-dash punchlines or hype.
-- A card headline can be shorter than the full title but must describe the same article.
+- Stranger Stats cards use the exact Markdown title with no summary/subheading. Other category card headlines can be shorter but must describe the same article.
   Write one or two original summary sentences, roughly 20–45 words. Do not paste abstracts.
 - Use `##`/`###` headings for a readable article TOC. This navigation TOC is distinct
   from the graphical abstract/TOC image for a research paper.
@@ -284,8 +283,7 @@ Current homepage Stranger Stats pins are #1, #3, #7, in that order, selected by 
 author. Keep their `featured` and `featured_order` values unless instructed otherwise.
 Use the original `source/images/al_logo.png` for the brand and favicon. The light
 palette uses warm ivory surfaces; dark mode uses warm charcoal with softer taupe cards.
-The rejected cool grey-green/slate palette should not be restored. Do not overlay circular
-arrow badges on post images.
+The rejected cool grey-green/slate palette should not be restored. Do not use diagonal arrows anywhere in the website UI, including text links, navigation, banners and contact links.
 Preserve original content colors and the white backing required by scientific TOCs.
 
 ## Phone preview on the same Wi-Fi
@@ -417,3 +415,18 @@ Keep independently deployed apps at their existing direct URLs. Do not add them 
 public navigation or homepage sections until the author requests that promotion.
 Before deploying from another checkout, fetch/merge the latest source and confirm
 all existing static-app exports are retained. The generated branch is not an app source.
+
+## Search appearance
+
+Homepage search title uses `_config.yml` `title` and `subtitle`; description uses
+`description`. Keep these accurate to the current role and published work. Google does
+not use meta keywords for ranking. Page titles and descriptions can influence the search
+result, but Google may select different text. Homepage WebSite structured data identifies
+the site as Aodong Liu. The favicon link uses `/images/al_logo.png`; keep the legacy
+`themes/matery/source/favicon.png` identical when replacing it. Keep the icon URL stable.
+After an authorized deployment, use Search Console URL Inspection on the homepage and
+Request indexing. Google recrawling and favicon updates may take days to weeks.
+
+Homepage exception: Stranger Stats cards omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged; collection and article titles retain the full title.
+
+The theme supplements the standard sitemap with generated research routes. Keep all published paper pages in `sitemap.xml`; validators enforce this. Standalone app exports remain outside that discovery list.

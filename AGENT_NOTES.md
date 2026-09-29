@@ -60,3 +60,7 @@ provenance and acquisition notes out of public captions. The theme uses compact 
 sections, warm ivory light mode and warm charcoal/taupe dark mode, with no decorative
 slogans or circular arrow badges. Validate metadata, generated links and draft exclusion
 before handing work off; publishing requires explicit authorization.
+
+- Stranger Stats cards use the exact Markdown `title`, with no summary/subheading. Remove all diagonal arrows from website UI, including navigation, banners and contact links.
+
+Homepage exception: Stranger Stats cards omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged; collection and article titles retain the full title.
