@@ -139,7 +139,7 @@
 
   <url>
     <loc>https://aodongliu.github.io/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,70 +147,70 @@
   
   <url>
     <loc>https://aodongliu.github.io/tags/nba/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/data/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/basketball/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/computational-chemistry/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/high-performance-computing/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/quantum-dynamics/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/personal/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/fitness/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/weight-loss/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/transformation/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -219,16 +219,25 @@
   
   <url>
     <loc>https://aodongliu.github.io/categories/Stranger-Stats/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/categories/Training/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
+  <url><loc>https://aodongliu.github.io/research/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/two-spinor-ehrenfest/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/strong-field-ionization/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/neo-at-scale/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/neo-vibrational-spectroscopy/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/magnetic-quantum-dynamics/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/gpu-relativistic-dft/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/multicomponent-cholesky/</loc></url>
+  <url><loc>https://aodongliu.github.io/research/simultaneous-neo-optimization/</loc></url>
 </urlset>
