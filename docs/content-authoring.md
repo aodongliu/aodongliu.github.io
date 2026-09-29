@@ -91,7 +91,13 @@ may need a server restart. Ordinary post metadata changes do not.
 | `featured_order` | Positive integer. Smaller numbers appear first among featured items. Defaults to 100. Ignored when not featured. |
 
 Leave `cover` empty until you have the actual image. No fabricated placeholders. Keep
-post covers in their original colors and full framing; article cards use contain sizing.
+post covers in their original colors. **Stranger Stats covers are 13:7** (3.25 x 1.75, the
+ACS TOC graphic shape the research cards also use); export them at 1950x1050 or larger at
+the same ratio, keeping titles and faces clear of the outer 5%. Every card image frame is
+13:7, so a matching cover fills it exactly and article cards stay uniform; a mismatched
+cover shows a dark mat. `node tools/check-content.cjs` warns about mismatched covers.
+Convert an existing cover by cropping background rows or columns only; if the key
+content (faces, ball, stat text) spans the full height, regenerate it instead.
 An explicit `cover` also appears at the top of the article. Publication TOCs use
 contain sizing, preserving the entire scientific image without cropping or recoloring.
 
@@ -193,6 +199,11 @@ grayscale redrawings or AI substitutes.
   from the graphical abstract/TOC image for a research paper.
 - Keep visual styling in theme CSS and templates. Article Markdown is for prose,
   headings, media references and block tags; avoid new inline layouts/styles.
+- Typography is Geist (text and headings) and Geist Mono (labels), self-hosted from
+  `themes/matery/source/fonts/` under the SIL Open Font License (`Geist-OFL.txt`). Do not
+  load fonts or CSS from third-party CDNs. Cards use soft rounded surfaces; one warm accent
+  (`--accent`) marks links, the current page and focus. Stranger Stats cards show the series
+  number in the label line ("No. 03 · Featured"), never on top of the cover art.
 - Use warm ivory in light mode and warm charcoal with softer taupe cards in dark mode.
   Preserve original-color imagery. Future projects are not featured as working demos
   until an actual artifact exists.
@@ -256,7 +267,7 @@ explicit action; neither a feature flag nor a request to write content authorize
   newest first. The existing weight-loss article is included. Future meet-preparation
   posts use the same category; drafts remain drafts until ready.
 - Edit public contact/profile links in `source/_data/portfolio.yml` under `contact_links`.
-  Instagram and WeChat were restored from the original Fluid About configuration;
+  Instagram and WeChat were restored from the site's earlier Fluid-theme About page;
   email follows the supplied current CV. WeChat links to the existing QR image.
 - `/cv/` is an HTML preview with an explicit PDF download. This avoids the in-app
   browser's blank PDF-viewer behavior. When replacing `source/files/aodongliu_cv.pdf`,
@@ -480,5 +491,5 @@ configured. Until then no comment section appears. Two providers are supported:
   disqus.com. Guests can comment, but the free plan shows ads and tracks readers.
 
 Threads map to the post's URL path, so keep dated URLs stable. The site never had its
-own Disqus forum: the old Fluid config's `fluid` shortname belongs to an unrelated site
-and must not be reused. A local preview may not load the external comment script.
+own Disqus forum: the `fluid` shortname in the retired Fluid-theme config belongs to an
+unrelated site and must not be reused. A local preview may not load the external comment script.

@@ -1,5 +1,5 @@
 'use strict';
-// Isolate generated output AND Hexo's cache from the existing Fluid checkout.
+// Isolate generated output AND Hexo's cache from the production build in public/.
 const path = require('path');
 const fs = require('fs');
 const Hexo = require('hexo');

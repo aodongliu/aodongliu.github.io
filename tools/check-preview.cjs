@@ -11,6 +11,7 @@ const production = process.argv.includes('--production');
 const errors = [];
 const check = (condition, message) => { if (!condition) errors.push(message); };
 const walk = dir => fs.readdirSync(dir, {withFileTypes: true}).flatMap(e => e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]);
+for (const font of ['Geist-Variable.woff2', 'GeistMono-Variable.woff2']) check(fs.existsSync(path.join(output, 'fonts', font)), `Missing self-hosted font ${font}`);
 const htmlFiles = walk(output).filter(f => f.endsWith('.html'));
 const documents = new Map();
 const config = yaml.load(fs.readFileSync(path.join(root, '_config.yml'), 'utf8'));

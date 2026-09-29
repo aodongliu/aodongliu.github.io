@@ -19,6 +19,7 @@
 <script type="application/ld+json"><%- JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:config.title,url:config.url}).replace(/</g, '\\u003c') %></script>
 <% } %>
 <script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">
 </head>

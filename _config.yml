@@ -109,7 +109,6 @@ pagination_dir: page
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
-  - robots.txt
   - _drafts/**
   - _html_blocks/**
 ignore:

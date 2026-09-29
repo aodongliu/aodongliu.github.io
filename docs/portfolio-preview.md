@@ -18,8 +18,8 @@ The preview is at http://127.0.0.1:4100/. Do not start a second server if one al
 owns that port. Refresh after edits; restart after Node helper changes. For a phone,
 serve `.preview/public` over the Mac's Wi-Fi address as described in the handbook.
 
-For an authorized production release, run `npm run clean`, `npm run build`, and
-`npm run check:production` before `npm run deploy`. Source lives on `main`; generated
+For an authorized production release, run `./deploy.sh` (content check, clean, build,
+production check, then `npm run deploy`). Source lives on `main`; generated
 GitHub Pages output is deployed to `master`. Push source separately. Inspect the public
 site after deployment; do not infer publication from a local preview or successful build.
 

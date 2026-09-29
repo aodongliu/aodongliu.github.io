@@ -63,13 +63,6 @@ hexo.extend.helper.register('ordered_stats_posts', function () {
   return policy.orderPosts(this.site.posts.toArray().filter(policy.isStats));
 });
 
-hexo.extend.filter.register('after_generate', function () {
-  // Keep unused upstream integrations and stock photography out of this preview.
-  for (const route of hexo.route.list()) {
-    if (/^(medias\/|libs\/|css\/|js\/)/.test(route) && !/^(css\/(site|article)\.css|js\/(site|article)\.js)$/.test(route)) hexo.route.remove(route);
-  }
-});
-
 // The stock sitemap only sees posts/pages, not generated research routes.
 hexo.extend.filter.register('after_generate', async function () {
   const stream = hexo.route.get('sitemap.xml');

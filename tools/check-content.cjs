@@ -5,7 +5,32 @@ const path = require('node:path');
 const yaml = require('js-yaml');
 const root = path.resolve(__dirname, '..');
 const errors = [];
+const warnings = [];
 const check = (ok, message) => { if (!ok) errors.push(message); };
+// Pixel size from a PNG, JPEG or WebP header (no image library needed).
+function imageSize(file) {
+  const b = fs.readFileSync(file);
+  if (b.toString('ascii', 1, 4) === 'PNG') return { width: b.readUInt32BE(16), height: b.readUInt32BE(20) };
+  if (b.toString('ascii', 8, 12) === 'WEBP') {
+    const kind = b.toString('ascii', 12, 16);
+    if (kind === 'VP8X') return { width: 1 + b.readUIntLE(24, 3), height: 1 + b.readUIntLE(27, 3) };
+    if (kind === 'VP8 ') return { width: b.readUInt16LE(26) & 0x3fff, height: b.readUInt16LE(28) & 0x3fff };
+    if (kind === 'VP8L') { const v = b.readUInt32LE(21); return { width: 1 + (v & 0x3fff), height: 1 + ((v >> 14) & 0x3fff) }; }
+  }
+  if (b[0] === 0xff && b[1] === 0xd8) for (let i = 2; i < b.length;) {
+    const marker = b[i + 1], length = b.readUInt16BE(i + 2);
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) return { width: b.readUInt16BE(i + 7), height: b.readUInt16BE(i + 5) };
+    i += 2 + length;
+  }
+  return null;
+}
+// Stranger Stats covers share the 13:7 card frame (3.25 x 1.75 in, the ACS TOC format).
+function coverShape(value, file) {
+  if (typeof value !== 'string' || !value.startsWith('/')) return;
+  const local = ['source', 'themes/matery/source'].map(base => path.join(root, base, value.slice(1))).find(fs.existsSync);
+  const size = local && imageSize(local);
+  if (size && Math.abs(size.width / size.height - 13 / 7) > 0.02) warnings.push(`${file}: cover is ${size.width}x${size.height} (${(size.width / size.height).toFixed(2)}:1); Stranger Stats covers should be 13:7, e.g. 1950x1050`);
+}
 const walk = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => entry.isDirectory()
   ? walk(path.join(dir, entry.name)) : [path.join(dir, entry.name)]);
 function frontMatter(file) {
@@ -39,6 +64,7 @@ for (const folder of ['_posts', '_drafts']) for (const file of walk(path.join(ro
     for (const field of ['card_title', 'summary', 'cover', 'cover_alt']) check(data[field] === undefined || typeof data[field] === 'string', `${name}: ${field} must be a string`);
     check(data.series_number === undefined || Number.isInteger(data.series_number) && data.series_number > 0, `${name}: series_number must be a positive integer`);
     image(data.cover, data.cover_alt, name);
+    if ([].concat(data.categories || []).includes('Stranger Stats')) coverShape(data.cover, name);
     for (const match of body.matchAll(/{%\s*htmlblock\s+([^\s%]+)\s*%}/g)) check(fs.existsSync(path.join(root, 'source/_html_blocks', match[1] + '.html')), `${name}: missing HTML block ${match[1]}`);
     postCount++;
   } catch (error) { errors.push(`${name}: ${error.message}`); }
@@ -62,5 +88,6 @@ for (const paper of papers) {
 const settings = yaml.load(fs.readFileSync(path.join(root, 'source/_data/portfolio.yml'), 'utf8'));
 for (const key of ['post_limit', 'research_limit']) check(Number.isInteger(settings.homepage?.[key]) && settings.homepage[key] > 0, `portfolio.homepage.${key}: positive integer required`);
 image(settings.stranger_stats?.default_cover, settings.stranger_stats?.default_cover_alt, 'portfolio.stranger_stats');
+if (warnings.length) console.warn('Warnings:\n  ' + warnings.join('\n  '));
 if (errors.length) { console.error(errors.join('\n')); process.exitCode = 1; }
 else console.log(`Content metadata verified: ${postCount} posts/drafts and ${papers.length} papers; feature fields, images and HTML blocks valid.`);
