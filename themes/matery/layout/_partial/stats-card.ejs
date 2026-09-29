@@ -1,4 +1,4 @@
-<% const meta = post_card(post); const cardTitle = typeof homepage !== 'undefined' && homepage ? meta.title.replace(/^Stranger Stats\s*#\d+:\s*/i, '') : meta.title; %>
+<% const meta = post_card(post); const cardTitle = meta.label === 'Stranger Stats' && !(typeof full_title !== 'undefined' && full_title) ? meta.title.replace(/^Stranger Stats\s*#\d+:\s*/i, '') : meta.title; %>
 <article class="stats-card">
   <% if (meta.cover) { %><a class="stats-thumb" href="<%= url_for(post.path) %>" tabindex="-1" aria-hidden="true"><img src="<%= meta.cover %>" alt="<%= meta.cover_alt %>" width="600" height="360" loading="lazy"><% if (meta.number) { %><span class="stats-number">NO. <%= String(meta.number).padStart(2, '0') %></span><% } %></a><% } %>
   <div class="card-copy"><div class="card-meta"><span><%= meta.label %><% if (meta.featured) { %> · FEATURED<% } %></span><time datetime="<%= date(post.date,'YYYY-MM-DD') %>"><%= date(post.date,'MMM D, YYYY') %></time></div><h3><a href="<%= url_for(post.path) %>"><%= cardTitle %></a></h3><% if (meta.summary) { %><p><%= meta.summary %></p><% } %></div>

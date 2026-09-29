@@ -1,3 +1,6 @@
-<header class="article-header site-wrap"><p class="eyebrow">Notes & investigations</p><h1><%= page.category ? page.category : page.tag ? '#' + page.tag : 'Writing' %></h1></header>
-<section class="site-wrap writing-list" aria-label="Articles"><% page.posts.each(function(post) { %><article class="writing-row"><time datetime="<%= date(post.date, 'YYYY-MM-DD') %>"><%= date(post.date, 'MMM D, YYYY') %></time><h2><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2></article><% }); %></section>
+<header class="article-header site-wrap taxonomy-header"><a class="eyebrow" href="<%- url_for('/categories/') %>">← All categories</a><h1><%= page.category %></h1><p class="article-meta"><%= page.posts.length %> post<%= page.posts.length === 1 ? '' : 's' %> in <%= page.category %></p><%- partial('_partial/archive-tabs') %></header>
+<div class="site-wrap taxonomy-page">
+  <section class="taxonomy-card"><%- partial('_partial/taxonomy-chips', {items: site.categories, active: page.category, label: 'All categories'}) %></section>
+  <section class="stats-grid taxonomy-grid" aria-label="Posts in <%= page.category %>"><% page.posts.each(function(post) { %><%- partial('_partial/stats-card', {post: post, full_title: true}) %><% }); %></section>
+</div>
 <% if (page.total > 1) { %><nav class="site-wrap pagination" aria-label="Pagination"><%- paginator({prev_text: '← Previous', next_text: 'Next →'}) %></nav><% } %>

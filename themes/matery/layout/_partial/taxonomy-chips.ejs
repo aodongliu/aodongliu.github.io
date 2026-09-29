@@ -1,0 +1,4 @@
+<% /* Matery chip cloud: every tag or category with its post count; the current one is active. */ %>
+<nav class="chip-cloud" aria-label="<%= label %>">
+  <% items.sort('name').each(function(item) { %><a class="chip tint-<%= taxonomy_tint(item.name) %>" href="<%- url_for(item.path) %>"<% if (item.name === active) { %> aria-current="page"<% } %>><%= item.name %><span class="chip-count"><%= item.length %></span></a><% }); %>
+</nav>

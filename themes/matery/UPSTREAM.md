@@ -14,7 +14,8 @@ and comparison; unused assets are filtered from all generated output.
 Added/changed custom files: layout/layout.ejs, layout/index.ejs,
 layout/portfolio.ejs, layout/research.ejs, layout/paper.ejs,
 layout/_partial/portfolio-*.ejs, layout/_partial/stats-card.ejs,
-layout/_partial/research-card.ejs, page/post/archive/taxonomy/about/404 layouts,
+layout/_partial/research-card.ejs, layout/_partial/{taxonomy-chips,post-chips,archive-tabs,comments}.ejs,
+page/post/archive/taxonomy/about/404 layouts,
 source/css/site.css, source/css/article.css, source/js/site.js,
 source/js/article.js (if present), source/portfolio/*, scripts/portfolio.js,
 scripts/legacy-blocks.js. Review these against this pinned upstream before upgrades.

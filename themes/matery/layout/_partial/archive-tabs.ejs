@@ -1,0 +1,5 @@
+<% /* Tags and Categories live under Archives rather than in the main navigation. */
+   const section = /^tags\//.test(page.path) ? 'tags' : /^categories\//.test(page.path) ? 'categories' : 'archives'; %>
+<nav class="archive-tabs" aria-label="Browse posts">
+  <% [['archives', 'Timeline'], ['tags', 'Tags'], ['categories', 'Categories']].forEach(function([key, label]) { %><a href="<%- url_for('/' + key + '/') %>"<% if (key === section) { %> aria-current="page"<% } %>><%= label %></a><% }); %>
+</nav>

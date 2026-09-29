@@ -8,6 +8,20 @@ subtitle: Quantum Chemistry & Scientific Software
 description: "Aodong Liu, Postdoctoral Scholar at the University of Washington. Quantum chemistry methods, scientific software, and NBA data stories with Stranger Stats."
 keywords: [Aodong Liu, University of Washington, quantum chemistry, scientific software, computational chemistry, quantum dynamics, high performance computing, basketball analytics, Stranger Stats]
 google_site_verification: "a5flzZpVfwVDvjWjzh97peCzB-SgDucm7psmiDh6qxU"
+# Comments on posts with `comment` front matter. Nothing renders until the chosen
+# provider's IDs are filled in. See docs/content-authoring.md, "Comments".
+comments:
+  provider: giscus # giscus | disqus
+  giscus:
+    repo: aodongliu/aodongliu.github.io
+    repo_id: R_kgDOKlnhsg
+    category: Announcements
+    category_id: DIC_kwDOKlnhss4DGrX8
+    mapping: pathname
+    light_theme: noborder_light
+    dark_theme: noborder_gray
+  disqus:
+    shortname: "" # your own forum shortname from disqus.com/admin
 author: Aodong Liu
 language: en
 timezone: America/Los_Angeles

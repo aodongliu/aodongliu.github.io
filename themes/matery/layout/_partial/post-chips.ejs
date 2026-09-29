@@ -1,0 +1,6 @@
+<% /* Category and tag chips shown with an article or a timeline entry. */ %>
+<% const cats = post.categories ? post.categories.toArray() : []; const tagList = post.tags ? post.tags.toArray() : []; %>
+<% if (cats.length || tagList.length) { %><ul class="post-chips" aria-label="Categories and tags">
+  <% cats.forEach(function(category) { %><li><a class="chip chip-small chip-category" href="<%- url_for(category.path) %>"><%= category.name %></a></li><% }); %>
+  <% tagList.forEach(function(tag) { %><li><a class="chip chip-small tint-<%= taxonomy_tint(tag.name) %>" href="<%- url_for(tag.path) %>"><%= tag.name %></a></li><% }); %>
+</ul><% } %>

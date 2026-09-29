@@ -60,5 +60,3 @@ In 2024-25 season, Jones was waived by the Clippers after the trade deadline. He
 Nik Stauskas was a legendary NCAA player, and came in to the NBA as the 8th pick in the highly hyped-up 2014 draft. Despite the high hopes on him as a lights-out shooter, this draft choice later proved to be a disappoinment. 
 Nevertheless, Nik had many highlights throughout his carrer, one of which being his [first game](https://www.basketball-reference.com/boxscores/201810180POR.html) as a Portland Trail Blazer in 2018. In the season opener against the Lakers, he put up 24 points in a winning debut, and spoiled the debut of another player... **LeBron James**! Yep that's right, LeBron and the Lakers youngins came short in their first game, scorched by the hot shooting performances by Dame, CJ and Nik!
 {% htmlblock p06/nik_stauskas %}
-
-

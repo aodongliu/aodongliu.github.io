@@ -1,2 +1,14 @@
-<header class="article-header site-wrap"><p class="eyebrow">Explore the writing</p><h1>Tags</h1></header>
-<div class="site-wrap topic-list"><% site.tags.sort('name').each(function(topic) { %><a href="<%- url_for(topic.path) %>"><%= topic.name %><span><%= topic.length %></span></a><% }); %></div>
+<% /* Matery tags page: chip card with counts, then a weighted word cloud. */
+   const tagArr = site.tags.toArray().filter(tag => tag.length);
+   const most = Math.max(1, ...tagArr.map(tag => tag.length));
+   const size = count => (14 + 26 * Math.log(count) / Math.log(Math.max(2, most))).toFixed(1);
+   // Deterministic interleave so the largest words sit mid-cloud, as in jQCloud.
+   const byWeight = [...tagArr].sort((a, b) => b.length - a.length || a.name.localeCompare(b.name));
+   const cloud = []; byWeight.forEach((tag, i) => i % 2 ? cloud.push(tag) : cloud.unshift(tag)); %>
+<header class="article-header site-wrap taxonomy-header"><h1>Tags</h1><p class="article-meta"><%= tagArr.length %> tags across <%= site.posts.length %> posts</p><%- partial('_partial/archive-tabs') %></header>
+<div class="site-wrap taxonomy-page">
+  <section class="taxonomy-card"><%- partial('_partial/taxonomy-chips', {items: site.tags, active: '', label: 'All tags'}) %></section>
+  <section class="taxonomy-card word-cloud" aria-label="Tag cloud, sized by number of posts">
+    <% cloud.forEach(function(tag) { %><a href="<%- url_for(tag.path) %>" style="font-size:<%= size(tag.length) %>px" class="<%= tag.length === most ? 'is-top' : '' %>" title="<%= tag.name %>: <%= tag.length %> post<%= tag.length === 1 ? '' : 's' %>"><%= tag.name %></a><% }); %>
+  </section>
+</div>

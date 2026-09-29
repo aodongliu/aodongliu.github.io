@@ -65,6 +65,19 @@ const sourcePosts = walk(path.join(root, 'source/_posts')).filter(file => file.e
   return { ...yaml.load(match[1]), body: text.slice(match[0].length) };
 });
 const expectedStats = sourcePosts.filter(post => post.published !== false && [].concat(post.categories || []).includes('Stranger Stats'));
+// Stranger Stats cards drop the "Stranger Stats #N: " prefix only on the homepage and series page; other cards may use card_title.
+const cardTitles = route => sourcePosts.filter(post => post.published !== false).map(post => expectedStats.includes(post)
+  ? (['/', '/strangerStats/'].includes(route) ? post.title.replace(/^Stranger Stats\s*#\d+:\s*/i, '') : post.title)
+  : post.card_title || post.title);
+for (const route of ['tags/index.html', 'categories/index.html', 'archives/index.html']) check(fs.existsSync(path.join(output, route)), `Missing ${route}`);
+for (const doc of documents.values()) if (/<header class="site-header"/.test(doc.html)) check(/id="search-dialog"/.test(doc.html) && /class="search-toggle"/.test(doc.html), `${doc.route}: missing search button or dialog`);
+let searchEntries = [];
+try { searchEntries = JSON.parse(fs.readFileSync(path.join(output, 'search.json'), 'utf8')); }
+catch (_) { check(false, 'Search index is missing or invalid JSON'); }
+const expectedSearchEntries = sourcePosts.filter(post => post.published !== false).length + papers.length;
+check(Array.isArray(searchEntries) && searchEntries.length === expectedSearchEntries, `Expected ${expectedSearchEntries} search entries, found ${searchEntries.length}`);
+check(searchEntries.every(entry => entry && entry.title && entry.url && entry.type && Array.isArray(entry.tags)), 'Search entry is missing title, URL, type or tags');
+check(!searchEntries.some(entry => /<[a-z][^>]*>/i.test(entry.text || '')), 'Search index text contains HTML');
 for (const doc of documents.values()) {
   let card = false, heading = false, title = '';
   const parser = new Parser({
@@ -76,7 +89,7 @@ for (const doc of documents.values()) {
     ontext(text) { if (heading) title += text; },
     onclosetag(name) {
       if (name === 'h3' && heading) {
-        check(expectedStats.some(post => (doc.route === '/' ? post.title.replace(/^Stranger Stats\s*#\d+:\s*/i, '') : post.title) === title), `${doc.route}: card title differs from Markdown: ${title}`);
+        check(cardTitles(doc.route).includes(title), `${doc.route}: card title differs from Markdown: ${title}`);
         heading = false;
       }
       if (name === 'article') card = false;

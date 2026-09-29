@@ -11,5 +11,5 @@
 </section>
 <section class="portfolio-group site-wrap" aria-labelledby="stats-title">
   <a class="stats-banner section-banner" href="/strangerStats/"><img src="/images/strangerStats_chatgpt3.png" width="799" height="533" loading="lazy" alt="A moonlit forest filled with statistical clues"><div class="stats-banner-copy section-banner-copy"><h2 id="stats-title">Stranger Stats</h2><span>All posts</span></div></a>
-  <div class="stats-grid"><% page.selectedPosts.forEach(post => { %><%- partial('_partial/stats-card', {post, homepage: true}) %><% }); %></div>
+  <div class="stats-grid"><% page.selectedPosts.forEach(post => { %><%- partial('_partial/stats-card', {post}) %><% }); %></div>
 </section>

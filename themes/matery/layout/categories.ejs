@@ -1,2 +1,14 @@
-<header class="article-header site-wrap"><p class="eyebrow">Explore the writing</p><h1>Categories</h1></header>
-<div class="site-wrap topic-list"><% site.categories.sort('name').each(function(topic) { %><a href="<%- url_for(topic.path) %>"><%= topic.name %><span><%= topic.length %></span></a><% }); %></div>
+<% /* Matery categories page: chip card, then posts per category.
+      Bars replace Matery's radar, which cannot draw a shape with fewer than three categories. */
+   const cats = site.categories.toArray().filter(category => category.length).sort((a, b) => b.length - a.length || a.name.localeCompare(b.name));
+   const most = Math.max(1, ...cats.map(category => category.length)); %>
+<header class="article-header site-wrap taxonomy-header"><h1>Categories</h1><p class="article-meta"><%= cats.length %> categories across <%= site.posts.length %> posts</p><%- partial('_partial/archive-tabs') %></header>
+<div class="site-wrap taxonomy-page">
+  <section class="taxonomy-card"><%- partial('_partial/taxonomy-chips', {items: site.categories, active: '', label: 'All categories'}) %></section>
+  <section class="taxonomy-card" aria-labelledby="category-chart-title">
+    <h2 id="category-chart-title" class="chart-title">Posts per category</h2>
+    <ol class="bar-chart">
+      <% cats.forEach(function(category) { %><li><a href="<%- url_for(category.path) %>" title="<%= category.name %>: <%= category.length %> post<%= category.length === 1 ? '' : 's' %>"><span class="bar-label"><%= category.name %></span><span class="bar-track"><span class="bar" style="width:<%= (100 * category.length / most).toFixed(1) %>%"></span></span><span class="bar-value"><%= category.length %></span></a></li><% }); %>
+    </ol>
+  </section>
+</div>

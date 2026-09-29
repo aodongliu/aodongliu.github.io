@@ -1,0 +1,43 @@
+<% /* Comment thread for posts that opt in with `comment` front matter. Provider is set in _config.yml. */ %>
+<% const c = config.comments || {}; const g = c.giscus || {}; const d = c.disqus || {};
+   const giscus = c.provider === 'giscus' && g.repo && g.repo_id && g.category && g.category_id;
+   const disqus = c.provider === 'disqus' && d.shortname; %>
+<% if (giscus || disqus) { %>
+<section class="comments site-wrap" aria-labelledby="comments-heading">
+  <h2 id="comments-heading">Comments</h2>
+  <% if (giscus) { %>
+  <div class="giscus" data-light-theme="<%= g.light_theme || 'noborder_light' %>" data-dark-theme="<%= g.dark_theme || 'noborder_gray' %>"></div>
+  <script>
+    (() => {
+      const box = document.querySelector('.giscus');
+      const s = document.createElement('script');
+      const attrs = {
+        src: 'https://giscus.app/client.js', 'data-repo': <%- JSON.stringify(g.repo) %>, 'data-repo-id': <%- JSON.stringify(g.repo_id) %>,
+        'data-category': <%- JSON.stringify(g.category) %>, 'data-category-id': <%- JSON.stringify(g.category_id) %>,
+        'data-mapping': <%- JSON.stringify(g.mapping || 'pathname') %>, 'data-strict': '1', 'data-reactions-enabled': '1',
+        'data-emit-metadata': '0', 'data-input-position': 'top', 'data-lang': 'en', 'data-loading': 'lazy', crossorigin: 'anonymous',
+        'data-theme': document.documentElement.dataset.theme === 'dark' ? box.dataset.darkTheme : box.dataset.lightTheme
+      };
+      for (const [key, value] of Object.entries(attrs)) s.setAttribute(key, value);
+      s.async = true;
+      box.after(s);
+    })();
+  </script>
+  <% } else { %>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = <%- JSON.stringify(new URL(page.path.replace(/index\.html$/, ''), config.url).href) %>;
+      this.page.identifier = <%- JSON.stringify(page.path.replace(/index\.html$/, '')) %>;
+    };
+    (function () {
+      var s = document.createElement('script');
+      s.src = 'https://' + <%- JSON.stringify(d.shortname) %> + '.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', String(+new Date()));
+      (document.head || document.body).appendChild(s);
+    })();
+  </script>
+  <% } %>
+  <noscript>Comments need JavaScript.</noscript>
+</section>
+<% } %>

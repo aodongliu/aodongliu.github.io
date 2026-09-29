@@ -1,6 +1,6 @@
 <% const statsPage = page.path.replace(/index\.html$/, '').replace(/\/$/, '') === 'strangerStats'; %>
 <% if (statsPage) { const statsPosts = ordered_stats_posts(); %>
-<header class="article-header site-wrap"><h1>Stranger Stats</h1><p class="article-intro">Unexpected NBA records. Unusual players. A closer look at what the numbers actually say.</p><p class="article-meta"><%= statsPosts.length %> published stories</p></header>
+<header class="article-header site-wrap"><h1>Stranger Stats</h1><div class="article-intro stats-intro"><%- page.content %></div><p class="article-meta"><%= statsPosts.length %> published stories</p></header>
 <section class="site-wrap stats-grid" aria-label="Stranger Stats articles"><% statsPosts.forEach(function(post) { %><%- partial('_partial/stats-card', {post: post}) %><% }); %></section>
 <% } else { %>
 <header class="article-header site-wrap"><h1><%= page.title %></h1></header>

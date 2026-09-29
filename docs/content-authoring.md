@@ -52,8 +52,9 @@ featured_order: 100
 
 The example is not a new factual claim or a publication. Replace it with your actual
 title, date and article. Other kinds of writing can use another category and omit
-`series_number` and `comment`. The customized theme does not currently load Disqus;
-`comment: disqus` remains for compatibility with the existing Stranger Stats workflow.
+`series_number` and `comment`. Any post with a `comment` field (the existing value
+`disqus` is kept for the analysis export) shows the site's comment thread once a provider
+is configured; see "Comments" below. Leave the field off for posts without comments.
 
 When ready to include it in the normal local preview:
 
@@ -427,8 +428,57 @@ the site as Aodong Liu. The favicon link uses `/images/al_logo.png`; keep the le
 After an authorized deployment, use Search Console URL Inspection on the homepage and
 Request indexing. Google recrawling and favicon updates may take days to weeks.
 
-Homepage exception: Stranger Stats cards omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged; collection and article titles retain the full title.
+Homepage and series-page exception: Stranger Stats cards on the homepage and on `/strangerStats/` omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged. Tag, category and archive listings, search results and article titles retain the full title.
 
 The theme supplements the standard sitemap with generated research routes. Keep all published paper pages in `sitemap.xml`; validators enforce this. Standalone app exports remain outside that discovery list.
 
 Google Search Console ownership uses `google_site_verification` in `_config.yml`, rendered by `_partial/portfolio-head.ejs`. Preserve this field and tag through future theme changes and deployments; ownership verification depends on its continued presence.
+
+## Tags, categories and archives
+
+These pages follow the stock Matery demo (blinkfox.com) in the site's warm palette. To
+keep the header short, only Archives is in the main navigation; Timeline / Tags /
+Categories tabs at the top of each of these pages switch between them.
+
+- `/tags/`: a card of every tag as a chip with its post count, then a tag cloud sized by
+  post count. `/tags/<tag>/` repeats the chips with the current tag highlighted, then
+  that tag's posts as cards.
+- `/categories/`: category chips, then a posts-per-category bar chart. Matery draws a
+  radar here, but a radar needs at least three categories to form a shape.
+  `/categories/<name>/` works like a tag page.
+- `/archives/`: a one-year post calendar (days with posts link to them), then a
+  year/month timeline of posts with cover, date, category and tag chips.
+- Each article shows its category and tag chips under the date.
+
+Chip tints come from a stable hash of the name (`taxonomy_tint` in `portfolio.js`), so a
+tag keeps its color everywhere. Categories are broad collections (`Stranger Stats`,
+`Training`); tags are narrower topics. Add player or team tags only when the article
+actually covers them, and reuse existing spellings (the Tags page shows them all).
+Everything is generated from front matter; no template edits are needed for new tags.
+
+## Search
+
+The magnifier button in the header opens a search dialog (also `/` or Ctrl/Cmd+K).
+It lazily loads the generated `/search.json`, which contains every published post
+(title, category, tags, summary, body text) and every paper in `research.json`; drafts
+are excluded. Results match every typed word, rank title matches first and show a
+highlighted snippet. New posts and papers are indexed automatically on the next build.
+Descriptive titles, summaries and tags make the best search terms.
+
+## Comments
+
+Comments render on posts with a `comment` field when `comments` in `_config.yml` is fully
+configured. Until then no comment section appears. Two providers are supported:
+
+- `giscus` (active): comments are stored as GitHub Discussions in this repository, in
+  the `Announcements` category (only the owner and giscus can open threads; anyone signed
+  in to GitHub can reply). Free, ad-free, no tracking; moderate or delete comments in the
+  repository's Discussions tab. The giscus GitHub app is installed on this repository
+  only. If the category changes, get new IDs from
+  `https://giscus.app/api/discussions/categories?repo=aodongliu/aodongliu.github.io`.
+- `disqus`: set `provider: disqus` and `disqus.shortname` to a forum you own at
+  disqus.com. Guests can comment, but the free plan shows ads and tracks readers.
+
+Threads map to the post's URL path, so keep dated URLs stable. The site never had its
+own Disqus forum: the old Fluid config's `fluid` shortname belongs to an unrelated site
+and must not be reused. A local preview may not load the external comment script.

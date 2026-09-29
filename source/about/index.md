@@ -44,7 +44,7 @@ I develop scientific software in Fortran and C++, including work on [Gaussian](h
 
 ## Curriculum Vitae
 
-<a href="/files/aodongliu_cv.pdf" download="Aodong_Liu_CV.pdf">Download my CV (PDF)</a>.
+<a href="/files/aodongliu_cv.pdf" download="Aodong_Liu_CV.pdf">Download my CV (PDF, updated Aug. 2026)</a>.
 
 ## Beyond Research
 
