@@ -33,17 +33,35 @@
       <a href="/research/" >Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
       <a href="/training/" >Training</a>
+      <a href="/archives/" >Archives</a>
       <a href="/about/" >About</a>
       <a class="nav-cv" href="/cv/">CV </a>
     </nav>
+    <button class="search-toggle" type="button" aria-label="Search this site" title="Search (/)" aria-haspopup="dialog" aria-controls="search-dialog"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
     <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
   </div>
 </header>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <form class="search-dialog-head" method="dialog" role="search">
+    <label id="search-dialog-title" for="search-dialog-input">Search</label>
+    <input id="search-dialog-input" class="search-input" type="search" autocomplete="off" spellcheck="false" aria-controls="search-dialog-results">
+    <button class="search-close" type="button" aria-label="Close search">Esc</button>
+  </form>
+  <p class="search-status" aria-live="polite"></p>
+  <ol id="search-dialog-results" class="search-results"></ol>
+</dialog>
 <main id="main" class="site-main">
 <header class="article-header site-wrap">
   <a class="eyebrow" href="/archives/">← Writing</a>
   <h1>Welcome</h1>
   <p class="article-meta"><time datetime="2025-08-19">August 19, 2025</time> · Aodong Liu</p>
+  
+
+<ul class="post-chips" aria-label="Categories and tags">
+  
+  <li><a class="chip chip-small tint-5" href="/tags/personal/">personal</a></li><li><a class="chip chip-small tint-1" href="/tags/computational-chemistry/">computational chemistry</a></li><li><a class="chip chip-small tint-5" href="/tags/high-performance-computing/">high performance computing</a></li><li><a class="chip chip-small tint-4" href="/tags/quantum-dynamics/">quantum dynamics</a></li>
+</ul>
+
 </header>
 <div class="article-layout site-wrap without-toc">
   <article class="article-body"><p>Hi, I’m <strong>Aodong Liu</strong>, a PhD candidate in theoretical chemistry at the University of Washington. You can learn more about what I do <a href="/about">here</a></p>
@@ -60,6 +78,7 @@
   </article>
   
 </div>
+
 
 </main>
 <footer class="site-footer site-wrap">

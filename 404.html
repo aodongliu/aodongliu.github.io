@@ -33,12 +33,23 @@
       <a href="/research/" >Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
       <a href="/training/" >Training</a>
+      <a href="/archives/" >Archives</a>
       <a href="/about/" >About</a>
       <a class="nav-cv" href="/cv/">CV </a>
     </nav>
+    <button class="search-toggle" type="button" aria-label="Search this site" title="Search (/)" aria-haspopup="dialog" aria-controls="search-dialog"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
     <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
   </div>
 </header>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <form class="search-dialog-head" method="dialog" role="search">
+    <label id="search-dialog-title" for="search-dialog-input">Search</label>
+    <input id="search-dialog-input" class="search-input" type="search" autocomplete="off" spellcheck="false" aria-controls="search-dialog-results">
+    <button class="search-close" type="button" aria-label="Close search">Esc</button>
+  </form>
+  <p class="search-status" aria-live="polite"></p>
+  <ol id="search-dialog-results" class="search-results"></ol>
+</dialog>
 <main id="main" class="site-main"><section class="site-wrap article-header"><p class="eyebrow">404</p><h1>Page not found.</h1><p class="page-intro">This address may have changed. Start with the homepage or explore the latest writing.</p><p><a href="/">Go home →</a></p><p><a href="/strangerStats/">Read Stranger Stats →</a></p></section>
 </main>
 <footer class="site-footer site-wrap">

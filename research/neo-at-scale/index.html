@@ -33,14 +33,36 @@
       <a href="/research/" aria-current="page">Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
       <a href="/training/" >Training</a>
+      <a href="/archives/" >Archives</a>
       <a href="/about/" >About</a>
       <a class="nav-cv" href="/cv/">CV </a>
     </nav>
+    <button class="search-toggle" type="button" aria-label="Search this site" title="Search (/)" aria-haspopup="dialog" aria-controls="search-dialog"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
     <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
   </div>
 </header>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <form class="search-dialog-head" method="dialog" role="search">
+    <label id="search-dialog-title" for="search-dialog-input">Search</label>
+    <input id="search-dialog-input" class="search-input" type="search" autocomplete="off" spellcheck="false" aria-controls="search-dialog-results">
+    <button class="search-close" type="button" aria-label="Close search">Esc</button>
+  </form>
+  <p class="search-status" aria-live="polite"></p>
+  <ol id="search-dialog-results" class="search-results"></ol>
+</dialog>
 <main id="main" class="site-main">
-<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Distributed computing / 2026</p><h1>Making quantum simulations fit across many computers</h1><p class="paper-summary">Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication costs.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/neo-at-scale.jpg" aria-label="View full-size image for Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach"><img src="/portfolio/papers/neo-at-scale.jpg" alt="Distributed Cholesky tensors across MPI ranks and a water cluster containing 500 quantum protons."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Eleftherios Lambros, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>APL Computational Physics</em><br>2, 026109 (2026)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1063/5.0318199">Read the published paper</a><p class="doi">DOI: 10.1063/5.0318199</p></section></div></article>
+<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Distributed computing / 2026</p><h1>Making quantum simulations fit across many computers</h1><p class="paper-summary">Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication costs.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/neo-at-scale.jpg" aria-label="View full-size image for Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach"><img src="/portfolio/papers/neo-at-scale.jpg" alt="Distributed Cholesky tensors across MPI ranks and a water cluster containing 500 quantum protons."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Eleftherios Lambros, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>APL Computational Physics</em><br>2, 026109 (2026)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1063/5.0318199">Read the published paper</a><p class="doi">DOI: 10.1063/5.0318199</p></section></div>
+
+<section class="paper-abstract article-body" aria-labelledby="abstract-heading">
+  <h2 id="abstract-heading">Abstract</h2>
+  <p>Cholesky decomposition (CD) is widely used to reduce the cost of storing two-particle integrals and has been extended to multicomponent nuclear–electronic orbital (NEO) methods. Although NEO-CD lowers memory demands, single-node implementations can still face memory bottlenecks due to the size of the mixed asymmetric nuclear–electronic tensors. In this study, we present a two-stage hybrid-layout distributed NEO-CD framework suitable for large NEO calculations at scale. Cholesky vectors are first generated and orthonormalized using an atomic orbital-index distribution. During Fock matrix construction, mixed nuclear–electronic vectors retain the atomic-orbital-index layout, while pure electronic and pure nuclear vectors are redistributed over the auxiliary index. This design avoids costly inter-rank communication and provides efficient construction of both Coulomb and exchange matrices. Benchmark calculations on water clusters with all protons treated quantum mechanically show excellent scaling and load balance. Using only 104 MPI ranks, a full NEO-Fock build for (H₂O)₂₅₀ with 500 quantum protons, the largest NEO calculation to date, completes in 96.2 s per Fock matrix construction. The distributed NEO-CD framework enables NEO-DFT calculations for liquid-like water clusters up to (H₂O)₁₀₀. Extrapolation of the binding energies yields a bulk-limit value of ΔEₙ→∞ = −10.35 ± 0.19 kcal/mol, in excellent agreement with the experimental vaporization enthalpy of water. These results demonstrate that fully quantum mechanical simulations of large molecular systems are now practical on modern computing architectures.</p>
+</section>
+
+</article>
+
+<script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']]}, options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']}};</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+
 </main>
 <footer class="site-footer site-wrap">
   <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a><a href="/images/wechatQR.jpg">WeChat</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>

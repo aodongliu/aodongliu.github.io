@@ -33,14 +33,42 @@
       <a href="/research/" >Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
       <a href="/training/" >Training</a>
+      <a href="/archives/" aria-current="page">Archives</a>
       <a href="/about/" >About</a>
       <a class="nav-cv" href="/cv/">CV </a>
     </nav>
+    <button class="search-toggle" type="button" aria-label="Search this site" title="Search (/)" aria-haspopup="dialog" aria-controls="search-dialog"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
     <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
   </div>
 </header>
-<main id="main" class="site-main"><header class="article-header site-wrap"><p class="eyebrow">Explore the writing</p><h1>Categories</h1></header>
-<div class="site-wrap topic-list"><a href="/categories/Stranger-Stats/">Stranger Stats<span>7</span></a><a href="/categories/Training/">Training<span>1</span></a></div>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <form class="search-dialog-head" method="dialog" role="search">
+    <label id="search-dialog-title" for="search-dialog-input">Search</label>
+    <input id="search-dialog-input" class="search-input" type="search" autocomplete="off" spellcheck="false" aria-controls="search-dialog-results">
+    <button class="search-close" type="button" aria-label="Close search">Esc</button>
+  </form>
+  <p class="search-status" aria-live="polite"></p>
+  <ol id="search-dialog-results" class="search-results"></ol>
+</dialog>
+<main id="main" class="site-main">
+<header class="article-header site-wrap taxonomy-header"><h1>Categories</h1><p class="article-meta">2 categories across 9 posts</p>
+<nav class="archive-tabs" aria-label="Browse posts">
+  <a href="/archives/">Timeline</a><a href="/tags/">Tags</a><a href="/categories/" aria-current="page">Categories</a>
+</nav>
+</header>
+<div class="site-wrap taxonomy-page">
+  <section class="taxonomy-card">
+<nav class="chip-cloud" aria-label="All categories">
+  <a class="chip tint-2" href="/categories/Stranger-Stats/">Stranger Stats<span class="chip-count">7</span></a><a class="chip tint-1" href="/categories/Training/">Training<span class="chip-count">1</span></a>
+</nav>
+</section>
+  <section class="taxonomy-card" aria-labelledby="category-chart-title">
+    <h2 id="category-chart-title" class="chart-title">Posts per category</h2>
+    <ol class="bar-chart">
+      <li><a href="/categories/Stranger-Stats/" title="Stranger Stats: 7 posts"><span class="bar-label">Stranger Stats</span><span class="bar-track"><span class="bar" style="width:100.0%"></span></span><span class="bar-value">7</span></a></li><li><a href="/categories/Training/" title="Training: 1 post"><span class="bar-label">Training</span><span class="bar-track"><span class="bar" style="width:14.3%"></span></span><span class="bar-value">1</span></a></li>
+    </ol>
+  </section>
+</div>
 </main>
 <footer class="site-footer site-wrap">
   <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a><a href="/images/wechatQR.jpg">WeChat</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>
