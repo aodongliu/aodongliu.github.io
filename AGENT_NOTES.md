@@ -22,20 +22,16 @@ supplement that guide. Do not add per-post content to theme JavaScript.
 
 ## Stranger Stats workflow
 
-- Start unpublished work in `source/_drafts/strangerStatsNN_slug.md`; promote only when
-  ready with `npx --no-install hexo publish strangerStatsNN_slug`. Published posts live
-  in `source/_posts/`. This local promotion is separate from deployment.
-- HTML blocks: `source/_html_blocks/pNN/slug.html`, referenced in the post as
-  `{% htmlblock pNN/slug %}`
-- Required front-matter: `categories: - Stranger Stats` (otherwise it won't show on the landing page)
-- Full workflow lives in the analysis repo at `/Users/aodongliu/Personal/strangerStats`
-  (read `AGENTS.md` and `.agents/skills/create-strangerstats-post/SKILL.md` there).
+The full workflow for a new post is the analysis repo's `AGENTS.md`
+(`/Users/aodongliu/Personal/strangerStats`). In short: analysis there, blocks built with its
+`toolkit/ssblocks.py` into `source/_html_blocks/pNN/`, the post written as a draft in
+`source/_drafts/`, checked with `toolkit/check_post.py`, the drafts preview and
+`tools/screenshot.cjs`. Aodong publishes; agents never do.
 
 ## Fantasy-points scoring (for posts that rank fantasy games)
 
-- **Local dataset** (not StatMuse): `/Users/aodongliu/Personal/strangerStats/<NN_topic>/kaggleNBADataset_MMDDYYYY/`
-  — `PlayerStatistics.csv` has the full box scores. Load it with
-  `/Users/aodongliu/anaconda3/bin/python` (has pandas).
+- **Local dataset** (not StatMuse): load it with `toolkit/data.py` in the analysis repo
+  (`connect()` builds a cached SQLite of the newest snapshot in `data/`).
 - **FanDuel** = PTS + 1.2·REB + 1.5·AST + 3·STL + 3·BLK − TOV.
 - **DraftKings** = PTS + 0.5·3PM + 1.25·REB + 1.5·AST + 2·STL + 2·BLK − 0.5·TOV
   + 1.5·(double-double) + 3·(triple-double), where DD = 2+ of {PTS,REB,AST,STL,BLK} ≥ 10
@@ -51,8 +47,7 @@ supplement that guide. Do not add per-post content to theme JavaScript.
 The [authoring handbook](docs/content-authoring.md) is the single current reference for
 manual editing, cover replacement, highlighting, CV updates, colors, previews and release
 commands. Follow it rather than the historical redesign proposal or upstream Matery docs.
-Keep website card metadata in front matter and mirror it into the canonical analysis
-article template before exporting; never force an export over website-only changes.
+Keep website card metadata in front matter; the Markdown lives only in this repo.
 
 Preserve the author's #1/#3/#7 homepage pins. #15 Inch for inch remains an unpublished
 draft. Use original supplied cover images, not generated replacements. Keep internal

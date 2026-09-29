@@ -10,8 +10,13 @@
       "venue": "Physical Chemistry Chemical Physics",
       "citation": "28, 19461–19471",
       "doi": "10.1039/D6CP02263D",
-      "headline": "Following molecular motion in a magnetic field",
+      "headline": "Simulating how magnetic fields steer moving molecules",
       "summary": "Magnetic fields can change how electrons and nuclei move together. This method follows that coupled motion, including electron spin, in proof-of-concept simulations of molecular rotation and bond breaking.",
+      "overview": {
+        "problem": "When light excites a molecule, its atoms start to move: bonds twist and can break. A magnetic field can change that motion, but simulating a moving molecule inside a magnetic field has been largely unexplored.",
+        "approach": "This work builds a simulation method that follows the electrons and the atomic nuclei together while a magnetic field is applied. It tracks both how the electrons move around the nuclei and their spin, the tiny built-in magnetism every electron carries.",
+        "finding": "In simulations of a small charged molecule (CH₂NH₂⁺) twisting around its central bond, the field acted mainly by changing how the electrons move around the nuclei; the direct magnetic push on the moving nuclei mattered little. For H₂ breaking apart, the method also captured the electron spins starting to precess in the field. The fields are much stronger than typical laboratory magnets, so these are proof-of-concept simulations."
+      },
       "abstract": "The influence of external magnetic fields on excited-state molecular dynamics remains largely unexplored despite its fundamental importance in photochemical and photophysical processes. To address this challenge, we develop a finite-magnetic-field ab initio nonadiabatic molecular dynamics framework based on Ehrenfest dynamics and gauge-including atomic orbitals. Analytical energy gradients in the presence of external magnetic fields are derived and implemented within a two-spinor formalism, enabling a unified treatment of orbital and spin angular momentum together with coupled electron–nuclear dynamics. The methodology is applied to the internal rotation of methyliminium cation (CH₂NH₂⁺) and the dissociation of H₂ in an external magnetic field. Analysis of the nuclear forces reveals that these effects arise primarily from the magnetic-field-induced orbital Zeeman effect, while the direct Lorentz force contributes only minimally to the CH₂NH₂⁺ isomerization dynamics. For H₂ dissociation, the two-spinor formalism captures both spin-coherence generation and magnetic-field-induced Larmor precession. These results establish a general framework for simulating magnetic-field-controlled nonadiabatic dynamics and provide new insights into the manipulation of photochemical and spin-dependent processes through external magnetic fields.",
       "topic": "Molecular dynamics",
       "featured": false,
@@ -31,8 +36,13 @@
       "venue": "The Journal of Chemical Physics",
       "citation": "165, 014105",
       "doi": "10.1063/5.0320154",
-      "headline": "Tracking electrons as intense fields pull them away",
+      "headline": "How intense laser light strips electrons from atoms",
       "summary": "Intense light can remove electrons from atoms, and the interaction between electron spin and motion changes the process. Simulations of krypton reveal how that interaction affects electron loss and opens a pathway for transfer between electronic states.",
+      "overview": {
+        "problem": "A very intense laser pulse can pull electrons out of an atom almost instantly. In heavier atoms, each electron's spin is linked to its motion (spin–orbit coupling), but how that link shapes the process in atoms with many electrons has been largely unexplored.",
+        "approach": "The method follows the electrons in real time using relativistic quantum mechanics, which includes the spin–orbit link from the start. An absorbing boundary removes electrons once they travel far from the atom, so the simulation can measure how quickly electrons are lost.",
+        "finding": "For krypton, the simulations reproduce how the rate of electron loss differs between the two spin–orbit states of its outer electrons (4p₁/₂ and 4p₃/₂). They also reveal a pathway, opened by spin–orbit coupling, that transfers electrons between those two states during the pulse, which is forbidden when spin–orbit coupling is ignored."
+      },
       "abstract": "Strong-field ionization exhibits rich ultrafast dynamics arising from intricate electron-field interactions. However, the role of spin-orbit coupling in the strong-field ionization of many-electron systems remains largely unexplored. Here, we develop a fully relativistic framework that combines a complex absorbing potential (CAP) with exact two-component (X2C) real-time time-dependent density functional theory. We apply this approach to investigate the real-time strong-field dynamics of atomic krypton with a variational treatment of spin-orbit coupling. The CAP-X2C method captures the spin-orbit-resolved ionization-rate trends of the Kr 4p shell. Moreover, we uncover a previously inaccessible coherent population transfer channel between the 4p₁/₂ and 4p₃/₂ states, opened by spin-orbit coupling, which lifts the nonrelativistic symmetry restriction that forbids their mixing. This work provides a practical framework for exploring strong-field dynamics in systems where spin-orbit coupling plays a significant role.",
       "topic": "Electron dynamics",
       "featured": false,
@@ -52,8 +62,13 @@
       "venue": "APL Computational Physics",
       "citation": "2, 026109",
       "doi": "10.1063/5.0318199",
-      "headline": "Making quantum simulations fit across many computers",
+      "headline": "Spreading huge quantum calculations across many computers",
       "summary": "Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication costs.",
+      "overview": {
+        "problem": "Protons are light enough to behave as quantum particles, not just points. Methods that treat protons quantum mechanically alongside the electrons must store an enormous number of particle–particle interactions, and even after compression that data can outgrow a single computer's memory.",
+        "approach": "This work spreads the compressed data (Cholesky vectors) across many processors in two stages. Each kind of data is arranged in the layout that lets the key step run without processors constantly exchanging data.",
+        "finding": "On water clusters with every proton treated quantum mechanically, the method scales well and keeps the work evenly balanced. One key step for 250 water molecules with 500 quantum protons, the largest calculation of this kind reported, took about 96 seconds on 104 processes. Full calculations on clusters of up to 100 water molecules give a binding energy that extrapolates to a value in excellent agreement with water's measured vaporization enthalpy."
+      },
       "abstract": "Cholesky decomposition (CD) is widely used to reduce the cost of storing two-particle integrals and has been extended to multicomponent nuclear–electronic orbital (NEO) methods. Although NEO-CD lowers memory demands, single-node implementations can still face memory bottlenecks due to the size of the mixed asymmetric nuclear–electronic tensors. In this study, we present a two-stage hybrid-layout distributed NEO-CD framework suitable for large NEO calculations at scale. Cholesky vectors are first generated and orthonormalized using an atomic orbital-index distribution. During Fock matrix construction, mixed nuclear–electronic vectors retain the atomic-orbital-index layout, while pure electronic and pure nuclear vectors are redistributed over the auxiliary index. This design avoids costly inter-rank communication and provides efficient construction of both Coulomb and exchange matrices. Benchmark calculations on water clusters with all protons treated quantum mechanically show excellent scaling and load balance. Using only 104 MPI ranks, a full NEO-Fock build for (H₂O)₂₅₀ with 500 quantum protons, the largest NEO calculation to date, completes in 96.2 s per Fock matrix construction. The distributed NEO-CD framework enables NEO-DFT calculations for liquid-like water clusters up to (H₂O)₁₀₀. Extrapolation of the binding energies yields a bulk-limit value of ΔEₙ→∞ = −10.35 ± 0.19 kcal/mol, in excellent agreement with the experimental vaporization enthalpy of water. These results demonstrate that fully quantum mechanical simulations of large molecular systems are now practical on modern computing architectures.",
       "topic": "Distributed computing",
       "featured": true,
@@ -73,8 +88,13 @@
       "venue": "The Journal of Chemical Physics",
       "citation": "164, 144123",
       "doi": "10.1063/5.0317500",
-      "headline": "Predicting molecular vibrations beyond simple springs",
+      "headline": "Predicting how molecules really vibrate",
       "summary": "Molecular vibrations become difficult to predict when atoms move far from the simple spring-like picture. This approach combines quantum protons with carefully initialized trajectories for other nuclei to capture more realistic vibrational spectra.",
+      "overview": {
+        "problem": "Molecules vibrate at characteristic frequencies that appear as peaks in a vibrational spectrum and help identify them. Simple models treat chemical bonds as ideal springs, but real bonds stretch unevenly (anharmonicity), especially when hydrogen atoms are involved, and the simple models miss those features.",
+        "approach": "The method treats selected protons as quantum particles on the same footing as the electrons, while the heavier nuclei move classically. Each trajectory starts with the zero-point energy that molecules keep even at absolute zero, so the simulations explore the uneven parts of the energy landscape.",
+        "finding": "It captures the uneven vibrations of both the quantum protons and the heavier atoms in HCN, HNC, FHF⁻, formaldehyde and formic acid. For a formate–water complex it reproduces the shifted, broadened O–H stretch band caused by hydrogen bonding and by coupling between the motions of hydrogen and heavier nuclei."
+      },
       "abstract": "Simulations of vibrational spectra are important for interpreting experimental data as well as understanding molecular structure and dynamics. Herein, we present an approach for the efficient and accurate incorporation of anharmonicity into such simulations. Real-time nuclear–electronic orbital time-dependent density functional theory treats specified protons quantum mechanically on the same level as the electrons, propagating the electronic and protonic densities according to the time-dependent Schrödinger equation. This approach inherently includes the anharmonicity of the quantum protons and can be combined with Ehrenfest dynamics for the classical nuclei. Herein, this real-time nuclear–electronic orbital (NEO)-Ehrenfest approach is combined with the quasiclassical trajectory (QCT) approach for generating initial conditions that include the zero-point energy of the classical nuclei, thereby enabling sampling of the anharmonic regions of the potential energy surface. The resulting NEO-QCT approach is shown to capture the anharmonic heavy nuclear motion, as well as the anharmonicity of the quantum protons, for a series of molecular systems, including HCN, HNC, FHF⁻, CH₂O, and HCOOH. The NEO-QCT method also captures the distinct spectral features of the formate–water complex (CHO₂⁻·H₂O), including the redshifted and broadened OH stretch band due to strong anharmonicity arising from hydrogen bonding and coupling between the motions of the hydrogen nuclei and the heavy nuclei. The NEO-QCT method enables computationally practical simulations of vibrational spectra of molecules that exhibit significant anharmonicity and coupling between vibrational modes.",
       "topic": "Vibrational spectroscopy",
       "featured": false,
@@ -94,8 +114,13 @@
       "venue": "Journal of Chemical Theory and Computation",
       "citation": "21 (9), 4357–4364",
       "doi": "10.1021/acs.jctc.5c00273",
-      "headline": "How magnetic fields reshape molecular vibrations",
+      "headline": "How a magnetic field changes the way molecules vibrate",
       "summary": "A magnetic field can couple motions in a molecule that would otherwise behave differently. This quantum simulation method examines how field direction and molecular symmetry shape proton motion in two small molecules.",
+      "overview": {
+        "problem": "A steady magnetic field could be used to drive molecular vibrations and, through them, control chemistry. So far, how nuclei move under such a field has mostly been studied with classical approximations.",
+        "approach": "This work introduces a quantum dynamics method in which the protons are treated quantum mechanically along with the electrons, using orbitals adapted to the magnetic field (London orbitals), so their motion can be followed in real time.",
+        "finding": "Simulations of HCN and formaldehyde (H₂CO) show that the effect depends on how the field is oriented relative to the symmetry of each vibration. The field couples vibrations that would otherwise stay separate."
+      },
       "abstract": "Harnessing a static magnetic field to drive molecular vibrations presents a promising avenue for controlling chemical processes. However, the coupling of nuclear dynamics with an external magnetic field has largely been explored only through classical approximations. In this work, we introduce a time-dependent quantum dynamics formalism based on London nuclear–electronic orbitals, enabling the simulation of magnetic field-driven quantum dynamics. Through simulations of HCN and H₂CO molecules, we provide a detailed analysis of how the relative orientation of the magnetic field and vibrational symmetry influence the resulting quantum dynamics. Our findings reveal field-induced mode couplings and symmetry-dependent effects, offering new insights into the role of magnetic fields in vibrational control.",
       "topic": "Quantum dynamics",
       "featured": true,
@@ -116,8 +141,13 @@
       "venue": "Journal of Chemical Theory and Computation",
       "citation": "20 (18), 7694–7699",
       "doi": "10.1021/acs.jctc.4c00843",
-      "headline": "Using GPUs to accelerate heavy-element simulations",
+      "headline": "Speeding up simulations of heavy metals with graphics cards",
       "summary": "Accurate simulations of heavy elements must account for relativistic effects, adding computational cost. This work moves a major numerical integration step onto GPUs and benchmarks the improvement on copper, silver, and gold clusters.",
+      "overview": {
+        "problem": "Accurate simulations of heavy elements such as gold must include relativistic effects, which makes them more expensive. One costly step, a numerical integration over many points in space, can be split into many independent pieces, which suits graphics processing units (GPUs).",
+        "approach": "This work implements that step on GPUs for relativistic two-component density functional theory in the GauXC library. It supports the high angular momentum basis functions that heavy elements require.",
+        "finding": "In benchmarks on copper, silver and gold clusters, one GPU matched roughly 400 CPU cores for this work, and the speedup grew for larger systems."
+      },
       "abstract": "Numerical integration of the exchange-correlation potential is an inherently parallel problem that can be significantly accelerated by graphical processing units (GPUs). In this Letter, we present the first implementation of GPU-accelerated exchange-correlation potential in the GauXC library for relativistic, 2-component density functional theory. By benchmarking against copper, silver, and gold coinage metal clusters, we demonstrate the speed and efficiency of our implementation, achieving significant speedup compared to CPU-based calculations. One GPU card provides computational power equivalent to roughly 400 CPU cores in the context of this work. The speedup further increases for larger systems, highlighting the potential of our approach for future, more computationally demanding simulations. Our implementation supports arbitrary angular momentum basis functions, enabling the simulation of systems with heavy elements and providing substantial speedup to relativistic electronic structure calculations. This advancement paves the way for more efficient and extensive computational studies in the field of density functional theory.",
       "topic": "GPU acceleration",
       "featured": true,
@@ -137,8 +167,13 @@
       "venue": "Journal of Chemical Theory and Computation",
       "citation": "19 (18), 6255–6262",
       "doi": "10.1021/acs.jctc.3c00686",
-      "headline": "Reducing the memory cost of quantum chemistry",
+      "headline": "Shrinking the memory that quantum chemistry needs",
       "summary": "Quantum calculations can spend enormous amounts of memory storing interactions between particles. This work adapts matrix factorization to electron–proton calculations and checks its accuracy and computational cost on water clusters.",
+      "overview": {
+        "problem": "Quantum chemistry calculations store huge tables of interactions between pairs of particles. Cholesky decomposition is a standard way to compress them, but treating protons as quantum particles adds mixed electron–proton interactions that break the symmetry the standard approach relies on.",
+        "approach": "This work proposes several ways to extend Cholesky decomposition to calculations that treat electrons and protons quantum mechanically together, and analyzes the error that each part of the compression introduces.",
+        "finding": "Benchmarks on water clusters, up to 27 water molecules with all 54 protons treated quantum mechanically, show the accuracy and computational cost of the approach."
+      },
       "abstract": "The Cholesky decomposition technique is commonly used to reduce the memory requirement for storing two-particle repulsion integrals in quantum chemistry calculations that use atomic orbital bases. However, when quantum methods use multicomponent bases, such as nuclear–electronic orbitals, additional challenges are introduced due to asymmetric two-particle integrals. This work proposes several multicomponent Cholesky decomposition methods for calculations using nuclear–electronic orbital density functional theory. To analyze the errors in different Cholesky decomposition components, benchmark calculations using water clusters are carried out. The largest benchmark calculation is a water cluster (H₂O)₂₇ where all 54 protons are treated quantum mechanically. This study provides energetic and timing analyses to demonstrate the accuracy and performance of the proposed multicomponent Cholesky decomposition method.",
       "topic": "Numerical algorithms",
       "featured": false,
@@ -158,8 +193,13 @@
       "venue": "The Journal of Physical Chemistry A",
       "citation": "126 (39), 7033–7039",
       "doi": "10.1021/acs.jpca.2c05172",
-      "headline": "Solving for electrons and protons together",
+      "headline": "Solving for electrons and protons at the same time",
       "summary": "Electrons and protons influence one another, making their joint quantum description expensive to converge. Optimizing both together reduces the computational work compared with updating them in separate steps.",
+      "overview": {
+        "problem": "Treating protons as quantum particles captures effects such as zero-point energy and tunneling, but the electrons and protons then depend on each other. Finding a converged solution is already demanding for electrons alone and harder when they are coupled to quantum protons.",
+        "approach": "Instead of alternating between updating the electrons and the protons, this method converges both at once, using a standard convergence accelerator (direct inversion in the iterative subspace) on the combined problem.",
+        "finding": "Benchmark studies show that solving for both together can significantly reduce the computational cost compared with the conventional step-by-step approach."
+      },
       "abstract": "Accurate modeling of important nuclear quantum effects, such as nuclear delocalization, zero-point energy, and tunneling, as well as non-Born–Oppenheimer effects, requires treatment of both nuclei and electrons quantum mechanically. The nuclear–electronic orbital (NEO) method provides an elegant framework to treat specified nuclei, typically protons, on the same level as the electrons. In conventional electronic structure theory, finding a converged ground state can be a computationally demanding task; converging NEO wavefunctions, due to their coupled electronic and nuclear nature, is even more demanding. Herein, we present an efficient simultaneous optimization method that uses the direct inversion in the iterative subspace method to simultaneously converge wavefunctions for both the electrons and quantum nuclei. Benchmark studies show that the simultaneous optimization method can significantly reduce the computational cost compared to the conventional stepwise method for optimizing NEO wavefunctions for multicomponent systems.",
       "topic": "Numerical optimization",
       "featured": false,

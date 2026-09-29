@@ -104,7 +104,15 @@ const searchable = [...documents.values()].map(d => d.html).join('\n') + JSON.st
 for (const draft of fs.readdirSync(path.join(root, 'source/_drafts')).filter(f => f.endsWith('.md'))) check(!searchable.includes(draft.slice(0, -3)), `Draft leaked: ${draft}`);
 check(!walk(output).some(f => /\/_html_blocks\//.test(f.split(path.sep).join('/'))), 'Raw HTML blocks should not be published separately');
 const expectedBlocks = sourcePosts.filter(post => post.published !== false).reduce((sum, post) => sum + (post.body.match(/{%\s*htmlblock\s/g) || []).length, 0);
-const renderedBlocks = [...documents.values()].filter(doc => /^\/\d{4}\/\d{2}\/\d{2}\//.test(doc.route)).reduce((sum, doc) => sum + (doc.html.match(/class="legacy-html-block"/g) || []).length, 0);
+// Each block renders either as an ss-* component (one ss-block root) or inside a legacy panel.
+const renderedBlocks = [...documents.values()].filter(doc => /^\/\d{4}\/\d{2}\/\d{2}\//.test(doc.route))
+  .reduce((sum, doc) => sum + (doc.html.match(/class="legacy-html-block"|class="[^"]*\bss-block\b[^"]*"/g) || []).length, 0);
+for (const post of sourcePosts.filter(post => post.published !== false)) {
+  for (const [, name] of post.body.matchAll(/{%\s*htmlblock\s+(\S+)\s*%}/g)) {
+    const html = fs.readFileSync(path.join(root, 'source/_html_blocks', `${name}.html`), 'utf8');
+    if (/class="[^"]*\bss-block\b/.test(html)) check(!/\sstyle=|<style/i.test(html), `${name}: ss-* blocks must not carry inline styles`);
+  }
+}
 check(renderedBlocks === expectedBlocks, `Expected ${expectedBlocks} embedded HTML panels from source, found ${renderedBlocks}`);
 const robots = fs.readFileSync(path.join(output, 'robots.txt'), 'utf8');
 check(production ? !/^Disallow:\s*\/\s*$/m.test(robots) : /^Disallow:\s*\/\s*$/m.test(robots), 'Incorrect robots.txt publication policy');

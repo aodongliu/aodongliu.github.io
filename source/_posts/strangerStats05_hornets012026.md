@@ -43,9 +43,9 @@ What elite company the Charlotte Hornets find themselves in. All other teams in 
 
 So let's break down what teams they faced on the road:
 
-{% htmlblock p05/b6 %}
+{% htmlblock p05/road_games_jan_2026 %}
 
-Ahh now we see why Hornets came on top on this most point differential list despite losing 3 games: **Most of their wins are blowout wins!**. In particular, the **+55** win against **Utah Jazz** alone counts as more than 1/3 of their net differential of the month. It's worth nothing that this **+55** win ranks [**#5**](https://www.statmuse.com/nba/ask/largest-road-win-margins-nba-single-game) in the largest road-win margins in NBA history, just 2pts shy of the top spot.
+Ahh now we see why Hornets came on top on this most point differential list despite losing 3 games: **Most of their wins are blowout wins!**. In particular, the **+55** win against **Utah Jazz** alone counts as more than 1/3 of their net differential of the month. It's worth noting that this **+55** win ranks [**#5**](https://www.statmuse.com/nba/ask/largest-road-win-margins-nba-single-game) in the largest road-win margins in NBA history, just 2pts shy of the top spot.
 
 Moreover, the Hornets also put up a string of true **giant-slayer performances** on the road. Coming to the enemies' territory, they blew out an **OKC team with the best record in the league by a wide margin**, handled a **Luka and LeBron led Lakers squad**, and dismantled a **hot Nuggets team** that had been rolling even in **Jokić’s absence**.
 These weren’t narrow escapes or late-game coin flips. They were **decisive wins**. That deserves real credit. It’s a true testament to the Hornets’ offensive execution and shot-making ability, especially against elite competitions on the road.
@@ -56,12 +56,12 @@ These weren’t narrow escapes or late-game coin flips. They were **decisive win
 
 Towards the end of the January, the Hornets is straight-up on fire, putting together a **six-game winning streak**:
 
-{% htmlblock p05/b7 %}
+{% htmlblock p05/win_streak_jan_2026 %}
 
 
-**The last time they won 6 straight or more was March of 2016, almost 10 years agao!** That Hornets team features a young Kemba Walker and Nicholas Batum (who just began his first season with the Hornets, coming from Portland), with Jeremy Lin and Al Jefferson coming off the bench 😂😂. [For real tho, checkout the box score for their win over the Suns.](https://www.basketball-reference.com/boxscores/201603010CHO.html) Man, that really brings back some nostalgia, doesn’t it?
+**The last time they won 6 straight or more was March of 2016, almost 10 years ago!** That Hornets team features a young Kemba Walker and Nicholas Batum (who just began his first season with the Hornets, coming from Portland), with Jeremy Lin and Al Jefferson coming off the bench 😂😂. [For real tho, checkout the box score for their win over the Suns.](https://www.basketball-reference.com/boxscores/201603010CHO.html) Man, that really brings back some nostalgia, doesn’t it?
 
-{% htmlblock p05/b8 %}
+{% htmlblock p05/win_streak_mar_2016 %}
 
 To really put this in perspective, consider how recently other NBA teams have put together a **6-game (or longer) winning streak**. For most franchises, the answer is *very* recent.
 

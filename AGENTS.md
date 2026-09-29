@@ -23,9 +23,11 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
   isolated under `.preview/`. Production: `npm run clean`, `npm run build`, then
   `npm run check:production`. Do not deploy, commit or push unless requested; the author
   authorized this release, not automatic future releases. Verify public output after deploy.
-- For new Stranger Stats analysis, follow the analysis repository's AGENTS.md and
-  creation skill. Check its canonical article template before editing generated output;
-  never run a force export over website changes. See the authoring guide's current caveat.
+- New Stranger Stats posts come from the analysis repo (`/Users/aodongliu/Personal/strangerStats`,
+  follow its AGENTS.md). Posts are drafts in `source/_drafts/`; blocks are built with its
+  `toolkit/ssblocks.py` and styled only by the `ss-*` rules in `article.css`.
+- Check pages visually: `node tools/screenshot.cjs <post-slug | /path/>` (desktop light and phone
+  dark tiles). Drafts: `node tools/preview.cjs server --drafts` (port 4101).
 - Update the authoring guide, scaffolds and relevant validation in the same change
   whenever a content field or publishing rule changes. Do not leave conflicting instructions.
 - Delegate bounded implementation/review tasks when useful in this user-authorized

@@ -79,6 +79,7 @@ for (const paper of papers) {
   check(Number.isInteger(paper.year), `${name}: year must be an integer`);
   check(paper.status === 'Published', `${name}: this collection is for published papers only`);
   check(typeof paper.url === 'string' && paper.url.startsWith('https://'), `${name}: HTTPS paper URL required`);
+  check(paper.overview === undefined || ['problem', 'approach', 'finding'].every(key => typeof paper.overview[key] === 'string' && paper.overview[key].trim()), `${name}: overview needs problem, approach and finding text`);
   featureFields(paper, name); image(paper.image, paper.image_alt, name);
   if (paper.image) {
     check(typeof paper.image_source === 'string' && paper.image_source.startsWith('https://'), `${name}: image source URL required`);

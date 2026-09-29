@@ -53,7 +53,7 @@ featured_order: 100
 The example is not a new factual claim or a publication. Replace it with your actual
 title, date and article. Other kinds of writing can use another category and omit
 `series_number` and `comment`. Any post with a `comment` field (the existing value
-`disqus` is kept for the analysis export) shows the site's comment thread once a provider
+`disqus` is the long-standing convention) shows the site's comment thread once a provider
 is configured; see "Comments" below. Leave the field off for posts without comments.
 
 When ready to include it in the normal local preview:
@@ -149,6 +149,11 @@ entry and replace every bibliographic field with verified details:
   "url": "https://doi.org/10.xxxx/actual-doi",
   "headline": "An accurate headline a nonexpert can understand",
   "summary": "Explain the problem and what this work contributes in plain language.",
+  "overview": {
+    "problem": "Why this matters, for someone with no chemistry background.",
+    "approach": "What the method does, with one plain-language gloss per technical term.",
+    "finding": "What the paper actually shows; only claims the abstract or paper supports."
+  },
   "topic": "Scientific computing",
   "status": "Published",
   "featured": false,
@@ -156,7 +161,11 @@ entry and replace every bibliographic field with verified details:
 }
 ```
 
-That automatically creates the paper's detail page and collection card. Keep the `id`
+That automatically creates the paper's detail page and collection card. The `headline` is
+the card title everywhere: a short everyday-language sentence a non-scientist understands,
+without jargon or acronyms ("Speeding up simulations of heavy metals with graphics cards").
+The optional `overview` renders as three short panels on the paper page, between the
+publication details and the abstract; keep each to two or three sentences. Keep the `id`
 stable because it defines the URL. Keep the array in publication order, newest first;
 the collection follows that order. Add `authorship_note` only when supported by the paper.
 This collection currently contains published papers only; keep submitted/in-preparation
@@ -210,18 +219,22 @@ grayscale redrawings or AI substitutes.
 
 ## Stranger Stats source ownership
 
-Analysis lives separately in the `strangerStats` repository/workspace. Before generating
-an article, read that workspace's `AGENTS.md` and creation skill. Keep generated tables
-in `source/_html_blocks/pNN/` and insert `{% htmlblock pNN/descriptive_name %}` in Markdown.
-Record dataset cutoff, definitions, exclusions and source references.
+Analysis lives in the `strangerStats` workspace (`/Users/aodongliu/Personal/strangerStats`);
+its `AGENTS.md` is the complete workflow for a new post, from data to screenshots. The
+Markdown lives only here: agents write `source/_drafts/strangerStatsNN_slug.md` directly, so
+there is no template or export to keep in sync, and website edits are never overwritten.
 
-The manifest assembler reads an article template that includes front matter. Add these
-card fields to that canonical template as well as any existing website copy so a later
-export preserves them. Current older exports can overwrite website edits and some write
-directly to `_posts`. Source drift has not yet been reconciled; do not use a force export
-or claim a draft-safe importer already exists. For a website-only curation change on an
-existing article, edit its metadata here and record/mirror the update in the canonical
-template before the next export. Do not overwrite either side when they disagree.
+Data blocks live in `source/_html_blocks/pNN/` and are referenced with
+`{% htmlblock pNN/descriptive_name %}`. Blocks for #1–#7 (and all new posts) are built from
+the `ss-*` components in the analysis repo's `toolkit/ssblocks.py`: plain HTML with class
+names, styled by the "Stranger Stats blocks" section of `themes/matery/source/css/article.css`,
+so they follow the light/dark theme. Change the look there, never with inline styles. Drafts
+#8–#15 still use older inline-styled blocks, shown inside a light `.legacy-html-block` panel
+(`themes/matery/scripts/legacy-blocks.js` decides by the `ss-block` class); convert them to
+components before publishing.
+
+Preview drafts with `node tools/preview.cjs server --drafts` (http://127.0.0.1:4101; its own
+cache, never written to disk), and screenshot any page with `node tools/screenshot.cjs`.
 
 ## Validation and handoff
 
@@ -262,7 +275,6 @@ explicit action; neither a feature flag nor a request to write content authorize
 - Stranger Stats #1 uses the author-supplied image at `source/images/strangerStats01/cover.png`.
   To replace another cover, put the original in `source/images/<post-slug>/` and set `cover`
   and `cover_alt` in its front matter. Do not generate replacement article covers.
-  Mirror this metadata in the upstream article template before its next export.
 - A published post with `categories: [Training]` automatically appears at `/training/`,
   newest first. The existing weight-loss article is included. Future meet-preparation
   posts use the same category; drafts remain drafts until ready.
@@ -343,7 +355,7 @@ To replace a post cover manually:
 1. Save the original image under `source/images/<stable-slug>/` with a descriptive filename.
 2. Set `cover: /images/<stable-slug>/<filename>` and accurate `cover_alt` in the post.
 3. Keep the original colors and complete framing; change banner crops only in CSS.
-4. Record source/provenance internally and mirror metadata into any upstream template.
+4. Record source/provenance internally.
 5. Build, validate, and inspect both its card and article on desktop/mobile.
 
 To change the logo, replace `source/images/al_logo.png` deliberately and verify the

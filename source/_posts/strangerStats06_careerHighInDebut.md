@@ -23,18 +23,18 @@ Stories like this are exactly what Stranger Stats lives for.
 
 So today, let’s break down some **career-high performances** that happened in a player’s **first game with a new team**.
 
-### Jock Randale's Crazy Trade Deadline Story
+### Jock Landale's Crazy Trade Deadline Story
 
-On **Feb. 3rd, 2026**, **Jock Randale** is traded from **Memphis Grizzlies** to the **Utah Jazz** in the [Jaren Jackson Jr. trade](https://x.com/ShamsCharania/status/2018756786052845599). 
+On **Feb. 3rd, 2026**, **Jock Landale** is traded from **Memphis Grizzlies** to the **Utah Jazz** in the [Jaren Jackson Jr. trade](https://x.com/ShamsCharania/status/2018756786052845599). 
 
-On **Feb. 4th, 2026**, **Jock Randale** is traded again from **Utah Jazz** to **Atlanta Hawks** for [cash considerations](https://x.com/ShamsCharania/status/2019164414570819978).
+On **Feb. 4th, 2026**, **Jock Landale** is traded again from **Utah Jazz** to **Atlanta Hawks** for [cash considerations](https://x.com/ShamsCharania/status/2019164414570819978).
 
 Landale later recalls that he found out about the second trade *while already on a flight to Utah*.
 So he got off the plane, went home briefly, then *load up his truck* and drove five and a half hours from Memphis to Atlanta to report to the his new team the Hawks.
 
 And guess what he did next?
 
-On **Feb. 5th, 2026**, **Jock Randale** dropped a **career high** 26 points to beat **Utah Jazz** who just traded him for some cash. What a gangster!
+On **Feb. 5th, 2026**, **Jock Landale** dropped a **career high** 26 points to beat **Utah Jazz** who just traded him for some cash. What a gangster!
 
 {% htmlblock p06/jock_landale %}
 
