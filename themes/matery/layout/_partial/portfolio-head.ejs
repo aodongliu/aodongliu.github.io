@@ -1,6 +1,7 @@
 <% const cleanDescription = strip_html(page.description || page.summary || (page.paper && page.paper.summary) || config.description).slice(0, 220); const canonicalPath = (page.path || '').replace(/index\.html$/, ''); const canonicalUrl = new URL(canonicalPath, config.url).href; %>
 <head>
 <meta charset="utf-8">
+<% if (config.google_site_verification) { %><meta name="google-site-verification" content="<%= config.google_site_verification %>"><% } %>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><%= page.title ? page.title + ' | ' + config.title : config.title + ' | ' + config.subtitle %></title>
 <meta name="description" content="<%= cleanDescription %>">

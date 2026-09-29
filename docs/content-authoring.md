@@ -430,3 +430,5 @@ Request indexing. Google recrawling and favicon updates may take days to weeks.
 Homepage exception: Stranger Stats cards omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged; collection and article titles retain the full title.
 
 The theme supplements the standard sitemap with generated research routes. Keep all published paper pages in `sitemap.xml`; validators enforce this. Standalone app exports remain outside that discovery list.
+
+Google Search Console ownership uses `google_site_verification` in `_config.yml`, rendered by `_partial/portfolio-head.ejs`. Preserve this field and tag through future theme changes and deployments; ownership verification depends on its continued presence.
