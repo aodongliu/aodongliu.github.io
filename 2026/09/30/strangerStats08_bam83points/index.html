@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+<meta charset="utf-8">
+<meta name="google-site-verification" content="a5flzZpVfwVDvjWjzh97peCzB-SgDucm7psmiDh6qxU">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stranger Stats #8: Where Does Bam&#39;s 83-Point Game Rank All-Time? | Aodong Liu</title>
+<meta name="description" content="Aodong Liu, Postdoctoral Scholar at the University of Washington. Quantum chemistry methods, scientific software, and NBA data stories with Stranger Stats.">
+
+<link rel="canonical" href="https://aodongliu.github.io/2026/09/30/strangerStats08_bam83points/">
+<meta property="og:title" content="Stranger Stats #8: Where Does Bam&#39;s 83-Point Game Rank All-Time?">
+<meta property="og:site_name" content="Aodong Liu">
+<meta property="og:description" content="Aodong Liu, Postdoctoral Scholar at the University of Washington. Quantum chemistry methods, scientific software, and NBA data stories with Stranger Stats.">
+<meta property="og:url" content="https://aodongliu.github.io/2026/09/30/strangerStats08_bam83points/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://aodongliu.github.io/images/headshot_lincolnPark.png">
+<meta name="theme-color" content="#f3efe7">
+<link rel="icon" type="image/png" href="/images/al_logo.png">
+
+<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/article.css">
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-wrap header-inner">
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/images/al_logo.png" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">＋</span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="/research/" >Research</a>
+      <a href="/strangerStats/" >Stranger Stats</a>
+      <a href="/training/" >Training</a>
+      <a href="/archives/" >Archives</a>
+      <a href="/about/" >About</a>
+      <a class="nav-cv" href="/cv/">CV </a>
+    </nav>
+    <button class="search-toggle" type="button" aria-label="Search this site" title="Search (/)" aria-haspopup="dialog" aria-controls="search-dialog"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
+  </div>
+</header>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <form class="search-dialog-head" method="dialog" role="search">
+    <label id="search-dialog-title" for="search-dialog-input">Search</label>
+    <input id="search-dialog-input" class="search-input" type="search" autocomplete="off" spellcheck="false" aria-controls="search-dialog-results">
+    <button class="search-close" type="button" aria-label="Close search">Esc</button>
+  </form>
+  <p class="search-status" aria-live="polite"></p>
+  <ol id="search-dialog-results" class="search-results"></ol>
+</dialog>
+<main id="main" class="site-main">
+<header class="article-header site-wrap">
+  <a class="eyebrow" href="/strangerStats/">← Stranger Stats</a>
+  <h1>Stranger Stats #8: Where Does Bam&#39;s 83-Point Game Rank All-Time?</h1>
+  <p class="article-meta"><time datetime="2026-09-30">September 30, 2026</time> · Aodong Liu</p>
+  
+
+<ul class="post-chips" aria-label="Categories and tags">
+  <li><a class="chip chip-small chip-category" href="/categories/Stranger-Stats/">Stranger Stats</a></li>
+  <li><a class="chip chip-small tint-2" href="/tags/nba/">nba</a></li><li><a class="chip chip-small tint-1" href="/tags/data/">data</a></li><li><a class="chip chip-small tint-4" href="/tags/basketball/">basketball</a></li>
+</ul>
+
+</header>
+<div class="article-layout site-wrap ">
+  <article class="article-body"><p>On <strong>March 10, 2026</strong>, Bam Adebayo, not exactly known for his scoring, dropped <strong>83 points</strong> on the Wizards. Only Wilt’s 100 is higher. Kobe’s 81 is now third.</p>
+<p>While that’s the <strong>second-best scoring performance</strong> of all time, there’s a lot more to a game than scoring: rebounds, assists, steals, blocks, taking care of the ball. Was it also one of the best <strong>all-around</strong> games ever? To measure that, I need one number that adds all of it up.</p>
+<p>There’s no single right way to do this. DraftKings, ESPN fantasy and Game Score all weigh things a little differently. Here I’ll use FanDuel’s fantasy score:</p>
+<p><strong>FanDuel &#x3D; PTS + 1.2 × REB + 1.5 × AST + 3 × STL + 3 × BLK − TOV</strong></p>
+<p>I ran it on every player-game in the dataset. Here’s Bam:</p>
+<div class="ss-card ss-surface ss-block">
+<div class="ss-card-head">
+<img class="ss-avatar" src="https://cdn.nba.com/headshots/nba/latest/260x190/1628389.png" alt="Bam Adebayo" loading="lazy">
+<div>
+<p class="ss-rank">#5</p>
+<p class="ss-name">Bam Adebayo</p>
+<p class="ss-meta">Mar 10, 2026 · Miami Heat vs Washington Wizards · W</p>
+</div></div>
+<p class="ss-headline ss-headline--accent">83 PTS · 9 REB · 3 AST · 2 STL · 2 BLK</p>
+<p class="ss-sub">FanDuel: <b>105.3</b> · Regular Season · <b>42</b> MIN</p>
+<ul class="ss-chips"><li><span>FG</span> <b>20/43</b></li><li><span>FT</span> <b>36/43</b></li><li><span>TOV</span> <b>5</b></li><li><span>3P</span> <b>7/22</b></li></ul>
+</div>
+
+<p><strong>105.3 fantasy points.</strong> Since 1977-78, the first season with every stat in that formula tracked, that ranks <strong>#5</strong>. Pretty great! But Bam scored 83 and still finished fifth, so let’s look at the four games ahead of him.</p>
+<hr>
+<h3 id="1-·-Hakeem-Olajuwon-1987"><a href="#1-·-Hakeem-Olajuwon-1987" class="headerlink" title="#1 · Hakeem Olajuwon, 1987"></a>#1 · Hakeem Olajuwon, 1987</h3><div class="ss-card ss-surface ss-block">
+<div class="ss-card-head">
+<img class="ss-avatar" src="https://cdn.nba.com/headshots/nba/latest/260x190/165.png" alt="Hakeem Olajuwon" loading="lazy">
+<div>
+<p class="ss-rank">#1</p>
+<p class="ss-name">Hakeem Olajuwon</p>
+<p class="ss-meta">Mar 10, 1987 · Houston Rockets vs Seattle SuperSonics · L</p>
+</div></div>
+<p class="ss-headline">38 PTS · 17 REB · 6 AST · 7 STL · 12 BLK</p>
+<p class="ss-sub">FanDuel: <b>120.4</b> · Regular Season · <b>53</b> MIN</p>
+<ul class="ss-chips"><li><span>FG</span> <b>14/29</b></li><li><span>FT</span> <b>10/14</b></li><li><span>TOV</span> <b>4</b></li></ul>
+</div>
+
+<p><strong>12 blocks and 7 steals.</strong> At 3 fantasy points each, those 19 stocks are worth <strong>57 points</strong> on their own. Hakeem scored “only” 38, and the Rockets lost in overtime.</p>
+<p>Fun coincidence: this game was on <strong>March 10</strong>, the same day as Bam’s, 39 years earlier. For Bam to pass it with everything else the same, he’d have needed <strong>99 points</strong>.</p>
+<h3 id="2-·-Michael-Jordan-1990"><a href="#2-·-Michael-Jordan-1990" class="headerlink" title="#2 · Michael Jordan, 1990"></a>#2 · Michael Jordan, 1990</h3><div class="ss-card ss-surface ss-block">
+<div class="ss-card-head">
+<img class="ss-avatar" src="https://cdn.nba.com/headshots/nba/latest/260x190/893.png" alt="Michael Jordan" loading="lazy">
+<div>
+<p class="ss-rank">#2</p>
+<p class="ss-name">Michael Jordan</p>
+<p class="ss-meta">Mar 28, 1990 · Chicago Bulls @ Cleveland Cavaliers · W</p>
+</div></div>
+<p class="ss-headline">69 PTS · 18 REB · 6 AST · 4 STL · 1 BLK</p>
+<p class="ss-sub">FanDuel: <b>112.6</b> · Regular Season · <b>50</b> MIN</p>
+<ul class="ss-chips"><li><span>FG</span> <b>23/37</b></li><li><span>FT</span> <b>21/23</b></li><li><span>TOV</span> <b>2</b></li></ul>
+</div>
+
+<p>The only game above Bam built mostly on scoring. Jordan’s 69 is his career high, but the <strong>18 rebounds</strong> are the real difference: 21.6 fantasy points, double Bam’s 10.8. Guards are not supposed to do that.</p>
+<h3 id="3-·-Hakeem-Olajuwon-1990"><a href="#3-·-Hakeem-Olajuwon-1990" class="headerlink" title="#3 · Hakeem Olajuwon, 1990"></a>#3 · Hakeem Olajuwon, 1990</h3><div class="ss-card ss-surface ss-block">
+<div class="ss-card-head">
+<img class="ss-avatar" src="https://cdn.nba.com/headshots/nba/latest/260x190/165.png" alt="Hakeem Olajuwon" loading="lazy">
+<div>
+<p class="ss-rank">#3</p>
+<p class="ss-name">Hakeem Olajuwon</p>
+<p class="ss-meta">Mar 3, 1990 · Houston Rockets vs Golden State Warriors · W</p>
+</div></div>
+<p class="ss-headline">29 PTS · 18 REB · 9 AST · 5 STL · 11 BLK</p>
+<p class="ss-sub">FanDuel: <b>112.1</b> · Regular Season · <b>40</b> MIN</p>
+<ul class="ss-chips"><li><span>FG</span> <b>13/25</b></li><li><span>FT</span> <b>3/4</b></li><li><span>TOV</span> <b>0</b></li></ul>
+</div>
+
+<p><strong>29 points</strong>, one assist short of a quadruple-double, and <strong>zero turnovers</strong>. Hakeem again, and he’s not done: he has <strong>16</strong> of the top 100 fantasy games since 1977-78. No one else has more than 7.</p>
+<h3 id="4-·-Shaquille-O’Neal-1993"><a href="#4-·-Shaquille-O’Neal-1993" class="headerlink" title="#4 · Shaquille O’Neal, 1993"></a>#4 · Shaquille O’Neal, 1993</h3><div class="ss-card ss-surface ss-block">
+<div class="ss-card-head">
+<img class="ss-avatar" src="https://cdn.nba.com/headshots/nba/latest/260x190/406.png" alt="Shaquille O&#x27;Neal" loading="lazy">
+<div>
+<p class="ss-rank">#4</p>
+<p class="ss-name">Shaquille O&#x27;Neal</p>
+<p class="ss-meta">Nov 20, 1993 · Orlando Magic @ New Jersey Nets · W</p>
+</div></div>
+<p class="ss-headline">24 PTS · 28 REB · 3 AST · 1 STL · 15 BLK</p>
+<p class="ss-sub">FanDuel: <b>107.1</b> · Regular Season · <b>36</b> MIN</p>
+<ul class="ss-chips"><li><span>FG</span> <b>12/19</b></li><li><span>FT</span> <b>0/1</b></li><li><span>TOV</span> <b>3</b></li></ul>
+</div>
+
+<p><strong>24 points.</strong> Shaq scored 59 fewer points than Bam and still beat him, thanks to <strong>15 blocks</strong> (45 fantasy points) and 28 rebounds. In his second NBA season.</p>
+<p>One more thing: <strong>4 of the top 5</strong> happened in <strong>March</strong>. Both Hakeem games, Jordan’s 69 and Bam’s 83. Shaq’s November night is the odd one out.</p>
+<hr>
+<h3 id="So-Why-Is-Bam-Fifth"><a href="#So-Why-Is-Bam-Fifth" class="headerlink" title="So Why Is Bam Fifth?"></a>So Why Is Bam Fifth?</h3><p>Here’s where each game’s fantasy points come from:</p>
+<div class="ss-table ss-surface ss-block"><p class="ss-table-title">Where the fantasy points come from</p><div class="ss-scroll"><table><thead><tr><th>Player</th><th class="num">Year</th><th class="num">PTS</th><th class="num">REB ×1.2</th><th class="num">AST ×1.5</th><th class="num">STL ×3</th><th class="num">BLK ×3</th><th class="num">TOV</th><th class="num">FanDuel</th></tr></thead><tbody>
+<tr><td>Hakeem Olajuwon</td><td class="num">1987</td><td class="num">38</td><td class="num">20.4</td><td class="num">9</td><td class="num">21</td><td class="num">36</td><td class="num">-4</td><td class="num"><b>120.4</b></td></tr>
+<tr><td>Michael Jordan</td><td class="num">1990</td><td class="num">69</td><td class="num">21.6</td><td class="num">9</td><td class="num">12</td><td class="num">3</td><td class="num">-2</td><td class="num"><b>112.6</b></td></tr>
+<tr><td>Hakeem Olajuwon</td><td class="num">1990</td><td class="num">29</td><td class="num">21.6</td><td class="num">13.5</td><td class="num">15</td><td class="num">33</td><td class="num">0</td><td class="num"><b>112.1</b></td></tr>
+<tr><td>Shaquille O&#x27;Neal</td><td class="num">1993</td><td class="num">24</td><td class="num">33.6</td><td class="num">4.5</td><td class="num">3</td><td class="num">45</td><td class="num">-3</td><td class="num"><b>107.1</b></td></tr>
+<tr><td><b>Bam Adebayo</b></td><td class="num"><b>2026</b></td><td class="num">83</td><td class="num">10.8</td><td class="num">4.5</td><td class="num">6</td><td class="num">6</td><td class="num">-5</td><td class="num"><b>105.3</b></td></tr>
+<tr><td>Luka Doncic</td><td class="num">2022</td><td class="num">60</td><td class="num">25.2</td><td class="num">15</td><td class="num">6</td><td class="num">3</td><td class="num">-4</td><td class="num"><b>105.2</b></td></tr>
+<tr><td>Kobe Bryant</td><td class="num">2006</td><td class="num">81</td><td class="num">7.2</td><td class="num">3</td><td class="num">9</td><td class="num">3</td><td class="num">-3</td><td class="num"><b>100.2</b></td></tr>
+</tbody></table></div></div>
+
+<p>Steals and blocks are worth 3 each, a point is worth 1. The two Hakeem games and Shaq’s got about <strong>48 to 57</strong> fantasy points from stocks alone. Bam got 12.</p>
+<p>Almost everything Bam did that night was scoring: <strong>79%</strong> of his fantasy total came from points. Of the top 100 games since 1977-78, only two got fewer fantasy points from everything <em>other than</em> scoring: <strong>Kobe’s 81</strong> (#11) and Luka’s 73-pointer.</p>
+<p>So it’s a top-5 fantasy game, but not really an all-around one. It’s a scoring game so big that the formula can’t ignore it.</p>
+<p>Also, look at <strong>Luka</strong> right behind him. His 60-21-10 triple-double against the Knicks is worth <strong>105.2</strong>, 0.1 behind Bam. One more rebound and Luka is #5.</p>
+<div class="ss-table ss-surface ss-block"><p class="ss-table-title">Top 20 FanDuel games since 1977-78</p><div class="ss-scroll"><table><thead><tr><th class="ctr">#</th><th>Player</th><th class="num">FD</th><th class="num">PTS</th><th class="num">REB</th><th class="num">AST</th><th class="num">STL</th><th class="num">BLK</th><th class="num">TOV</th><th>Date</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg" alt="" loading="lazy">Hakeem Olajuwon</span></td><td class="num"><b>120.4</b></td><td class="num">38</td><td class="num">17</td><td class="num">6</td><td class="num">7</td><td class="num">12</td><td class="num">4</td><td>Mar 10, 1987</td></tr>
+<tr><td class="ctr">2</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg" alt="" loading="lazy">Michael Jordan</span></td><td class="num"><b>112.6</b></td><td class="num">69</td><td class="num">18</td><td class="num">6</td><td class="num">4</td><td class="num">1</td><td class="num">2</td><td>Mar 28, 1990</td></tr>
+<tr><td class="ctr">3</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg" alt="" loading="lazy">Hakeem Olajuwon</span></td><td class="num"><b>112.1</b></td><td class="num">29</td><td class="num">18</td><td class="num">9</td><td class="num">5</td><td class="num">11</td><td class="num">0</td><td>Mar 3, 1990</td></tr>
+<tr><td class="ctr">4</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612753/primary/L/logo.svg" alt="" loading="lazy">Shaquille O&#x27;Neal</span></td><td class="num"><b>107.1</b></td><td class="num">24</td><td class="num">28</td><td class="num">3</td><td class="num">1</td><td class="num">15</td><td class="num">3</td><td>Nov 20, 1993</td></tr>
+<tr><td class="ctr"><b>5</b></td><td><b><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg" alt="" loading="lazy">Bam Adebayo</span></b></td><td class="num"><b>105.3</b></td><td class="num"><b>83</b></td><td class="num"><b>9</b></td><td class="num"><b>3</b></td><td class="num"><b>2</b></td><td class="num"><b>2</b></td><td class="num"><b>5</b></td><td><b>Mar 10, 2026</b></td></tr>
+<tr><td class="ctr">6</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg" alt="" loading="lazy">Luka Doncic</span></td><td class="num"><b>105.2</b></td><td class="num">60</td><td class="num">21</td><td class="num">10</td><td class="num">2</td><td class="num">1</td><td class="num">4</td><td>Dec 27, 2022</td></tr>
+<tr><td class="ctr">7</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg" alt="" loading="lazy">Joel Embiid</span></td><td class="num"><b>104.1</b></td><td class="num">70</td><td class="num">18</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td>Jan 22, 2024</td></tr>
+<tr><td class="ctr">8</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg" alt="" loading="lazy">Hakeem Olajuwon</span></td><td class="num"><b>104.0</b></td><td class="num">49</td><td class="num">25</td><td class="num">2</td><td class="num">2</td><td class="num">6</td><td class="num">2</td><td>May 14, 1987</td></tr>
+<tr><td class="ctr">9</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg" alt="" loading="lazy">Joel Embiid</span></td><td class="num"><b>103.2</b></td><td class="num">59</td><td class="num">11</td><td class="num">8</td><td class="num">1</td><td class="num">7</td><td class="num">5</td><td>Nov 13, 2022</td></tr>
+<tr><td class="ctr">10</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg" alt="" loading="lazy">Chris Webber</span></td><td class="num"><b>100.7</b></td><td class="num">51</td><td class="num">26</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td>Jan 5, 2001</td></tr>
+<tr><td class="ctr">11</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg" alt="" loading="lazy">Kobe Bryant</span></td><td class="num"><b>100.2</b></td><td class="num">81</td><td class="num">6</td><td class="num">2</td><td class="num">3</td><td class="num">1</td><td class="num">3</td><td>Jan 22, 2006</td></tr>
+<tr><td class="ctr">12</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg" alt="" loading="lazy">Hakeem Olajuwon</span></td><td class="num"><b>100.0</b></td><td class="num">38</td><td class="num">10</td><td class="num">4</td><td class="num">5</td><td class="num">10</td><td class="num">1</td><td>Apr 21, 1988</td></tr>
+<tr><td class="ctr">13</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612759/primary/L/logo.svg" alt="" loading="lazy">David Robinson</span></td><td class="num"><b>99.9</b></td><td class="num">43</td><td class="num">12</td><td class="num">3</td><td class="num">4</td><td class="num">10</td><td class="num">4</td><td>Jan 10, 1991</td></tr>
+<tr><td class="ctr">14</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg" alt="" loading="lazy">Joe Barry Carroll</span></td><td class="num"><b>99.8</b></td><td class="num">43</td><td class="num">24</td><td class="num">6</td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td>Feb 1, 1987</td></tr>
+<tr><td class="ctr">15</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612740/primary/L/logo.svg" alt="" loading="lazy">Anthony Davis</span></td><td class="num"><b>99.5</b></td><td class="num">50</td><td class="num">15</td><td class="num">5</td><td class="num">5</td><td class="num">4</td><td class="num">3</td><td>Oct 26, 2016</td></tr>
+<tr><td class="ctr">16</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg" alt="" loading="lazy">Hakeem Olajuwon</span></td><td class="num"><b>99.0</b></td><td class="num">32</td><td class="num">25</td><td class="num">2</td><td class="num">3</td><td class="num">10</td><td class="num">5</td><td>Dec 17, 1989</td></tr>
+<tr><td class="ctr">17</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg" alt="" loading="lazy">Nikola Jokic</span></td><td class="num"><b>98.7</b></td><td class="num">56</td><td class="num">16</td><td class="num">15</td><td class="num">0</td><td class="num">2</td><td class="num">5</td><td>Dec 25, 2025</td></tr>
+<tr><td class="ctr">18</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg" alt="" loading="lazy">James Harden</span></td><td class="num"><b>98.5</b></td><td class="num">60</td><td class="num">10</td><td class="num">11</td><td class="num">4</td><td class="num">1</td><td class="num">5</td><td>Jan 30, 2018</td></tr>
+<tr><td class="ctr">19</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612752/primary/L/logo.svg" alt="" loading="lazy">Patrick Ewing</span></td><td class="num"><b>98.4</b></td><td class="num">44</td><td class="num">22</td><td class="num">4</td><td class="num">2</td><td class="num">7</td><td class="num">5</td><td>Jan 7, 1990</td></tr>
+<tr><td class="ctr">20</td><td><span class="ss-team-cell"><img class="ss-logo ss-logo--sm" src="https://cdn.nba.com/logos/nba/1610612749/primary/L/logo.svg" alt="" loading="lazy">Giannis Antetokounmpo</span></td><td class="num"><b>98.3</b></td><td class="num">59</td><td class="num">14</td><td class="num">7</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td>Nov 13, 2024</td></tr>
+</tbody></table></div></div>
+
+<hr>
+<h3 id="And-Then-There’s-Wilt"><a href="#And-Then-There’s-Wilt" class="headerlink" title="And Then There’s Wilt"></a>And Then There’s Wilt</h3><p>All of the above starts in 1977-78. Go back further and the box scores are missing stats: no steals or blocks before 1973-74, no turnovers before 1977-78. If you score those old games with only what was recorded, one name takes over.</p>
+<div class="ss-card ss-surface ss-block">
+<div class="ss-card-head">
+<img class="ss-avatar" src="https://cdn.nba.com/headshots/nba/latest/260x190/76375.png" alt="Wilt Chamberlain" loading="lazy">
+<div>
+<p class="ss-name">Wilt Chamberlain</p>
+<p class="ss-meta">Mar 2, 1962 · Philadelphia Warriors vs New York Knicks · W</p>
+</div></div>
+<p class="ss-headline">100 PTS · 25 REB · 2 AST</p>
+<p class="ss-sub">FanDuel: <b>133.0</b> · steals, blocks and turnovers not tracked yet</p>
+<p class="ss-sub">Regular Season · <b>48</b> MIN</p>
+<ul class="ss-chips"><li><span>FG</span> <b>36/63</b></li><li><span>FT</span> <b>28/32</b></li></ul>
+</div>
+
+<p><strong>133 fantasy points</strong> from just points, rebounds and assists. That beats Hakeem’s #1 by almost 13 without a single steal or block counted. Wilt’s 78-point, 43-rebound game in 1961 comes in at <strong>131.1</strong>.</p>
+<p>Counting those incomplete games, Bam drops to <strong>#20</strong>, and <strong>14</strong> of the 19 games ahead of him belong to Wilt. Wilt being Wilt.</p>
+<p>See you next time.</p>
+<p><em>Data: Kaggle NBA box scores (Eoin Moore), snapshot July 6, 2026. Regular season and playoffs. The main ranking starts in 1977-78, when every stat in the formula was tracked; older games are scored on the stats that were recorded.</em></p>
+
+    <footer class="article-end"><a href="/strangerStats/">← More Stranger Stats</a></footer>
+  </article>
+  <aside class="article-toc"><nav aria-label="On this page"><p class="eyebrow">On this page</p><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%C2%B7-Hakeem-Olajuwon-1987"><span class="toc-text">#1 · Hakeem Olajuwon, 1987</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%C2%B7-Michael-Jordan-1990"><span class="toc-text">#2 · Michael Jordan, 1990</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%C2%B7-Hakeem-Olajuwon-1990"><span class="toc-text">#3 · Hakeem Olajuwon, 1990</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%C2%B7-Shaquille-O%E2%80%99Neal-1993"><span class="toc-text">#4 · Shaquille O’Neal, 1993</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#So-Why-Is-Bam-Fifth"><span class="toc-text">So Why Is Bam Fifth?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#And-Then-There%E2%80%99s-Wilt"><span class="toc-text">And Then There’s Wilt</span></a></li></ol></nav></aside>
+</div>
+
+
+
+<section class="comments site-wrap" aria-labelledby="comments-heading">
+  <h2 id="comments-heading">Comments</h2>
+  
+  <div class="giscus" data-light-theme="noborder_light" data-dark-theme="noborder_gray"></div>
+  <script>
+    (() => {
+      const box = document.querySelector('.giscus');
+      const s = document.createElement('script');
+      const attrs = {
+        src: 'https://giscus.app/client.js', 'data-repo': "aodongliu/aodongliu.github.io", 'data-repo-id': "R_kgDOKlnhsg",
+        'data-category': "Announcements", 'data-category-id': "DIC_kwDOKlnhss4DGrX8",
+        'data-mapping': "pathname", 'data-strict': '1', 'data-reactions-enabled': '1',
+        'data-emit-metadata': '0', 'data-input-position': 'top', 'data-lang': 'en', 'data-loading': 'lazy', crossorigin: 'anonymous',
+        'data-theme': document.documentElement.dataset.theme === 'dark' ? box.dataset.darkTheme : box.dataset.lightTheme
+      };
+      for (const [key, value] of Object.entries(attrs)) s.setAttribute(key, value);
+      s.async = true;
+      box.after(s);
+    })();
+  </script>
+  
+  <noscript>Comments need JavaScript.</noscript>
+</section>
+
+
+
+</main>
+<footer class="site-footer site-wrap">
+  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a><a href="/images/wechatQR.jpg">WeChat</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>
+  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
+</footer>
+<script src="/js/site.js" defer></script>
+</body>
+</html>
