@@ -1,6 +1,7 @@
 ---
 title: "Stranger Stats #7: Out There Doing Cardio, 20 Minutes of NBA Basketball With Nothing to Show for It"
-date: 2026-08-31
+date: 2026-09-14
+permalink: 2026/08/31/strangerStats07_cardio/
 comment: disqus
 tags: [nba, data, basketball]
 categories:

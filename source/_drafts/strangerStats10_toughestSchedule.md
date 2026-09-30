@@ -1,6 +1,6 @@
 ---
 title: "Stranger Stats #10: Who Got the Most Brutal 2026-27 NBA Schedule? A Full Ranking of All 30 Teams"
-date: 2026-08-14
+date: 2026-10-05
 comment: disqus
 tags: [nba, data, basketball]
 categories:
