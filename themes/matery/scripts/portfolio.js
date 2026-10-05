@@ -63,6 +63,22 @@ hexo.extend.helper.register('ordered_stats_posts', function () {
   return policy.orderPosts(this.site.posts.toArray().filter(policy.isStats));
 });
 
+// Series page: pinned (featured) posts, the rest newest first, and which post is "New!".
+// New = the most recent published post, if it is within stranger_stats.new_days (default 21)
+// of the build date. Stickers are computed at build time, so they refresh on each deploy.
+hexo.extend.helper.register('stats_series', function () {
+  const posts = policy.orderPosts(this.site.posts.toArray().filter(policy.isStats));
+  const newest = [...posts].sort((a, b) => b.date - a.date)[0];
+  const days = this.site.data.portfolio?.stranger_stats?.new_days ?? 21;
+  const fresh = newest && (Date.now() - newest.date.valueOf()) <= days * 86400000;
+  return {
+    pinned: posts.filter(post => post.featured === true),
+    rest: posts.filter(post => post.featured !== true),
+    newPath: fresh ? newest.path : null,
+    total: posts.length
+  };
+});
+
 // The stock sitemap only sees posts/pages, not generated research routes.
 hexo.extend.filter.register('after_generate', async function () {
   const stream = hexo.route.get('sitemap.xml');

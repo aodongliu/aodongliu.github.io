@@ -34,12 +34,16 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
   collaboration; keep file ownership separate and integrate/review changes before delivery.
 
 - Use direct section names and compact layouts. No promotional taglines or decorative
-  section labels. Preserve Training navigation and public contact links. See the handbook.
+  section labels. Preserve public contact links. Training is hidden from the nav until
+  Aodong says the page is ready; the page itself stays. See the handbook.
 
-- Homepage Stranger Stats pins are #1, #3, #7, in that order. #15 Inch for inch is an
+- The homepage focuses on Research (banner + cards). Stranger Stats, AlleyLoop and future apps
+  appear only as compact "Side projects" banners (`projects` in `portfolio.yml`), no cards.
+  Stranger Stats featured posts (#1, #3, #7) are the series page's Pinned panel; the newest
+  post gets a "New!" sticker automatically. #15 Inch for inch is an
   unfinished draft; keep it excluded from generated routes, collections and indexes.
-- Research and Stranger Stats use matching wide banners and compact cards. Keep both
-  climbers in the North Cascades crop. No Recent posts row, circular image arrows,
+- Research uses a wide banner and compact cards; the Stranger Stats series page keeps its
+  cards. Keep both climbers in the North Cascades crop. No Recent posts row, circular image arrows,
   research-card descriptions, redundant Research hero button or public provenance notes.
   Paper images themselves open full-size; do not add source/full-size caption links.
 - Preserve the original logo/favicon, color portrait, 2020–2026 PhD dates, all contact
@@ -48,4 +52,4 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
 - Stranger Stats covers are 13:7 (e.g. 1950x1050), the same frame as research cards.
 - Stranger Stats cards use the exact Markdown `title`, with no summary/subheading. Remove all diagonal arrows from website UI, including navigation, banners and contact links.
 
-Homepage and series-page exception: Stranger Stats cards on the homepage and on `/strangerStats/` omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged. Tag, category and archive listings, search results and article titles retain the full title.
+Series-page exception: Stranger Stats cards on `/strangerStats/` omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged. Tag, category and archive listings, search results and article titles retain the full title.

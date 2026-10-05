@@ -1,7 +1,16 @@
 <% const statsPage = page.path.replace(/index\.html$/, '').replace(/\/$/, '') === 'strangerStats'; %>
-<% if (statsPage) { const statsPosts = ordered_stats_posts(); %>
-<header class="article-header site-wrap"><h1>Stranger Stats</h1><div class="article-intro stats-intro"><%- page.content %></div><p class="article-meta"><%= statsPosts.length %> published stories</p></header>
-<section class="site-wrap stats-grid" aria-label="Stranger Stats articles"><% statsPosts.forEach(function(post) { %><%- partial('_partial/stats-card', {post: post}) %><% }); %></section>
+<% if (statsPage) { const series = stats_series(); const sticker = post => post.path === series.newPath ? 'new' : ''; %>
+<header class="article-header site-wrap"><h1>Stranger Stats</h1><div class="article-intro stats-intro"><%- page.content %></div><p class="article-meta"><%= series.total %> published stories</p></header>
+<% if (series.pinned.length) { %>
+<section class="site-wrap stats-pinned" aria-labelledby="pinned-title">
+  <h2 id="pinned-title" class="stats-section-title"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 3l6 6-3 1-4 4 .5 4.5L13 20l-4-4-5 5-1-1 5-5-4-4 1.5-1.5L10 10l4-4z" fill="currentColor"/></svg>Pinned</h2>
+  <div class="stats-grid"><% series.pinned.forEach(function(post) { %><%- partial('_partial/stats-card', {post: post, sticker: sticker(post) || 'pinned'}) %><% }); %></div>
+</section>
+<% } %>
+<section class="site-wrap stats-more" aria-labelledby="more-title">
+  <% if (series.pinned.length) { %><h2 id="more-title" class="stats-section-title">More posts</h2><% } %>
+  <div class="stats-grid"><% series.rest.forEach(function(post) { %><%- partial('_partial/stats-card', {post: post, sticker: sticker(post)}) %><% }); %></div>
+</section>
 <% } else { %>
 <header class="article-header site-wrap"><h1><%= page.title %></h1></header>
 <article class="article-body standalone-page site-wrap"><%- page.content %></article>

@@ -6,6 +6,8 @@ stranger_stats:
   # Shared existing series artwork, used only when a post has no cover.
   default_cover: /images/strangerStats_chatgpt3.png
   default_cover_alt: Stranger Stats series artwork
+  # The newest post shows a "New!" sticker on the series page for this many days.
+  new_days: 21
 
 # Public contact links restored from the original site's About configuration.
 contact_links:
@@ -28,3 +30,19 @@ research:
   # Landscape banner; crop is presentation-only in CSS.
   banner_image: /images/north-cascades.jpg
   banner_alt: Mountain slopes and autumn foliage in the North Cascades.
+
+# Homepage "Side projects": one compact banner each, no cards. Order = display order.
+# Add Powerlifting Physics Lab and Impact Echo here when they are ready to show.
+projects:
+  - title: Stranger Stats
+    text: NBA data stories that might shock you.
+    link: /strangerStats/
+    link_label: All posts
+    image: /images/strangerStats_chatgpt3.png
+    image_alt: A moonlit forest filled with statistical clues
+  - title: AlleyLoop
+    text: 6 degrees of separation mini games.
+    link: https://aodongliu.github.io/alleyloop/
+    link_label: Play
+    image: /images/projects/alleyloop.webp
+    image_alt: An empty basketball court under arena lights

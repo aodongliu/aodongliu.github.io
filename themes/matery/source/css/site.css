@@ -123,4 +123,37 @@ h1,h2,h3{font-weight:600;letter-spacing:-.035em}
 .overview-grid h3{font:600 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 .overview-grid p{font-size:15.5px;line-height:1.7}
 @media(max-width:900px){.overview-grid{grid-template-columns:1fr}}
+/* Homepage side projects: compact image banners, secondary to Research (portfolio.yml: projects). */
+.projects-heading{font-size:24px;margin-bottom:18px}
+.project-banners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.project-banner{position:relative;isolation:isolate;display:block;height:190px;border-radius:14px;overflow:hidden;background:#15191c;color:#fff;box-shadow:0 4px 16px #30231912}
+.project-banner>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 45%;transition:transform .5s}
+.project-banner:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,10,12,.82),rgba(8,10,12,.25) 70%,transparent)}
+.project-banner:hover>img{transform:scale(1.03)}
+.project-banner-copy{display:flex;flex-direction:column;justify-content:center;height:100%;padding:24px 30px}
+.project-banner-title{font-size:30px;font-weight:600;letter-spacing:-.035em;line-height:1.1}
+.project-banner-text{margin-top:8px;font-size:14px;color:#e8e4dc;max-width:300px}
+.project-banner-link{margin-top:14px;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+.project-banner:hover .project-banner-link{text-decoration-thickness:2px}
+@media(max-width:720px){.project-banners{grid-template-columns:minmax(0,1fr)}.project-banner{height:170px}.project-banner-copy{padding:20px 22px}.project-banner-title{font-size:26px}}
+@media(prefers-reduced-motion:reduce){.project-banner:hover>img{transform:none}}
+/* Stranger Stats series page: pinned panel, "More posts", and stickers on card covers. */
+.stats-section-title{display:flex;align-items:center;gap:8px;font:600 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.stats-pinned{margin-bottom:56px}
+.stats-pinned>.stats-section-title{color:var(--accent)}
+.stats-pinned>.stats-grid{padding:22px;border-radius:20px;background:var(--panel-alt);box-shadow:inset 0 0 0 1px var(--line)}
+.stats-more{padding-bottom:90px}
+.stats-thumb{position:relative}
+.sticker{position:absolute;top:12px;left:12px;z-index:1;padding:4px 11px;border-radius:7px;font:700 12px/1.4 var(--font);letter-spacing:.02em;transform:rotate(-5deg);box-shadow:0 0 0 2px #fffaf2,0 3px 10px #0000004d}
+.sticker-pinned{background:#2f2b27;color:#fff4e6}
+.sticker-new{background:#c2532a;color:#fff;text-transform:uppercase;letter-spacing:.06em}
+.stats-card:hover .sticker{transform:rotate(-2deg) scale(1.04);transition:transform .2s}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:720px){.stats-pinned{margin-bottom:40px}.stats-pinned>.stats-grid{padding:14px;border-radius:16px}}
+@media(prefers-reduced-motion:reduce){.stats-card:hover .sticker{transform:rotate(-5deg)}}
+/* Stranger Stats card header: large series number, readable date. */
+.stats-card .card-meta{align-items:baseline;font:400 13px/1.3 var(--font);letter-spacing:0;text-transform:none;margin-bottom:12px}
+.card-no{display:inline-flex;align-items:baseline;gap:5px;font-size:24px;font-weight:650;letter-spacing:-.035em;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.card-no-label{font:600 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.stats-card .card-meta time{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 

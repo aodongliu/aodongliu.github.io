@@ -10,7 +10,8 @@
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="/research/" <%- page.path && page.path.startsWith('research/') ? 'aria-current="page"' : '' %>>Research</a>
       <a href="/strangerStats/" <%- page.path && page.path.startsWith('strangerStats/') ? 'aria-current="page"' : '' %>>Stranger Stats</a>
-      <a href="/training/" <%- page.path && page.path.startsWith('training/') ? 'aria-current="page"' : '' %>>Training</a>
+      <%# Training is hidden from the nav until the page is ready; restore this link to show it: %>
+      <%# <a href="/training/" ...>Training</a> %>
       <a href="/archives/" <%- page.path && /^(archives|tags|categories)\//.test(page.path) ? 'aria-current="page"' : '' %>>Archives</a>
       <a href="/about/" <%- page.path && page.path.startsWith('about/') ? 'aria-current="page"' : '' %>>About</a>
       <a class="nav-cv" href="/cv/">CV </a>

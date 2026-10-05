@@ -9,7 +9,11 @@
   </a>
   <div class="research-grid"><% page.selectedPapers.forEach(paper => { %><%- partial('_partial/research-card', {paper}) %><% }); %></div>
 </section>
-<section class="portfolio-group site-wrap" aria-labelledby="stats-title">
-  <a class="stats-banner section-banner" href="/strangerStats/"><img src="/images/strangerStats_chatgpt3.png" width="799" height="533" loading="lazy" alt="A moonlit forest filled with statistical clues"><div class="stats-banner-copy section-banner-copy"><h2 id="stats-title">Stranger Stats</h2><span>All posts</span></div></a>
-  <div class="stats-grid"><% page.selectedPosts.forEach(post => { %><%- partial('_partial/stats-card', {post}) %><% }); %></div>
+<% const projects = site.data.portfolio.projects || []; if (projects.length) { %>
+<section class="portfolio-group site-wrap" aria-labelledby="projects-title">
+  <h2 id="projects-title" class="projects-heading">Side projects</h2>
+  <div class="project-banners"><% projects.forEach(item => { %>
+    <a class="project-banner" href="<%= item.link %>"><img src="<%= item.image %>" alt="<%= item.image_alt %>" loading="lazy"><span class="project-banner-copy"><span class="project-banner-title"><%= item.title %></span><span class="project-banner-text"><%= item.text %></span><span class="project-banner-link"><%= item.link_label || 'Open' %></span></span></a>
+  <% }); %></div>
 </section>
+<% } %>

@@ -114,23 +114,28 @@ featured: true
 featured_order: 1
 ```
 
-This does two things:
-
-1. Makes a Stranger Stats post eligible for highlights beneath its homepage banner.
-2. If it is a Stranger Stats post, moves it ahead of unfeatured entries on that collection page.
-
-The Stranger Stats homepage section takes featured published Stranger Stats posts first,
-ordered by ascending `featured_order`. Other categories stay in their own collections;
-a feature flag alone does not place them under the Stranger Stats banner.
-Ties use newest date first, then stable URL order. If there are fewer featured posts than
-slots, remaining slots show recent unfeatured Stranger Stats posts. The default is three
-slots, controlled by `homepage.post_limit` in `portfolio.yml`. Featuring more posts than
-slots does not create more slots: the highest-priority ones appear. The remaining posts
-are still available in their collections and archive. Selected cards show a Featured label.
+For a Stranger Stats post this **pins** it: it moves into the "Pinned" panel at the top of
+the series page with a "Pinned" sticker, ordered by ascending `featured_order` (ties: newest
+date, then URL). All other posts follow under "More posts", newest first. The most recent
+post gets a "New!" sticker for `stranger_stats.new_days` days (21 by default, in
+`portfolio.yml`). Stickers are computed at build time, so they update on each deploy;
+nothing needs editing when you post. The homepage no longer shows Stranger Stats cards: it keeps Research as the
+focus and lists side projects as compact banners (see "Homepage side projects").
 
 Set `featured: false` to unfeature. Never change the article's publication date, body or
 URL for this operation. Featuring does not promote a draft and does not deploy anything.
 Archives and all-writing pages stay chronological.
+
+## Homepage side projects
+
+Below Research, the homepage shows **Side projects** as compact image banners, two per row,
+with no cards: currently Stranger Stats and AlleyLoop. They are listed under `projects` in
+`source/_data/portfolio.yml` (title, one short line, link, link label, image, image alt);
+order in the file is display order. To add a project such as Powerlifting Physics Lab or
+Impact Echo, add an entry with a real image from the project itself; nothing in the
+templates changes. Keep the text to one plain line. Projects hosted from their own GitHub
+repos (AlleyLoop at `aodongliu/alleyloop`) are linked by full URL, since their files are not
+part of this site's build.
 
 ## Add or feature a research paper
 
@@ -266,7 +271,8 @@ explicit action; neither a feature flag nor a request to write content authorize
 
 ## Training, contact links, and current presentation rules
 
-- Use simple section names: Research, Stranger Stats, Training, About, CV.
+- Use simple section names: Research, Stranger Stats, About, CV. Training is hidden from the
+  navigation until the page is ready (commented out in `layout.ejs`); `/training/` still exists.
   Do not add promotional taglines, numbered section eyebrows, or decorative slogans.
 - Research and Stranger Stats each use a full-width banner followed immediately by
   their own highlight cards. Do not add a separate Recent posts row or heading. The
@@ -361,7 +367,8 @@ To replace a post cover manually:
 To change the logo, replace `source/images/al_logo.png` deliberately and verify the
 header/favicon in both modes. Edit profile links in `source/_data/portfolio.yml`, preserving
 Email, LinkedIn, Google Scholar, GitHub, Instagram, WeChat and ORCID unless asked to remove
-one. The Training category and navigation are permanent parts of the site.
+one. The Training category and page are permanent parts of the site; its navigation link returns
+when the page is ready.
 
 ## Production build, commit and deployment
 
@@ -451,7 +458,7 @@ the site as Aodong Liu. The favicon link uses `/images/al_logo.png`; keep the le
 After an authorized deployment, use Search Console URL Inspection on the homepage and
 Request indexing. Google recrawling and favicon updates may take days to weeks.
 
-Homepage and series-page exception: Stranger Stats cards on the homepage and on `/strangerStats/` omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged. Tag, category and archive listings, search results and article titles retain the full title.
+Series-page exception: Stranger Stats cards on `/strangerStats/` omit only the leading `Stranger Stats #N: ` prefix, since the series and number are already labeled. The rest of the Markdown title is unchanged. Tag, category and archive listings, search results and article titles retain the full title.
 
 The theme supplements the standard sitemap with generated research routes. Keep all published paper pages in `sitemap.xml`; validators enforce this. Standalone app exports remain outside that discovery list.
 
