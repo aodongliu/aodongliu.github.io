@@ -1,8 +1,8 @@
 ---
-title: "Stranger Stats #13: The 209 Triple-Double Man — Russell Westbrook's Career Was Bigger Than Almost Every Franchise's Entire History"
+title: "Stranger Stats #14: The 209 Triple-Double Man — Russell Westbrook's Career Was Bigger Than Almost Every Franchise's Entire History"
 date: 2026-08-14
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Deep Dives, Careers]
 categories:
   - Stranger Stats
 ---
@@ -15,7 +15,7 @@ Here's the thing about 209 that doesn't get said enough: it's not just more than
 
 ### Westbrook vs. Every Franchise
 
-{% htmlblock p13/every_franchise_s_all_time_triple_doubles_vs_westbrook_s_209 %}
+{% htmlblock p14/every_franchise_s_all_time_triple_doubles_vs_westbrook_s_209 %}
 
 Westbrook alone recorded more triple-doubles than **27 of the 30 current franchises** in their entire existence. The only three above him:
 
@@ -47,20 +47,20 @@ And the active league? Nikola Jokić is the active leader at **197** — 12 behi
 
 These are the box scores that broke the stat:
 
-<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 57-13-11 against Orlando</p>{% htmlblock p13/russell_westbrook %}
-<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 51-13-10 against Phoenix</p>{% htmlblock p13/51_pts_13_reb_10_ast %}
-<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 50-16-10 against Denver</p>{% htmlblock p13/50_pts_16_reb_10_ast %}
-<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 20-20-21 against the Lakers</p>{% htmlblock p13/20_pts_20_reb_21_ast %}
-<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 24-13-24 against San Antonio</p>{% htmlblock p13/24_pts_13_reb_24_ast %}
-<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 14-21-24 against Indiana</p>{% htmlblock p13/14_pts_21_reb_24_ast %}
+<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 57-13-11 against Orlando</p>{% htmlblock p14/russell_westbrook %}
+<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 51-13-10 against Phoenix</p>{% htmlblock p14/51_pts_13_reb_10_ast %}
+<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 50-16-10 against Denver</p>{% htmlblock p14/50_pts_16_reb_10_ast %}
+<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 20-20-21 against the Lakers</p>{% htmlblock p14/20_pts_20_reb_21_ast %}
+<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 24-13-24 against San Antonio</p>{% htmlblock p14/24_pts_13_reb_24_ast %}
+<p style="font-weight:600;margin:1.25rem 0 0;"><span style="color:#1a7a3a;">●</span> 14-21-24 against Indiana</p>{% htmlblock p14/14_pts_21_reb_24_ast %}
 
 The 57-point triple-double against Orlando in 2017. The 20-20-21 against the Lakers in 2019 — a true 20-20-20 game. The 24-assist game against the Spurs, in a 154-147 double-overtime shootout. The 14-21-24 against Indiana. And the fastest triple-double of his career came in **20 minutes** in 2014 — 13 points, 10 boards, 14 dimes, done by halftime, basically.
 
 ### The Road to 209
 
-{% htmlblock p13/the_road_to_209 %}
+{% htmlblock p14/the_road_to_209 %}
 
-{% htmlblock p13/triple_doubles_per_82_games_by_age %}
+{% htmlblock p14/triple_doubles_per_82_games_by_age %}
 
 His first triple-double came March 2, 2009, as a 20-year-old. Then it took him **2,163 days** to get to No. 10 — six seasons for the first ten. From there the dam broke: 10 to 50 took 683 days, 50 to 100 took 451, and he hit **No. 182 on May 10, 2021**, passing Oscar Robertson's record that had stood for 47 years. His final 28 took another 1,769 days — the slowdown of age, and also of playing for teams that stopped running through him.
 
@@ -68,7 +68,7 @@ The pace numbers are insane: 11 consecutive games with a triple-double (2019), 1
 
 ### The Victims
 
-{% htmlblock p13/westbrook_s_triple_double_victims_top_14 %}
+{% htmlblock p14/westbrook_s_triple_double_victims_top_14 %}
 
 The Jazz saw 10 Westbrook triple-doubles and won exactly one of them. Orlando went 2-8. Indiana 3-8. James Harden, his old running mate turned rival, was on the floor for **11** of them — nobody in the league watched more Westbrook triple-doubles go in. Home and road barely mattered: 114 at home, 95 on the road. He never recorded more than two consecutive triple-doubles against the same opponent, because the schedule wouldn't let him.
 

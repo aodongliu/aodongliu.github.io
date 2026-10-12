@@ -1,8 +1,8 @@
 ---
-title: "Stranger Stats #11: Dennis Schröder Is on Team No. 12. Who Has Actually Played for the Most Teams in NBA History?"
+title: "Stranger Stats #12: Dennis Schröder Is on Team No. 12. Who Has Actually Played for the Most Teams in NBA History?"
 date: 2026-08-14
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Careers, Records]
 categories:
   - Stranger Stats
 ---
@@ -19,7 +19,7 @@ That got me wondering the obvious stranger-stats question: is 12 teams the most?
 
 Here's every stop on Schröder's resume, per the trade wires:
 
-{% htmlblock p11/dennis_schroder_s_12_nba_stops %}
+{% htmlblock p12/dennis_schroder_s_12_nba_stops %}
 
 Nine trades, twelve stops. They don't line up 1-to-1 because trades aren't the only way players change teams — free-agent signings count too. But it's still the fastest a 32-year-old has ever decorated a locker room.
 
@@ -38,17 +38,17 @@ The second question is the fun one, because "on a team" is a paperwork stat and 
 
 These are the bannermen. Every one of them checked in for at least a third of the league.
 
-{% htmlblock p11/1_ish_smith %}
+{% htmlblock p12/1_ish_smith %}
 
-{% htmlblock p11/2_joe_smith %}
+{% htmlblock p12/2_joe_smith %}
 
-{% htmlblock p11/3_jim_jackson %}
+{% htmlblock p12/3_jim_jackson %}
 
-{% htmlblock p11/4_chucky_brown %}
+{% htmlblock p12/4_chucky_brown %}
 
-{% htmlblock p11/5_tony_massenburg %}
+{% htmlblock p12/5_tony_massenburg %}
 
-{% htmlblock p11/6_garrett_temple %}
+{% htmlblock p12/6_garrett_temple %}
 
 Ish Smith is the GOAT. **13 franchises, 747 games** — he averaged roughly 57 games per stop. The man basically rented jerseys by the month. He never averaged double-digit points for a season, never made an All-Star team, and still carved out a 15-year career by being exactly what every team needed: a point guard who could get the ball over half court and not die.
 
@@ -56,7 +56,7 @@ The rest of the club is a hall of fame of "wait, he played THERE too?" Joe Smith
 
 ### The Full Leaderboard
 
-{% htmlblock p11/most_nba_franchises_played_for_min_1_game_1946_2026 %}
+{% htmlblock p12/most_nba_franchises_played_for_min_1_game_1946_2026 %}
 
 ### What We Learned
 

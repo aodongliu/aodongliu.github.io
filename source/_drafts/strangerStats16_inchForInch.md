@@ -1,13 +1,13 @@
 ---
-title: "Stranger Stats #15: Inch for Inch — Basketball's Pound-for-Pound Rankings, for One Game and One Season"
+title: "Stranger Stats #16: Inch for Inch — Basketball's Pound-for-Pound Rankings, for One Game and One Season"
 date: 2026-08-26
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Records]
 categories:
   - Stranger Stats
 card_title: "Inch for inch"
 summary: "What happens when basketball’s biggest performances are measured against height?"
-series_number: 15
+series_number: 16
 featured: false
 featured_order: 100
 ---
@@ -35,7 +35,7 @@ Basketball never built the equivalent. So let's build it. Six height classes, a 
 
 Within a class, size is roughly equal, so raw production is a fair fight. Here are the top five single games and top five seasons in each class:
 
-{% htmlblock p15/class_boards %}
+{% htmlblock p16/class_boards %}
 
 A few things worth reading off those boards:
 
@@ -52,13 +52,13 @@ The class champions settle who's best *within* a size. They don't settle who's b
 
 So the pound-for-pound question divides production by height: **FanDuel ÷ inches**. Jordan's 69-point game: 112.6 ÷ 78 inches = **1.444 per inch**. Wilt's 100 doesn't get to play, steals, blocks, and turnovers weren't tracked in 1962, so the ranking starts in **1977-78**, the first season with a complete box score.
 
-{% htmlblock p15/top10_games %}
+{% htmlblock p16/top10_games %}
 
 The greatest game ever played, inch for inch, is **Michael Jordan's 69 in Cleveland**: 69 points, 18 rebounds, 6 assists, 4 steals, from a 6'6" frame. And the closest challenger is Hakeem's 1987 game again, at 1.433. Hakeem produced more raw FanDuel than Jordan, 120.4 to 112.6, but he had to spread it across 84 inches, so Jordan won by a fraction of an inch. Literally.
 
 Look at how the inch-for-inch list reorders the class champions. Mitchell's 71 jumps from the 30th-best raw game to **6th** per inch. Bam's 83 sits 5th, Kobe's 81 7th. An 81-point night and an 83-point night both lose to a 69-point night, and it's not the scoring that does it. It's the height. The tallest man in the top ten is Shaq, whose 24-point, 28-rebound, 15-block game is 9th: his blocks were worth 45 FanDuel points, more than his 24 points, and even that was barely enough at 7'1".
 
-{% htmlblock p15/top10_seasons %}
+{% htmlblock p16/top10_seasons %}
 
 The best season ever, inch for inch, is **Russell Westbrook's 2016-17 MVP year**: 31.9 points, 10.7 rebounds, 10.4 assists per game, 61.1 FanDuel per game from a 6'4" frame, for **0.804 per inch**. Jordan owns four of the top six seasons, and notice what beats the 37-point 1986-87: the all-around seasons, 1988-89 and 1987-88, the ones where he did everything. And the tallest player in the top five is **Nikola Jokic's 2024-25**: 63.3 FanDuel per game, the highest raw production of anyone on the list. Jokic produced more per game than Westbrook or Jordan. He just had to do it with 83 inches instead of 76. A 7-footer forcing his way into the per-inch club is the rarest thing on this list.
 
@@ -74,4 +74,4 @@ See you next time.
 
 ---
 
-*All counts from the [NBA Player, Team, and Game Stats dataset on Kaggle](https://www.kaggle.com/datasets/eoinamoore/historical-nba-data-and-player-box-scores) (1946-2026 snapshot), regular season + playoffs, 1977-78 onward, the first season with steals, blocks, and turnovers all tracked (Wilt's 1960s games are excluded). Production = FanDuel (PTS + 1.2×REB + 1.5×AST + 3×STL + 3×BLK − TOV). Heights from the dataset's player table (5'3" to 7'7"); single-game boards require 30+ minutes (401,624 qualifying games from 1,186,287 player-games); season boards require 30+ games in player-team-season units, keyed on the player's listed team so box-score rows without a numeric team id are still counted (16,478 seasons). Class boards rank by raw FanDuel within each height class; the inch-for-inch lists divide FanDuel by height in inches. Ties break by raw production. The full ranking re-runs from `strangerStats/15_inchForInch/analysis.py`.*
+*All counts from the [NBA Player, Team, and Game Stats dataset on Kaggle](https://www.kaggle.com/datasets/eoinamoore/historical-nba-data-and-player-box-scores) (1946-2026 snapshot), regular season + playoffs, 1977-78 onward, the first season with steals, blocks, and turnovers all tracked (Wilt's 1960s games are excluded). Production = FanDuel (PTS + 1.2×REB + 1.5×AST + 3×STL + 3×BLK − TOV). Heights from the dataset's player table (5'3" to 7'7"); single-game boards require 30+ minutes (401,624 qualifying games from 1,186,287 player-games); season boards require 30+ games in player-team-season units, keyed on the player's listed team so box-score rows without a numeric team id are still counted (16,478 seasons). Class boards rank by raw FanDuel within each height class; the inch-for-inch lists divide FanDuel by height in inches. Ties break by raw production. The full ranking re-runs from `strangerStats/16_inchForInch/analysis.py`.*

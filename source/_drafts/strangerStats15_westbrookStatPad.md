@@ -1,8 +1,8 @@
 ---
-title: "Stranger Stats #14: The Westbrook Audit — Was the Stat Padding Real, and Did the Turnovers Actually Cost Games?"
+title: "Stranger Stats #15: The Westbrook Audit — Was the Stat Padding Real, and Did the Turnovers Actually Cost Games?"
 date: 2026-08-14
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Deep Dives]
 categories:
   - Stranger Stats
 ---
@@ -17,7 +17,7 @@ The stat-padding debate has been running for a decade, and both sides have been 
 
 The cleanest way to test stat-padding is to compare how often a player **finishes** a triple-double once he's within one stat of it. If you're hunting the 10th rebound, you convert the 9-rebound game at an unusual rate. Here's every great who has done this:
 
-{% htmlblock p14/near_miss_vs_actual_triple_double_the_greats %}
+{% htmlblock p15/near_miss_vs_actual_triple_double_the_greats %}
 
 There it is. **Westbrook converts "within one stat" games into triple-doubles 76.8% of the time — the highest rate ever recorded.** Magic Johnson finished at 66.2%. LeBron at 61.0%. Even Jokić, the man chasing the record right now, is at 73.2%. Westbrook got within one stat, and he finished the job at a rate nobody else has matched. That's what chasing the 10th looks like in the data.
 
@@ -27,13 +27,13 @@ The other side of the coin: his 56 near-misses (29 one-rebound-short, 24 one-ass
 
 Westbrook is the most prolific turnover machine the league has ever seen, and this part is not close:
 
-{% htmlblock p14/all_time_turnover_leaders_career %}
+{% htmlblock p15/all_time_turnover_leaders_career %}
 
 **5,031 career turnovers — second-most in NBA history**, and the **highest turnovers per game (3.88) of anyone on the all-time list**. He turns the ball over more per game than LeBron, Harden, Kobe, Stockton, Kidd, everyone.
 
 Did they cost games? Yes, at the margin:
 
-{% htmlblock p14/westbrook_s_record_by_turnover_load %}
+{% htmlblock p15/westbrook_s_record_by_turnover_load %}
 
 The gradient is unmistakable. Under 3 turnovers: 0.582. Five to six: 0.566. Seven to eight: 0.526. **Nine or more: 0.500.** The only losing bucket in his career is the high-turnover one — and his 8+ turnover games went 32-39 overall (0.451). The correlation between his turnovers and his team's +/- is only -0.07, so the effect is small game to game, but it never flipped positive. In a career full of close games, the sloppy nights were the ones that got away.
 
@@ -41,7 +41,7 @@ The gradient is unmistakable. Under 3 turnovers: 0.582. Five to six: 0.566. Seve
 
 The turnover number only matters in context, so here's the context:
 
-{% htmlblock p14/assist_to_turnover_vs_all_time_great_point_guards %}
+{% htmlblock p15/assist_to_turnover_vs_all_time_great_point_guards %}
 
 **Westbrook's career A/TO: 2.06.** Chris Paul: 4.04. John Stockton: 3.72. Magic: 3.07. Jason Kidd: 3.02. Westbrook is second-worst in this group — only Stephen Curry is lower, and Curry turns it over a full 0.8 fewer times per game. Westbrook's 3.88 turnovers per game is the heaviest load of any elite point guard in history. He got 10,342 career assists, but he paid for every one of them in a way no other great point guard did.
 
@@ -49,7 +49,7 @@ The turnover number only matters in context, so here's the context:
 
 This is where the "triple-double is empty" case gets its fuel:
 
-{% htmlblock p14/career_shooting_efficiency_vs_all_time_greats %}
+{% htmlblock p15/career_shooting_efficiency_vs_all_time_greats %}
 
 Career 43.9% from the field, 30.8% from three, **52.7% true shooting** — better than only Isiah Thomas and Jason Kidd on this list, and miles behind Jokić (64.1), Magic (61.0), Stockton (60.8), Nash (60.5), LeBron (59.0) and Paul (58.1).
 
@@ -57,7 +57,7 @@ And the wild part: **his triple-double games were even less efficient than his n
 
 ### The Controls — What the Wins Actually Prove
 
-{% htmlblock p14/do_triple_doubles_actually_win_games_with_controls %}
+{% htmlblock p15/do_triple_doubles_actually_win_games_with_controls %}
 
 Here's the honest reading of all of it:
 
