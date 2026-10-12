@@ -14,8 +14,12 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
 - Use original author-supplied TOC/graphical abstracts or verified publication imagery
   with provenance. Preserve colors. Never generate or invent substitute paper images.
   All eight author-supplied TOCs are installed; see docs/research-image-sources.md.
-- Keep warm ivory light mode and warm charcoal/taupe dark mode with original-color
-  imagery. Do not restore rejected cold green/slate palettes or monochrome illustrations.
+- The site uses the Lagoon palette (Oct 2026): near-white with soft teal/blue glows, a deep
+  teal-black dark mode, and a teal-to-indigo gradient on the hero line and page titles. Its
+  tokens are the first lines of `site.css`. Keep original-color imagery. The preview has a
+  color-scheme chooser (`_partial/scheme-lab.ejs`, preview only) for comparing alternatives.
+- Research papers carry color-coded `keywords` from `source/_data/keywords.yml`; Stranger
+  Stats posts take 1-2 topic tags from `source/_data/tags.yml`. Never invent new ones casually.
 - Preview using `node tools/preview.cjs server`, build with `node tools/preview.cjs build`,
   and validate with `node tools/check-content.cjs` and `node tools/check-preview.cjs`.
   For selection-logic changes also run `node --test tools/content-policy.test.cjs`.

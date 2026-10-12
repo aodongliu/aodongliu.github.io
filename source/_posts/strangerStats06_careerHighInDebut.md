@@ -2,7 +2,7 @@
 title: "Stranger Stats #6: Bro Drove 5.5 Hours After Being Traded and Dropped a Career High! A Look at Career-High Performances in Debuts"
 date: 2026-02-09
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Scoring]
 math: true
 categories:
   - Stranger Stats

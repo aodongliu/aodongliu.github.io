@@ -39,7 +39,7 @@ title: "Stranger Stats #16: The question this article answers"
 date: 2026-09-28
 categories:
   - Stranger Stats
-tags: [nba, data, basketball]
+tags: [Scoring, Records]   # 1-2 from source/_data/tags.yml
 comment: disqus
 series_number: 16
 summary: "One or two sentences explaining the question and why a reader might care."
@@ -137,6 +137,24 @@ templates changes. Keep the text to one plain line. Projects hosted from their o
 repos (AlleyLoop at `aodongliu/alleyloop`) are linked by full URL, since their files are not
 part of this site's build.
 
+## Keywords and tags
+
+**Research keywords** are color-coded pills (blue Computing, violet Math, green Science) on the
+Research list, each paper page and the homepage banner. The vocabulary and groups live in
+`source/_data/keywords.yml`; each paper lists its `keywords` in `research.json`. Use terms an
+industry reader searches for (MPI, GPU, Linear Algebra...) plus distinguishing science topics
+(Nuclear Quantum Effects, Magnetic Field...), only where the abstract supports them. Skip terms
+true of every paper. The homepage banner shows the fixed list `research.banner_keywords` in
+`portfolio.yml`. `check-content` rejects keywords missing from the vocabulary.
+
+**Tags** group posts on `/tags/`. Stranger Stats posts take 1-2 topic tags from the
+`stranger_stats` list in `source/_data/tags.yml` (Records, Scoring, Shooting, Bad Nights,
+Careers, Teams, Deep Dives); other posts use the `other` list. Every Stranger Stats post is
+already in its category, so generic tags (nba, basketball) are not used. Keep the list short;
+add a tag only when several posts need it. `check-content` enforces both lists.
+Tag URLs are lowercase and hyphenated (`/tags/bad-nights/`), generated from this file by
+`themes/matery/scripts/portfolio.js`; no separate `tag_map` entry is needed.
+
 ## Add or feature a research paper
 
 Add one object to the `papers` array in `source/_data/research.json`. Copy an existing
@@ -218,7 +236,7 @@ grayscale redrawings or AI substitutes.
   load fonts or CSS from third-party CDNs. Cards use soft rounded surfaces; one warm accent
   (`--accent`) marks links, the current page and focus. Stranger Stats cards show the series
   number in the label line ("No. 03 · Featured"), never on top of the cover art.
-- Use warm ivory in light mode and warm charcoal with softer taupe cards in dark mode.
+- Use the Lagoon palette (near-white with soft teal/blue glows; deep teal-black dark mode; a teal-to-indigo gradient on the hero line and page titles).
   Preserve original-color imagery. Future projects are not featured as working demos
   until an actual artifact exists.
 
@@ -312,8 +330,7 @@ About link in the hero; the Research banner is the collection entry point.
 Current homepage Stranger Stats pins are #1, #3, #7, in that order, selected by the
 author. Keep their `featured` and `featured_order` values unless instructed otherwise.
 Use the original `source/images/al_logo.png` for the brand and favicon. The light
-palette uses warm ivory surfaces; dark mode uses warm charcoal with softer taupe cards.
-The rejected cool grey-green/slate palette should not be restored. Do not use diagonal arrows anywhere in the website UI, including text links, navigation, banners and contact links.
+palette is Lagoon: near-white surfaces with teal/blue glows; dark mode is deep teal-black. Do not use diagonal arrows anywhere in the website UI, including text links, navigation, banners and contact links.
 Preserve original content colors and the white backing required by scientific TOCs.
 
 ## Phone preview on the same Wi-Fi
@@ -337,8 +354,8 @@ after edits to update the phone view. Drafts remain excluded from the generated 
 
 Use `themes/matery/source/css/site.css` for shared colors, spacing and typography. Adjust
 its existing light/dark color variables rather than appending competing palettes or
-putting colors into Markdown. Keep the warm ivory default and warm charcoal/taupe dark
-mode; do not restore the rejected cool green/slate scheme. Scientific images retain
+putting colors into Markdown. Keep the Lagoon tokens (first lines of `site.css`); compare
+alternatives in the preview's color chooser before changing them. Scientific images retain
 white backing where needed for readability. Check text, borders, buttons, menus and
 focus states in both modes after changing tokens.
 

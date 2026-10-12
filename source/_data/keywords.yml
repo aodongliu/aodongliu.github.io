@@ -1,0 +1,29 @@
+# Research keywords shown as color-coded pills. Each keyword belongs to one group; the group
+# sets its color. Add a keyword here before using it in research.json (check-content enforces
+# this). Keywords must describe what the paper actually does (see its abstract), and should
+# distinguish papers: skip terms that apply to all of them (e.g. "quantum chemistry").
+groups:
+  compute: Computing
+  math: Math
+  science: Science
+keywords:
+  MPI: compute
+  Distributed Computing: compute
+  HPC: compute
+  GPU: compute
+  Memory Optimization: compute
+  Linear Algebra: math
+  Matrix Factorization: math
+  Numerical Optimization: math
+  Numerical Methods: math
+  Numerical Integration: math
+  Analytic Gradients: math
+  Sampling: math
+  Nuclear Quantum Effects: science
+  Magnetic Field: science
+  Spin–Orbit Coupling: science
+  Relativistic Effects: science
+  Quantum Dynamics: science
+  Molecular Dynamics: science
+  Spectroscopy: science
+  DFT: science

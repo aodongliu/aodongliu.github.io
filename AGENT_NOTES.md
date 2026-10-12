@@ -52,7 +52,7 @@ Keep website card metadata in front matter; the Markdown lives only in this repo
 Preserve the author's #1/#3/#7 homepage pins. #15 Inch for inch remains an unpublished
 draft. Use original supplied cover images, not generated replacements. Keep internal
 provenance and acquisition notes out of public captions. The theme uses compact banner
-sections, warm ivory light mode and warm charcoal/taupe dark mode, with no decorative
+sections and the Lagoon palette (see AGENTS.md), with no decorative
 slogans or circular arrow badges. Validate metadata, generated links and draft exclusion
 before handing work off; publishing requires explicit authorization.
 

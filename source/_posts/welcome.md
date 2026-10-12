@@ -1,7 +1,7 @@
 ---
 title: Welcome
 date: 2025-08-19
-tags: [computational chemistry, high performance computing, quantum dynamics, personal]
+tags: [Personal]
 sticky: 1
 ---
 

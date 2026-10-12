@@ -2,7 +2,7 @@
 categories: [Training]
 title: My 2022 Weight Loss Journey
 date: 2025-8-20
-tags: [personal, fitness, weight loss, transformation]
+tags: [Fitness]
 ---
 
 In 2022, I set out on an important personal project of my life: **taking control of my health and fitness**.  

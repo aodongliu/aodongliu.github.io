@@ -2,7 +2,7 @@
 title: "Stranger Stats #4: Too Young, Too Simple? Breaking Down the Youngest NBA Records Nobody Wants"
 date: 2026-01-26
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Records, Bad Nights]
 math: true
 categories:
   - Stranger Stats

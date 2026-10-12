@@ -2,7 +2,7 @@
 title: "Stranger Stats #3: He Shot 0/17 In an NBA Game, and 30 Years Later His Son Shot 0/12?"
 date: 2026-01-19
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Shooting, Bad Nights]
 math: true
 categories:
   - Stranger Stats

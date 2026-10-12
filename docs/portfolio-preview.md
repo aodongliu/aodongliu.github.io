@@ -25,7 +25,7 @@ site after deployment; do not infer publication from a local preview or successf
 
 ## What to verify
 
-- Warm ivory default and warm charcoal/taupe dark mode; original-color logo and portrait.
+- Lagoon palette in light and dark mode; original-color logo and portrait.
 - Matching Research/Stranger Stats banner titles; both climbers visible in the landscape.
 - Compact cards, original full TOCs, no circular arrows, captions or decorative slogans.
 - Stranger Stats #1/#3/#7 highlighted in order; unfinished #15 excluded.

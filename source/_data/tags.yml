@@ -1,0 +1,15 @@
+# Tag vocabulary. Tags group posts on /tags/; keep the list short so the page stays readable.
+# Stranger Stats posts use 1-2 topic tags from this list (check-content enforces it).
+# Every Stranger Stats post is already in the "Stranger Stats" category, so tags like
+# "nba" or "basketball" would apply to all of them and are not used.
+stranger_stats:
+  Records: All-time and franchise records, leaderboards and "who has the most"
+  Scoring: Big scoring nights and points
+  Shooting: Field goals, threes and free throws
+  Bad Nights: Games and records nobody wants
+  Careers: Career-long numbers, journeys and averages
+  Teams: Team seasons, months and schedules
+  Deep Dives: Multi-part looks at one player or one claim
+other:
+  Fitness: Training and weight loss
+  Personal: Notes about me and this site

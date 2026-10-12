@@ -2,7 +2,7 @@
 title: "Stranger Stats #9: No Field Goals, All Free Throws. Who's Been Carried by the Refs?"
 date: 2026-09-28
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Shooting]
 categories:
   - Stranger Stats
 series_number: 9

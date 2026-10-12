@@ -2,7 +2,7 @@
 title: "Stranger Stats #5: The Buzz in January: A Recap of the Hornets’ Historic Month"
 date: 2026-02-02
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Teams]
 math: true
 categories:
   - Stranger Stats

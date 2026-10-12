@@ -42,6 +42,7 @@ for (const file of htmlFiles) {
   check(doc.canonicals.length === 1, `${route}: expected one canonical`);
   check(doc.canonicals[0] === 'https://aodongliu.github.io' + route, `${route}: incorrect canonical ${doc.canonicals[0]}`);
   check(!/{%\s*htmlblock/.test(doc.html), `${route}: unresolved HTML block tag`);
+  if (production) check(!/scheme-lab/.test(doc.html), `${route}: preview-only scheme chooser in production output`);
 }
 let checkedLinks = 0;
 for (const doc of documents.values()) for (const href of doc.links) {

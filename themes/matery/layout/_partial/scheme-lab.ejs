@@ -1,0 +1,41 @@
+<% /* Preview-only color-scheme chooser. Rendered only with _config.preview.yml (portfolio_preview). */ %>
+<script>
+  (() => {
+    const pick = new URLSearchParams(location.search).get('scheme');
+    let saved = null; try { saved = localStorage.getItem('scheme-lab-v3'); } catch (_) {}
+    document.documentElement.dataset.scheme = pick || saved || 'lagoon';
+  })();
+</script>
+<aside class="scheme-lab" aria-label="Color scheme preview">
+  <details open>
+    <summary>Colors: <b class="scheme-lab-name"></b></summary>
+    <div class="scheme-lab-options">
+      <% [['lagoon', 'Lagoon (site default)', '#fbfefe', '#1f8fa8'], ['aurora', 'Aurora', '#ffffff', '#8fa4e0'], ['wash', 'Aurora wash', '#eef2ff', '#7fb0c8'], ['dusk', 'Dusk', '#fffbfa', '#d27597'], ['iris', 'Iris', '#ffffff', '#5b3fd6'], ['polar', 'Polar', '#07111c', '#62e3b0'], ['husky', 'Husky purple', '#faf8fd', '#4b2e83'], ['sunset', 'Sunset', '#fff9f4', '#e2552f'], ['midnight', 'Midnight gold', '#0e1726', '#e2b65c']].forEach(([key, label, bg, accent]) => { %>
+      <button type="button" data-scheme="<%= key %>"><span class="scheme-swatch" style="background:<%= bg %>;box-shadow:inset 0 0 0 1px #0002, inset -10px 0 0 <%= accent %>"></span><%= label %></button>
+      <% }); %>
+    </div>
+    <p>Theme toggle (◐) switches light/dark. Preview only.</p>
+  </details>
+</aside>
+<style>
+  .scheme-lab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:1000;font:13px/1.4 system-ui,-apple-system,sans-serif;color:#222}
+  .scheme-lab details{background:#fff;border:1px solid #d9d9d9;border-radius:12px;box-shadow:0 10px 30px #0003;min-width:200px}
+  .scheme-lab summary{cursor:pointer;padding:9px 13px;list-style:none}.scheme-lab summary::-webkit-details-marker{display:none}
+  .scheme-lab details[open] summary{border-bottom:1px solid #eee}
+  .scheme-lab-options{display:grid;gap:2px;padding:6px}
+  .scheme-lab button{display:flex;align-items:center;gap:10px;padding:7px 8px;border:0;border-radius:8px;background:none;font:inherit;color:inherit;cursor:pointer;text-align:left}
+  .scheme-lab button:hover,.scheme-lab button[aria-pressed=true]{background:#f0f0f0}.scheme-lab button[aria-pressed=true]{font-weight:600}
+  .scheme-swatch{width:26px;height:18px;border-radius:5px;flex:0 0 auto}
+  .scheme-lab p{margin:0;padding:6px 13px 10px;font-size:11px;color:#777}
+  @media(max-width:720px){.scheme-lab details{min-width:0}.scheme-lab details:not([open]){opacity:.95}}
+</style>
+<script>
+  (() => {
+    const root = document.documentElement, panel = document.querySelector('.scheme-lab');
+    const name = panel.querySelector('.scheme-lab-name');
+    const sync = () => { panel.querySelectorAll('button').forEach(b => { const on = b.dataset.scheme === root.dataset.scheme; b.setAttribute('aria-pressed', on); if (on) name.textContent = b.textContent.trim(); }); };
+    panel.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { root.dataset.scheme = b.dataset.scheme; try { localStorage.setItem('scheme-lab-v3', b.dataset.scheme); } catch (_) {} sync(); }));
+    if (matchMedia('(max-width: 720px)').matches) panel.querySelector('details').open = false;
+    sync();
+  })();
+</script>

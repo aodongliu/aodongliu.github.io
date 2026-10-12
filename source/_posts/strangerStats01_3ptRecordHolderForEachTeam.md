@@ -3,7 +3,7 @@ title: "Stranger Stats #1: NBA Franchise Single-Game 3-Point Records Are Held by
 
 date: 2026-01-05
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Records, Shooting]
 categories:
   - Stranger Stats
 

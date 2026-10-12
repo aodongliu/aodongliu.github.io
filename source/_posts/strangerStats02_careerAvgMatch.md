@@ -2,7 +2,7 @@
 title: "Stranger Stats #2: LeBron Never Recorded His Career-Average Game (27/7/7), But Who Has?"
 date: 2026-01-12
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Careers]
 math: true
 categories:
   - Stranger Stats

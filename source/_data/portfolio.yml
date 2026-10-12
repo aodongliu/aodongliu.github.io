@@ -30,6 +30,8 @@ research:
   # Landscape banner; crop is presentation-only in CSS.
   banner_image: /images/north-cascades.jpg
   banner_alt: Mountain slopes and autumn foliage in the North Cascades.
+  # Keyword pills on the homepage Research banner (must exist in keywords.yml).
+  banner_keywords: [HPC, Distributed Computing, GPU, Numerical Optimization, Nuclear Quantum Effects]
 
 # Homepage "Side projects": one compact banner each, no cards. Order = display order.
 # Add Powerlifting Physics Lab and Impact Echo here when they are ready to show.

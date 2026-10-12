@@ -64,6 +64,12 @@ for (const folder of ['_posts', '_drafts']) for (const file of walk(path.join(ro
     for (const field of ['card_title', 'summary', 'cover', 'cover_alt']) check(data[field] === undefined || typeof data[field] === 'string', `${name}: ${field} must be a string`);
     check(data.series_number === undefined || Number.isInteger(data.series_number) && data.series_number > 0, `${name}: series_number must be a positive integer`);
     image(data.cover, data.cover_alt, name);
+    const tagVocab = yaml.load(fs.readFileSync(path.join(root, 'source/_data/tags.yml'), 'utf8'));
+    const tagList = [].concat(data.tags || []);
+    if ([].concat(data.categories || []).includes('Stranger Stats')) {
+      check(tagList.length >= 1 && tagList.length <= 2, `${name}: Stranger Stats posts take 1-2 topic tags`);
+      for (const tag of tagList) check(tag in (tagVocab.stranger_stats || {}), `${name}: tag "${tag}" is not in source/_data/tags.yml (stranger_stats)`);
+    } else for (const tag of tagList) check(tag in { ...(tagVocab.stranger_stats || {}), ...(tagVocab.other || {}) }, `${name}: tag "${tag}" is not in source/_data/tags.yml`);
     if ([].concat(data.categories || []).includes('Stranger Stats')) coverShape(data.cover, name);
     for (const match of body.matchAll(/{%\s*htmlblock\s+([^\s%]+)\s*%}/g)) check(fs.existsSync(path.join(root, 'source/_html_blocks', match[1] + '.html')), `${name}: missing HTML block ${match[1]}`);
     postCount++;
@@ -80,6 +86,9 @@ for (const paper of papers) {
   check(paper.status === 'Published', `${name}: this collection is for published papers only`);
   check(typeof paper.url === 'string' && paper.url.startsWith('https://'), `${name}: HTTPS paper URL required`);
   check(paper.overview === undefined || ['problem', 'approach', 'finding'].every(key => typeof paper.overview[key] === 'string' && paper.overview[key].trim()), `${name}: overview needs problem, approach and finding text`);
+  const vocabulary = yaml.load(fs.readFileSync(path.join(root, 'source/_data/keywords.yml'), 'utf8')).keywords;
+  check(Array.isArray(paper.keywords) && paper.keywords.length > 0, `${name}: keywords list required (see source/_data/keywords.yml)`);
+  for (const word of paper.keywords || []) check(word in vocabulary, `${name}: keyword "${word}" is not in source/_data/keywords.yml`);
   featureFields(paper, name); image(paper.image, paper.image_alt, name);
   if (paper.image) {
     check(typeof paper.image_source === 'string' && paper.image_source.startsWith('https://'), `${name}: image source URL required`);
@@ -89,6 +98,8 @@ for (const paper of papers) {
 const settings = yaml.load(fs.readFileSync(path.join(root, 'source/_data/portfolio.yml'), 'utf8'));
 for (const key of ['post_limit', 'research_limit']) check(Number.isInteger(settings.homepage?.[key]) && settings.homepage[key] > 0, `portfolio.homepage.${key}: positive integer required`);
 image(settings.stranger_stats?.default_cover, settings.stranger_stats?.default_cover_alt, 'portfolio.stranger_stats');
+const keywordVocab = yaml.load(fs.readFileSync(path.join(root, 'source/_data/keywords.yml'), 'utf8')).keywords;
+for (const word of settings.research?.banner_keywords || []) check(word in keywordVocab, `portfolio.research.banner_keywords: "${word}" is not in keywords.yml`);
 if (warnings.length) console.warn('Warnings:\n  ' + warnings.join('\n  '));
 if (errors.length) { console.error(errors.join('\n')); process.exitCode = 1; }
 else console.log(`Content metadata verified: ${postCount} posts/drafts and ${papers.length} papers; feature fields, images and HTML blocks valid.`);

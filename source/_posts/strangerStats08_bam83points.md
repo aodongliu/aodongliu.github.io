@@ -2,7 +2,7 @@
 title: "Stranger Stats #8: Where Does Bam's 83-Point Game Rank All-Time?"
 date: 2026-09-21
 comment: disqus
-tags: [nba, data, basketball]
+tags: [Scoring, Records]
 categories:
   - Stranger Stats
 series_number: 8

@@ -2,6 +2,19 @@
 const path = require('path');
 const policy = require(path.join(hexo.base_dir, 'lib/content-policy.cjs'));
 
+// Lowercase, hyphenated tag URLs (/tags/bad-nights/) for every tag in source/_data/tags.yml.
+{
+  const fs = require('fs');
+  const yaml = require('js-yaml');
+  const file = path.join(hexo.base_dir, 'source/_data/tags.yml');
+  if (fs.existsSync(file)) {
+    const vocab = yaml.load(fs.readFileSync(file, 'utf8')) || {};
+    const map = { ...(hexo.config.tag_map || {}) };
+    for (const group of Object.values(vocab)) for (const name of Object.keys(group || {})) map[name] = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    hexo.config.tag_map = map;
+  }
+}
+
 hexo.extend.generator.register('portfolio', function (locals) {
   const data = locals.data.research || { papers: [] };
   const papers = Array.isArray(data) ? data : data.papers;
@@ -126,4 +139,19 @@ hexo.extend.helper.register('post_calendar', function (posts) {
   if (months.length > 1 && months[1].col - months[0].col < 3) months.shift();
   const total = weeks.flat().filter(Boolean).reduce((sum, cell) => sum + cell.posts.length, 0);
   return { weeks, months, total, start: iso(start), end: iso(today) };
+});
+
+// Color-coded keyword pills for a paper (groups in source/_data/keywords.yml).
+const { escapeHTML } = require('hexo-util');
+hexo.extend.helper.register('keyword_pills', function (paper, limit) {
+  const vocab = this.site.data.keywords || { keywords: {} };
+  const words = (paper.keywords || []).slice(0, limit || undefined);
+  if (!words.length) return '';
+  return '<ul class="kw-pills">' + words.map(word =>
+    `<li class="kw kw-${escapeHTML(vocab.keywords[word] || 'other')}">${escapeHTML(word)}</li>`).join('') + '</ul>';
+});
+
+// Author list with Aodong's name in bold.
+hexo.extend.helper.register('author_list', function (authors) {
+  return escapeHTML(String(authors || '')).replace(/Aodong Liu/g, '<b>Aodong Liu</b>');
 });
