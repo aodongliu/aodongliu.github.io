@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://aodongliu.github.io/2026/09/21/strangerStats08_bam83points/</loc>
+    <loc>https://aodongliu.github.io/2026/08/31/strangerStats07_cardio/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://aodongliu.github.io/2026/08/31/strangerStats07_cardio/</loc>
+    <loc>https://aodongliu.github.io/2026/09/21/strangerStats08_bam83points/</loc>
     
     <lastmod>2026-10-12</lastmod>
     
@@ -164,20 +164,6 @@
 
   
   <url>
-    <loc>https://aodongliu.github.io/tags/shooting/</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://aodongliu.github.io/tags/bad-nights/</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://aodongliu.github.io/tags/records/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -185,7 +171,21 @@
   </url>
   
   <url>
+    <loc>https://aodongliu.github.io/tags/shooting/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://aodongliu.github.io/tags/careers/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aodongliu.github.io/tags/bad-nights/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
