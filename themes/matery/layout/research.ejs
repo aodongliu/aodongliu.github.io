@@ -13,7 +13,7 @@
           <p class="pub-authors"><%- author_list(paper.authors) %></p>
           <p class="pub-venue"><em><%= paper.venue %></em> <%= paper.citation %></p>
           <%- keyword_pills(paper) %>
-          <p class="pub-links"><a href="/research/<%= paper.id %>/">Overview</a><a href="<%= paper.url %>">Paper</a></p>
+          <p class="pub-links"><a href="/research/<%= paper.id %>/">Summary</a><a href="<%= paper.url %>">Paper</a></p>
         </div>
       </li><% }); %>
     </ol>

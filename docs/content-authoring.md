@@ -172,11 +172,6 @@ entry and replace every bibliographic field with verified details:
   "url": "https://doi.org/10.xxxx/actual-doi",
   "headline": "An accurate headline a nonexpert can understand",
   "summary": "Explain the problem and what this work contributes in plain language.",
-  "overview": {
-    "problem": "Why this matters, for someone with no chemistry background.",
-    "approach": "What the method does, with one plain-language gloss per technical term.",
-    "finding": "What the paper actually shows; only claims the abstract or paper supports."
-  },
   "topic": "Scientific computing",
   "status": "Published",
   "featured": false,
@@ -186,9 +181,7 @@ entry and replace every bibliographic field with verified details:
 
 That automatically creates the paper's detail page and collection card. The `headline` is
 the card title everywhere: a short everyday-language sentence a non-scientist understands,
-without jargon or acronyms ("Speeding up simulations of heavy metals with graphics cards").
-The optional `overview` renders as three short panels on the paper page, between the
-publication details and the abstract; keep each to two or three sentences. Keep the `id`
+without jargon or acronyms ("Speeding up simulations of heavy metals with graphics cards"). Keep the `id`
 stable because it defines the URL. Keep the array in publication order, newest first;
 the collection follows that order. Add `authorship_note` only when supported by the paper.
 This collection currently contains published papers only; keep submitted/in-preparation

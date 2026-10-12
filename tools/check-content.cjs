@@ -85,7 +85,6 @@ for (const paper of papers) {
   check(Number.isInteger(paper.year), `${name}: year must be an integer`);
   check(paper.status === 'Published', `${name}: this collection is for published papers only`);
   check(typeof paper.url === 'string' && paper.url.startsWith('https://'), `${name}: HTTPS paper URL required`);
-  check(paper.overview === undefined || ['problem', 'approach', 'finding'].every(key => typeof paper.overview[key] === 'string' && paper.overview[key].trim()), `${name}: overview needs problem, approach and finding text`);
   const vocabulary = yaml.load(fs.readFileSync(path.join(root, 'source/_data/keywords.yml'), 'utf8')).keywords;
   check(Array.isArray(paper.keywords) && paper.keywords.length > 0, `${name}: keywords list required (see source/_data/keywords.yml)`);
   for (const word of paper.keywords || []) check(word in vocabulary, `${name}: keyword "${word}" is not in source/_data/keywords.yml`);
