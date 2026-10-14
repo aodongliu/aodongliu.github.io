@@ -296,8 +296,8 @@ explicit action; neither a feature flag nor a request to write content authorize
   newest first. The existing weight-loss article is included. Future meet-preparation
   posts use the same category; drafts remain drafts until ready.
 - Edit public contact/profile links in `source/_data/portfolio.yml` under `contact_links`.
-  Instagram and WeChat were restored from the site's earlier Fluid-theme About page;
-  email follows the supplied current CV. WeChat links to the existing QR image.
+  Email follows the supplied current CV. Instagram and WeChat were removed at Aodong's
+  request (Oct 2026); don't add them back.
 - `/cv/` is an HTML preview with an explicit PDF download. This avoids the in-app
   browser's blank PDF-viewer behavior. When replacing `source/files/aodongliu_cv.pdf`,
   regenerate `source/images/cv/page-*.png` using `pdftoppm -scale-to 1600 -png
@@ -376,7 +376,7 @@ To replace a post cover manually:
 
 To change the logo, replace `source/images/al_logo.png` deliberately and verify the
 header/favicon in both modes. Edit profile links in `source/_data/portfolio.yml`, preserving
-Email, LinkedIn, Google Scholar, GitHub, Instagram, WeChat and ORCID unless asked to remove
+Email, LinkedIn, Google Scholar, GitHub and ORCID unless asked to remove
 one. The Training category and page are permanent parts of the site; its navigation link returns
 when the page is ready.
 
