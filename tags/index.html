@@ -14,11 +14,18 @@
 <meta property="og:description" content="Aodong Liu, Postdoctoral Scholar at the University of Washington. Quantum chemistry methods, scientific software, and NBA data stories with Stranger Stats.">
 <meta property="og:url" content="https://aodongliu.github.io/tags/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://aodongliu.github.io/images/headshot_lincolnPark.png">
-<meta name="theme-color" content="#fbfefe">
-<link rel="icon" type="image/png" href="/images/al_logo.png">
 
-<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<meta property="og:image" content="https://aodongliu.github.io/images/og/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfefe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#061417" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script>(() => { let mode = null; try { mode = localStorage.getItem('aodong-theme-v2'); } catch (_) {} if (mode !== 'light' && mode !== 'dark') mode = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; })();</script>
 <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">
@@ -29,8 +36,8 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-wrap header-inner">
-    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/images/al_logo.png" width="48" height="48" alt=""><span>Aodong Liu</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">＋</span></button>
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/optimized/w96/images/al_logo.webp" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="/research/" >Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
@@ -60,19 +67,14 @@
 </nav>
 </header>
 <div class="site-wrap taxonomy-page">
-  <section class="taxonomy-card">
 <nav class="chip-cloud" aria-label="All tags">
   <a class="chip tint-3" href="/tags/bad-nights/">Bad Nights<span class="chip-count">3</span></a><a class="chip tint-2" href="/tags/careers/">Careers<span class="chip-count">1</span></a><a class="chip tint-5" href="/tags/fitness/">Fitness<span class="chip-count">1</span></a><a class="chip tint-3" href="/tags/personal/">Personal<span class="chip-count">1</span></a><a class="chip tint-3" href="/tags/records/">Records<span class="chip-count">3</span></a><a class="chip tint-2" href="/tags/scoring/">Scoring<span class="chip-count">2</span></a><a class="chip tint-2" href="/tags/shooting/">Shooting<span class="chip-count">3</span></a><a class="chip tint-1" href="/tags/teams/">Teams<span class="chip-count">1</span></a>
 </nav>
-</section>
-  <section class="taxonomy-card word-cloud" aria-label="Tag cloud, sized by number of posts">
-    <a href="/tags/personal/" style="font-size:14.0px" class="" title="Personal: 1 post">Personal</a><a href="/tags/careers/" style="font-size:14.0px" class="" title="Careers: 1 post">Careers</a><a href="/tags/shooting/" style="font-size:40.0px" class="is-top" title="Shooting: 3 posts">Shooting</a><a href="/tags/bad-nights/" style="font-size:40.0px" class="is-top" title="Bad Nights: 3 posts">Bad Nights</a><a href="/tags/records/" style="font-size:40.0px" class="is-top" title="Records: 3 posts">Records</a><a href="/tags/scoring/" style="font-size:30.4px" class="" title="Scoring: 2 posts">Scoring</a><a href="/tags/fitness/" style="font-size:14.0px" class="" title="Fitness: 1 post">Fitness</a><a href="/tags/teams/" style="font-size:14.0px" class="" title="Teams: 1 post">Teams</a>
-  </section>
 </div>
 </main>
 <footer class="site-footer site-wrap">
-  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>
-  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
+  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a></nav>
+  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><a href="#main">Back to top ↑</a></div>
 </footer>
 <script src="/js/site.js" defer></script>
 </body>

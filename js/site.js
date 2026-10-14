@@ -3,6 +3,11 @@
   const themeButton = document.querySelector('.theme-toggle');
   function label() { themeButton.setAttribute('aria-label', `Switch to ${root.dataset.theme === 'dark' ? 'light' : 'dark'} theme`); }
   label();
+  // With no saved choice, follow the device setting as it changes.
+  if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    let saved = null; try { saved = localStorage.getItem('aodong-theme-v2'); } catch (_) {}
+    if (saved !== 'light' && saved !== 'dark') { root.dataset.theme = event.matches ? 'dark' : 'light'; label(); }
+  });
   themeButton.addEventListener('click', () => { root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark'; try { localStorage.setItem('aodong-theme-v2', root.dataset.theme); } catch (_) {} label(); });
   const menuButton = document.querySelector('.menu-toggle');
   menuButton.addEventListener('click', () => { const expanded = menuButton.getAttribute('aria-expanded') !== 'true'; menuButton.setAttribute('aria-expanded', String(expanded)); document.querySelector('.primary-nav').classList.toggle('is-open', expanded); });
@@ -54,7 +59,8 @@
         const item = document.createElement('li');
         const link = document.createElement('a'); link.href = entry.url;
         const meta = document.createElement('span'); meta.className = 'search-result-meta';
-        meta.textContent = [entry.type, entry.date].filter(Boolean).join(' · ');
+        const when = /^\d{4}-\d{2}-\d{2}$/.test(entry.date || '') ? new Date(entry.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : entry.date;
+        meta.textContent = [entry.type, when].filter(Boolean).join(' · ');
         const title = document.createElement('strong'); highlight(title, entry.title, words);
         const text = document.createElement('span'); text.className = 'search-result-text'; highlight(text, snippet(entry, words), words);
         link.append(meta, title, text); item.append(link); list.append(item);

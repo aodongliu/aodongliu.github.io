@@ -14,13 +14,20 @@
 <meta property="og:description" content="Aodong Liu, Postdoctoral Scholar at the University of Washington. Quantum chemistry methods, scientific software, and NBA data stories with Stranger Stats.">
 <meta property="og:url" content="https://aodongliu.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://aodongliu.github.io/images/headshot_lincolnPark.png">
-<meta name="theme-color" content="#fbfefe">
-<link rel="icon" type="image/png" href="/images/al_logo.png">
+
+<meta property="og:image" content="https://aodongliu.github.io/images/og/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfefe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#061417" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Aodong Liu","url":"https://aodongliu.github.io"}</script>
 
-<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<script>(() => { let mode = null; try { mode = localStorage.getItem('aodong-theme-v2'); } catch (_) {} if (mode !== 'light' && mode !== 'dark') mode = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; })();</script>
 <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">
@@ -31,8 +38,8 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-wrap header-inner">
-    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/images/al_logo.png" width="48" height="48" alt=""><span>Aodong Liu</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">＋</span></button>
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/optimized/w96/images/al_logo.webp" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="/research/" >Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
@@ -57,28 +64,28 @@
 </dialog>
 <main id="main" class="site-main"><section class="hero site-wrap">
   <div class="hero-copy"><h1>Aodong Liu.<br><span>Computational chemist.</span></h1><p class="hero-description">Postdoctoral Scholar at the University of Washington. I develop quantum chemistry methods and scientific software.<br>Train by day, data-driven blog by night, all day!</p><div class="hero-actions"><a class="button button-quiet" href="/about/">A little about me <span aria-hidden="true">→</span></a></div></div>
-  <figure class="hero-art"><img class="hero-portrait" src="/images/headshot_lincolnPark.png" width="585" height="1028" alt="Aodong Liu at Lincoln Park"></figure>
+  <figure class="hero-art"><picture><source media="(max-width: 720px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><img class="hero-portrait" src="/optimized/w960/images/headshot_lincolnPark.webp" width="585" height="1028" alt="Aodong Liu at Lincoln Park"></picture></figure>
 </section>
 <section class="portfolio-group site-wrap" aria-labelledby="research-title">
   <a class="section-banner research-banner" href="/research/">
     <div class="section-banner-copy"><h2 id="research-title">Research</h2><p>Quantum chemistry and scientific computing.</p><ul class="banner-kw kw-pills"><li class="kw kw-compute">HPC</li><li class="kw kw-compute">Distributed Computing</li><li class="kw kw-compute">GPU</li><li class="kw kw-math">Numerical Optimization</li><li class="kw kw-science">Nuclear Quantum Effects</li></ul><span>All 8 papers</span></div>
-    <img src="/images/north-cascades.jpg" alt="Mountain slopes and autumn foliage in the North Cascades." loading="lazy">
+    <img src="/optimized/w1600/images/north-cascades.webp" alt="Mountain slopes and autumn foliage in the North Cascades." loading="lazy">
   </a>
 </section>
 
 <section class="portfolio-group site-wrap" aria-labelledby="projects-title">
   <h2 id="projects-title" class="projects-heading">Side projects</h2>
   <div class="project-banners">
-    <a class="project-banner" href="/strangerStats/"><img src="/images/strangerStats_chatgpt3.png" alt="A moonlit forest filled with statistical clues" loading="lazy"><span class="project-banner-copy"><span class="project-banner-title">Stranger Stats</span><span class="project-banner-text">NBA data stories that might shock you.</span><span class="project-banner-link">All posts</span></span></a>
+    <a class="project-banner" href="/strangerStats/"><img src="/optimized/w960/images/strangerStats_chatgpt3.webp" alt="A moonlit forest filled with statistical clues" loading="lazy"><span class="project-banner-copy"><span class="project-banner-title">Stranger Stats</span><span class="project-banner-text">NBA data stories that might shock you.</span><span class="project-banner-link">All posts</span></span></a>
   
-    <a class="project-banner" href="https://aodongliu.github.io/alleyloop/"><img src="/images/projects/alleyloop.webp" alt="An empty basketball court under arena lights" loading="lazy"><span class="project-banner-copy"><span class="project-banner-title">AlleyLoop</span><span class="project-banner-text">6 degrees of separation mini games.</span><span class="project-banner-link">Play</span></span></a>
+    <a class="project-banner" href="https://aodongliu.github.io/alleyloop/"><img src="/optimized/w960/images/projects/alleyloop.webp" alt="An empty basketball court under arena lights" loading="lazy"><span class="project-banner-copy"><span class="project-banner-title">AlleyLoop</span><span class="project-banner-text">6 degrees of separation mini games.</span><span class="project-banner-link">Play</span></span></a>
   </div>
 </section>
 
 </main>
 <footer class="site-footer site-wrap">
-  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>
-  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
+  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a></nav>
+  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><a href="#main">Back to top ↑</a></div>
 </footer>
 <script src="/js/site.js" defer></script>
 </body>

@@ -14,11 +14,18 @@
 <meta property="og:description" content="Aodong Liu, Postdoctoral Scholar at the University of Washington. Quantum chemistry methods, scientific software, and NBA data stories with Stranger Stats.">
 <meta property="og:url" content="https://aodongliu.github.io/about/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://aodongliu.github.io/images/headshot_lincolnPark.png">
-<meta name="theme-color" content="#fbfefe">
-<link rel="icon" type="image/png" href="/images/al_logo.png">
 
-<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<meta property="og:image" content="https://aodongliu.github.io/images/og/home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfefe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#061417" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script>(() => { let mode = null; try { mode = localStorage.getItem('aodong-theme-v2'); } catch (_) {} if (mode !== 'light' && mode !== 'dark') mode = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; })();</script>
 <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">
@@ -29,8 +36,8 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-wrap header-inner">
-    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/images/al_logo.png" width="48" height="48" alt=""><span>Aodong Liu</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">＋</span></button>
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/optimized/w96/images/al_logo.webp" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="/research/" >Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
@@ -53,37 +60,30 @@
   <p class="search-status" aria-live="polite"></p>
   <ol id="search-dialog-results" class="search-results"></ol>
 </dialog>
-<main id="main" class="site-main"><header class="article-header site-wrap about-header"><h1>About</h1><img class="about-portrait" src="/images/headshot_lincolnPark.png" width="220" height="260" alt="Aodong Liu"></header>
+<main id="main" class="site-main"><header class="article-header site-wrap about-header"><h1>About</h1><img class="about-portrait" src="/optimized/w480/images/headshot_lincolnPark.webp" width="220" height="260" alt="Aodong Liu"></header>
 <article class="article-body standalone-page site-wrap about-body"><p>I’m a Postdoctoral Scholar in the <a target="_blank" rel="noopener" href="https://uwligroup.org/">Li Group</a> at the University of Washington. I completed my Ph.D. in Theoretical Chemistry at UW in June 2026.</p>
 <p>My research focuses on incorporating nuclear quantum effects into electronic structure theory and on developing scalable algorithms for large-scale quantum dynamics simulations. </p>
 <p>Specifically, I combine numerical methods with modern high-performance computing architectures to enable calculations at system sizes that are otherwise computationally prohibitive. These efficient implementations allow me to investigate ultrafast dynamics in chemically relevant systems from first principles.</p>
 <p>I develop scientific software in Fortran and C++, including work on <a target="_blank" rel="noopener" href="https://gaussian.com/">Gaussian</a> and <a target="_blank" rel="noopener" href="https://github.com/xsligroup/chronusq_public">ChronusQuantum</a>. My work includes leading development of the nuclear–electronic orbital module in Gaussian 25 and developing distributed algorithms with MPI and OpenMP.</p>
-<h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><div style='margin: 1.6rem 0 1.0rem 0;'>
-  <div style='display:flex; align-items:center; gap:20px;'>
-    <img src='/images/uwlogo.png' width='80' style='flex:0 0 auto; border-radius: 8px;'>
-    <div style='flex: 1;'>
-      <div style='display: flex; justify-content: space-between; align-items: baseline;'>
-        <div style='font-size:1.25em; font-weight:700; line-height:1.2;'>Ph.D. in Theoretical Chemistry</div>
-        <div style='color: var(--sec-text-color); font-size:0.95em; white-space: nowrap; margin-left: 1rem;'>2020–2026</div>
-      </div>
-      <div style='color: var(--sec-text-color); font-size:0.98em; margin-top:4px;'>University of Washington, Seattle, WA</div>
-      <div style='color: var(--sec-text-color); font-size:0.95em; margin-top:2px; font-style: italic;'>Advisor: Xiaosong Li</div>
-    </div>
-  </div>
+<h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><div class="edu-list">
+<div class="edu">
+<img class="edu-logo" src="/optimized/w1600/images/uwlogo.webp" alt="University of Washington">
+<div class="edu-body">
+<p class="edu-degree">Ph.D. in Theoretical Chemistry</p>
+<p class="edu-school">University of Washington, Seattle, WA</p>
+<p class="edu-note">Advisor: Xiaosong Li</p>
 </div>
-
-<div style='margin: 1.6rem 0 1.0rem 0;'>
-  <div style='display:flex; align-items:center; gap:20px;'>
-    <img src='/images/vanderbiltlogo.png' width='80' style='flex:0 0 auto; border-radius: 8px;'>
-    <div style='flex: 1;'>
-      <div style='display: flex; justify-content: space-between; align-items: baseline;'>
-        <div style='font-size:1.25em; font-weight:700; line-height:1.2;'>B.A. in Physical Chemistry with Honors</div>
-        <div style='color: var(--sec-text-color); font-size:0.95em; white-space: nowrap; margin-left: 1rem;'>2016 – 2020</div>
-      </div>
-      <div style='color: var(--sec-text-color); font-size:0.98em; margin-top:4px;'>Vanderbilt University, Nashville, TN</div>
-      <div style='color: var(--sec-text-color); font-size:0.95em; margin-top:2px; font-style: italic;'>Advisor: Jens Meiler</div>
-    </div>
-  </div>
+<p class="edu-years">2020–2026</p>
+</div>
+<div class="edu">
+<img class="edu-logo" src="/optimized/w1600/images/vanderbiltlogo.webp" alt="Vanderbilt University">
+<div class="edu-body">
+<p class="edu-degree">B.A. in Physical Chemistry with Honors</p>
+<p class="edu-school">Vanderbilt University, Nashville, TN</p>
+<p class="edu-note">Advisor: Jens Meiler</p>
+</div>
+<p class="edu-years">2016–2020</p>
+</div>
 </div>
 
 <h2 id="Curriculum-Vitae"><a href="#Curriculum-Vitae" class="headerlink" title="Curriculum Vitae"></a>Curriculum Vitae</h2><p><a href="/files/aodongliu_cv.pdf" download="Aodong_Liu_CV.pdf">Download my CV (PDF, updated Aug. 2026)</a>.</p>
@@ -93,8 +93,8 @@
 
 </main>
 <footer class="site-footer site-wrap">
-  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>
-  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
+  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a></nav>
+  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><a href="#main">Back to top ↑</a></div>
 </footer>
 <script src="/js/site.js" defer></script>
 </body>

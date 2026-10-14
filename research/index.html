@@ -14,11 +14,18 @@
 <meta property="og:description" content="Quantum dynamics and electronic structure: research papers by Aodong Liu, explained for curious readers.">
 <meta property="og:url" content="https://aodongliu.github.io/research/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://aodongliu.github.io/images/headshot_lincolnPark.png">
-<meta name="theme-color" content="#fbfefe">
-<link rel="icon" type="image/png" href="/images/al_logo.png">
 
-<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<meta property="og:image" content="https://aodongliu.github.io/images/og/research.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfefe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#061417" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script>(() => { let mode = null; try { mode = localStorage.getItem('aodong-theme-v2'); } catch (_) {} if (mode !== 'light' && mode !== 'dark') mode = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; })();</script>
 <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">
@@ -29,8 +36,8 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-wrap header-inner">
-    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/images/al_logo.png" width="48" height="48" alt=""><span>Aodong Liu</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">＋</span></button>
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/optimized/w96/images/al_logo.webp" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="/research/" aria-current="page">Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
@@ -62,7 +69,7 @@
     <p class="pub-year-label">2026</p>
     <ol class="pub-rows">
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/two-spinor-ehrenfest/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/two-spinor-ehrenfest.png" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/two-spinor-ehrenfest/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/two-spinor-ehrenfest.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/two-spinor-ehrenfest/">Ab initio two-spinor Ehrenfest dynamics with magnetic field</a></h3>
           <p class="pub-authors">Diandong Tang, <b>Aodong Liu</b>, Tanner Culpitt, Xiaosong Li</p>
@@ -72,7 +79,7 @@
         </div>
       </li>
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/strong-field-ionization/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/strong-field-ionization.jpeg" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/strong-field-ionization/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/strong-field-ionization.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/strong-field-ionization/">Spin–orbit-resolved strong-field ionization from real-time relativistic dynamics</a></h3>
           <p class="pub-authors">Mengqi Yang, Shiv Upadhyay, <b>Aodong Liu</b>, Xiaosong Li</p>
@@ -82,7 +89,7 @@
         </div>
       </li>
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/neo-at-scale/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/neo-at-scale.jpg" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/neo-at-scale/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/neo-at-scale.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/neo-at-scale/">Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach</a></h3>
           <p class="pub-authors"><b>Aodong Liu</b>, Tianyuan Zhang, Eleftherios Lambros, Sharon Hammes-Schiffer, Xiaosong Li</p>
@@ -92,7 +99,7 @@
         </div>
       </li>
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/neo-vibrational-spectroscopy/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/neo-vibrational-spectroscopy.jpeg" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/neo-vibrational-spectroscopy/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/neo-vibrational-spectroscopy.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/neo-vibrational-spectroscopy/">Nuclear–electronic orbital quasiclassical trajectory method for vibrational spectroscopy</a></h3>
           <p class="pub-authors">Chiara Aieta, Scott M. Garner, <b>Aodong Liu</b>, Xiaosong Li, Sharon Hammes-Schiffer</p>
@@ -108,7 +115,7 @@
     <p class="pub-year-label">2025</p>
     <ol class="pub-rows">
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/magnetic-quantum-dynamics/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/magnetic-quantum-dynamics.png" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/magnetic-quantum-dynamics/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/magnetic-quantum-dynamics.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/magnetic-quantum-dynamics/">Simulating Magnetic Field-Driven Real-Time Quantum Dynamics Using London Nuclear–Electronic Orbital Approach</a></h3>
           <p class="pub-authors">Diandong Tang, <b>Aodong Liu</b>, Tanner Culpitt, Sharon Hammes-Schiffer, Xiaosong Li</p>
@@ -124,7 +131,7 @@
     <p class="pub-year-label">2024</p>
     <ol class="pub-rows">
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/gpu-relativistic-dft/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/gpu-relativistic-dft.png" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/gpu-relativistic-dft/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/gpu-relativistic-dft.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/gpu-relativistic-dft/">Accelerating Relativistic Exact-Two-Component Density Functional Theory Calculations with Graphical Processing Units</a></h3>
           <p class="pub-authors">Mikael Kovtun, Eleftherios Lambros, <b>Aodong Liu</b>, Diandong Tang, David B. Williams-Young, Xiaosong Li</p>
@@ -140,7 +147,7 @@
     <p class="pub-year-label">2023</p>
     <ol class="pub-rows">
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/multicomponent-cholesky/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/multicomponent-cholesky.png" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/multicomponent-cholesky/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/multicomponent-cholesky.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/multicomponent-cholesky/">Multicomponent Cholesky Decomposition: Application to Nuclear–Electronic Orbital Theory</a></h3>
           <p class="pub-authors"><b>Aodong Liu</b>, Tianyuan Zhang, Sharon Hammes-Schiffer, Xiaosong Li</p>
@@ -156,7 +163,7 @@
     <p class="pub-year-label">2022</p>
     <ol class="pub-rows">
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/simultaneous-neo-optimization/" tabindex="-1" aria-hidden="true"><img src="/portfolio/papers/simultaneous-neo-optimization.png" alt="" loading="lazy"></a>
+        <a class="pub-thumb" href="/research/simultaneous-neo-optimization/" tabindex="-1" aria-hidden="true"><img src="/optimized/w480/portfolio/papers/simultaneous-neo-optimization.webp" alt="" loading="lazy"></a>
         <div class="pub-copy">
           <h3><a href="/research/simultaneous-neo-optimization/">Simultaneous Optimization of Nuclear–Electronic Orbitals</a></h3>
           <p class="pub-authors"><b>Aodong Liu</b>, Mathew Chow, Andrew Wildman, Michael J. Frisch, Sharon Hammes-Schiffer, Xiaosong Li</p>
@@ -171,8 +178,8 @@
 </section>
 </main>
 <footer class="site-footer site-wrap">
-  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>
-  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
+  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a></nav>
+  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><a href="#main">Back to top ↑</a></div>
 </footer>
 <script src="/js/site.js" defer></script>
 </body>

@@ -14,11 +14,17 @@
 <meta property="og:description" content="Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication ">
 <meta property="og:url" content="https://aodongliu.github.io/research/neo-at-scale/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://aodongliu.github.io/portfolio/papers/neo-at-scale.jpg">
-<meta name="theme-color" content="#fbfefe">
-<link rel="icon" type="image/png" href="/images/al_logo.png">
 
-<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<meta property="og:image" content="https://aodongliu.github.io/portfolio/papers/neo-at-scale.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfefe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#061417" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script>(() => { let mode = null; try { mode = localStorage.getItem('aodong-theme-v2'); } catch (_) {} if (mode !== 'light' && mode !== 'dark') mode = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; })();</script>
 <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">
@@ -29,8 +35,8 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-wrap header-inner">
-    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/images/al_logo.png" width="48" height="48" alt=""><span>Aodong Liu</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">＋</span></button>
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/optimized/w96/images/al_logo.webp" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="/research/" aria-current="page">Research</a>
       <a href="/strangerStats/" >Stranger Stats</a>
@@ -54,13 +60,14 @@
   <ol id="search-dialog-results" class="search-results"></ol>
 </dialog>
 <main id="main" class="site-main">
-<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">Distributed computing / 2026</p><h1>Spreading huge quantum calculations across many computers</h1><ul class="kw-pills"><li class="kw kw-compute">MPI</li><li class="kw kw-compute">Distributed Computing</li><li class="kw kw-compute">HPC</li><li class="kw kw-math">Linear Algebra</li><li class="kw kw-math">Matrix Factorization</li><li class="kw kw-science">Nuclear Quantum Effects</li></ul><p class="paper-summary">Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication costs.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/neo-at-scale.jpg" aria-label="View full-size image for Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach"><img src="/portfolio/papers/neo-at-scale.jpg" alt="Distributed Cholesky tensors across MPI ranks and a water cluster containing 500 quantum protons."></a></figure><section class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Eleftherios Lambros, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>APL Computational Physics</em><br>2, 026109 (2026)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1063/5.0318199">Read the published paper</a><p class="doi">DOI: 10.1063/5.0318199</p></section></div>
+<article class="paper-page site-wrap"><a class="back-link" href="/research/">← All research</a><header class="paper-header"><p class="eyebrow">2026 · APL Computational Physics</p><h1>Spreading huge quantum calculations across many computers</h1><ul class="kw-pills"><li class="kw kw-compute">MPI</li><li class="kw kw-compute">Distributed Computing</li><li class="kw kw-compute">HPC</li><li class="kw kw-math">Linear Algebra</li><li class="kw kw-math">Matrix Factorization</li><li class="kw kw-science">Nuclear Quantum Effects</li></ul><p class="paper-summary">Treating both electrons and protons as quantum particles quickly becomes a memory problem. This work distributes the calculations across processors, enabling larger water-cluster simulations while reducing communication costs.</p></header><div class="paper-layout"><figure class="paper-figure publication-figure"><a class="paper-image-link" href="/portfolio/papers/neo-at-scale.jpg" aria-label="View full-size image for Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach"><img src="/optimized/w1600/portfolio/papers/neo-at-scale.webp" alt="Distributed Cholesky tensors across MPI ranks and a water cluster containing 500 quantum protons."></a></figure><aside class="paper-citation" aria-labelledby="publication-heading"><p class="eyebrow" id="publication-heading">Publication</p><h2>Nuclear–electronic orbital method at scale: A two-stage hybrid-layout distributed Cholesky decomposition approach</h2><p class="paper-authors">Aodong Liu, Tianyuan Zhang, Eleftherios Lambros, Sharon Hammes-Schiffer, Xiaosong Li</p><p><em>APL Computational Physics</em><br>2, 026109 (2026)</p><a class="button button-primary" target="_blank" rel="noopener" href="https://doi.org/10.1063/5.0318199">Read the published paper</a><p class="doi">DOI: 10.1063/5.0318199</p></aside>
 
 <section class="paper-abstract article-body" aria-labelledby="abstract-heading">
   <h2 id="abstract-heading">Abstract</h2>
   <p>Cholesky decomposition (CD) is widely used to reduce the cost of storing two-particle integrals and has been extended to multicomponent nuclear–electronic orbital (NEO) methods. Although NEO-CD lowers memory demands, single-node implementations can still face memory bottlenecks due to the size of the mixed asymmetric nuclear–electronic tensors. In this study, we present a two-stage hybrid-layout distributed NEO-CD framework suitable for large NEO calculations at scale. Cholesky vectors are first generated and orthonormalized using an atomic orbital-index distribution. During Fock matrix construction, mixed nuclear–electronic vectors retain the atomic-orbital-index layout, while pure electronic and pure nuclear vectors are redistributed over the auxiliary index. This design avoids costly inter-rank communication and provides efficient construction of both Coulomb and exchange matrices. Benchmark calculations on water clusters with all protons treated quantum mechanically show excellent scaling and load balance. Using only 104 MPI ranks, a full NEO-Fock build for (H₂O)₂₅₀ with 500 quantum protons, the largest NEO calculation to date, completes in 96.2 s per Fock matrix construction. The distributed NEO-CD framework enables NEO-DFT calculations for liquid-like water clusters up to (H₂O)₁₀₀. Extrapolation of the binding energies yields a bulk-limit value of ΔEₙ→∞ = −10.35 ± 0.19 kcal/mol, in excellent agreement with the experimental vaporization enthalpy of water. These results demonstrate that fully quantum mechanical simulations of large molecular systems are now practical on modern computing architectures.</p>
 </section>
 
+</div>
 </article>
 
 <script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']]}, options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']}};</script>
@@ -68,8 +75,8 @@
 
 </main>
 <footer class="site-footer site-wrap">
-  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://orcid.org/0000-0003-2287-2216">ORCID</a></nav>
-  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
+  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a></nav>
+  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><a href="#main">Back to top ↑</a></div>
 </footer>
 <script src="/js/site.js" defer></script>
 </body>
