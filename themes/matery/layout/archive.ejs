@@ -23,24 +23,13 @@
     <div class="calendar-foot"><p class="calendar-readout" aria-hidden="true">Hover a day to see its posts.</p><p class="calendar-legend" aria-hidden="true"><span>No post</span><span class="cell"></span><span class="cell level-1"></span><span class="cell level-2"></span><span>2+ posts</span></p></div>
   </section>
   <% } %>
-  <section class="timeline" aria-label="Posts by date">
+  <section class="archive-list" aria-label="Posts by date">
     <% groups.forEach(function(y) { %>
-    <div class="timeline-year"><h2 class="timeline-node year-node"><%= y.year %></h2>
-      <% y.months.forEach(function(m) { %>
-      <div class="timeline-month"><h3 class="timeline-node month-node"><%= m.month %></h3>
-        <% m.posts.forEach(function(post) { const meta = post_card(post); %>
-        <article class="timeline-entry">
-          <% if (meta.cover) { %><a class="timeline-thumb" href="<%- url_for(post.path) %>" tabindex="-1" aria-hidden="true"><img src="<%= meta.cover %>" alt="" width="240" height="144" loading="lazy"></a><% } %>
-          <div class="timeline-copy">
-            <time datetime="<%= date(post.date, 'YYYY-MM-DD') %>"><%= date(post.date, 'MMM D, YYYY') %></time>
-            <h4><a href="<%- url_for(post.path) %>"><%= post.title %></a></h4>
-            <%- partial('_partial/post-chips', {post: post}) %>
-          </div>
-        </article>
-        <% }); %>
-      </div>
-      <% }); %>
-    </div>
+    <h2 class="archive-year"><%= y.year %></h2>
+    <% y.months.forEach(function(m) { %>
+    <h3 class="archive-month"><%= m.month %></h3>
+    <ol class="sl-rows"><% m.posts.forEach(function(post) { %><%- partial('_partial/post-row', {post: post}) %><% }); %></ol>
+    <% }); %>
     <% }); %>
   </section>
 </div>

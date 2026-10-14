@@ -1,4 +1,4 @@
-<header class="article-header site-wrap about-header"><h1>About</h1><img class="about-portrait" src="<%- url_for('/images/headshot_lincolnPark.png') %>" width="220" height="260" alt="Aodong Liu"></header>
+<header class="article-header site-wrap about-header"><h1>About</h1><img class="about-portrait" src="<%- opt_img('/images/headshot_lincolnPark.png', 480) %>" width="220" height="260" alt="Aodong Liu"></header>
 <article class="article-body standalone-page site-wrap about-body"><%- page.content %></article>
 <% if (page.math || page.mathjax) { %>
 <script>window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}, options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']}};</script>

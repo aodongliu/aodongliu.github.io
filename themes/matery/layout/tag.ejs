@@ -1,6 +1,6 @@
 <header class="article-header site-wrap taxonomy-header"><a class="eyebrow" href="<%- url_for('/tags/') %>">← All tags</a><h1><%= page.tag %></h1><p class="article-meta"><%= page.posts.length %> post<%= page.posts.length === 1 ? '' : 's' %> tagged <%= page.tag %></p><%- partial('_partial/archive-tabs') %></header>
 <div class="site-wrap taxonomy-page">
-  <section class="taxonomy-card"><%- partial('_partial/taxonomy-chips', {items: site.tags, active: page.tag, label: 'All tags'}) %></section>
-  <section class="stats-grid taxonomy-grid" aria-label="Posts tagged <%= page.tag %>"><% page.posts.each(function(post) { %><%- partial('_partial/stats-card', {post: post, full_title: true}) %><% }); %></section>
+  <%- partial('_partial/taxonomy-chips', {items: site.tags, active: page.tag, label: 'All tags'}) %>
+  <ol class="sl-rows" aria-label="Posts"><% page.posts.each(function(post) { %><%- partial('_partial/post-row', {post: post}) %><% }); %></ol>
 </div>
 <% if (page.total > 1) { %><nav class="site-wrap pagination" aria-label="Pagination"><%- paginator({prev_text: '← Previous', next_text: 'Next →'}) %></nav><% } %>

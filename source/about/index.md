@@ -14,32 +14,25 @@ I develop scientific software in Fortran and C++, including work on [Gaussian](h
 
 ## Education
 
-<div style='margin: 1.6rem 0 1.0rem 0;'>
-  <div style='display:flex; align-items:center; gap:20px;'>
-    <img src='/images/uwlogo.png' width='80' style='flex:0 0 auto; border-radius: 8px;'>
-    <div style='flex: 1;'>
-      <div style='display: flex; justify-content: space-between; align-items: baseline;'>
-        <div style='font-size:1.25em; font-weight:700; line-height:1.2;'>Ph.D. in Theoretical Chemistry</div>
-        <div style='color: var(--sec-text-color); font-size:0.95em; white-space: nowrap; margin-left: 1rem;'>2020–2026</div>
-      </div>
-      <div style='color: var(--sec-text-color); font-size:0.98em; margin-top:4px;'>University of Washington, Seattle, WA</div>
-      <div style='color: var(--sec-text-color); font-size:0.95em; margin-top:2px; font-style: italic;'>Advisor: Xiaosong Li</div>
-    </div>
-  </div>
+<div class="edu-list">
+<div class="edu">
+<img class="edu-logo" src="/images/uwlogo.png" alt="University of Washington">
+<div class="edu-body">
+<p class="edu-degree">Ph.D. in Theoretical Chemistry</p>
+<p class="edu-school">University of Washington, Seattle, WA</p>
+<p class="edu-note">Advisor: Xiaosong Li</p>
 </div>
-
-<div style='margin: 1.6rem 0 1.0rem 0;'>
-  <div style='display:flex; align-items:center; gap:20px;'>
-    <img src='/images/vanderbiltlogo.png' width='80' style='flex:0 0 auto; border-radius: 8px;'>
-    <div style='flex: 1;'>
-      <div style='display: flex; justify-content: space-between; align-items: baseline;'>
-        <div style='font-size:1.25em; font-weight:700; line-height:1.2;'>B.A. in Physical Chemistry with Honors</div>
-        <div style='color: var(--sec-text-color); font-size:0.95em; white-space: nowrap; margin-left: 1rem;'>2016 – 2020</div>
-      </div>
-      <div style='color: var(--sec-text-color); font-size:0.98em; margin-top:4px;'>Vanderbilt University, Nashville, TN</div>
-      <div style='color: var(--sec-text-color); font-size:0.95em; margin-top:2px; font-style: italic;'>Advisor: Jens Meiler</div>
-    </div>
-  </div>
+<p class="edu-years">2020–2026</p>
+</div>
+<div class="edu">
+<img class="edu-logo" src="/images/vanderbiltlogo.png" alt="Vanderbilt University">
+<div class="edu-body">
+<p class="edu-degree">B.A. in Physical Chemistry with Honors</p>
+<p class="edu-school">Vanderbilt University, Nashville, TN</p>
+<p class="edu-note">Advisor: Jens Meiler</p>
+</div>
+<p class="edu-years">2016–2020</p>
+</div>
 </div>
 
 ## Curriculum Vitae

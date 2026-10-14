@@ -12,13 +12,20 @@
 <meta property="og:description" content="<%= cleanDescription %>">
 <meta property="og:url" content="<%= canonicalUrl %>">
 <meta property="og:type" content="<%= page.__post ? 'article' : 'website' %>">
-<meta property="og:image" content="<%= new URL(page.cover || (page.paper && page.paper.image) || '/images/headshot_lincolnPark.png', config.url).href %>">
-<meta name="theme-color" content="#fbfefe">
-<link rel="icon" type="image/png" href="/images/al_logo.png">
+<% const sectionPath = (page.path || '').replace(/index\.html$/, ''); const ogCard = { 'research/': 'research', 'strangerStats/': 'stranger-stats' }[sectionPath] || (!page.cover && !(page.paper && page.paper.image) ? 'home' : ''); const ogImage = ogCard ? `/images/og/${ogCard}.jpg` : (page.cover || page.paper.image); %>
+<meta property="og:image" content="<%= new URL(ogImage, config.url).href %>">
+<% if (ogCard) { %><meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630"><% } %>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfefe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#061417" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <% if (!page.path || page.path === 'index.html') { %>
 <script type="application/ld+json"><%- JSON.stringify({"@context":"https://schema.org","@type":"WebSite",name:config.title,url:config.url}).replace(/</g, '\\u003c') %></script>
 <% } %>
-<script>try { const mode = localStorage.getItem('aodong-theme-v2'); if (mode === 'light' || mode === 'dark') document.documentElement.dataset.theme = mode; } catch (_) {}</script>
+<script>(() => { let mode = null; try { mode = localStorage.getItem('aodong-theme-v2'); } catch (_) {} if (mode !== 'light' && mode !== 'dark') mode = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; })();</script>
 <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/article.css">

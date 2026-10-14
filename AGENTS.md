@@ -18,6 +18,8 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
   teal-black dark mode, and a teal-to-indigo gradient on the hero line and page titles. Its
   tokens are the first lines of `site.css`. Keep original-color imagery. The preview has a
   color-scheme chooser (`_partial/scheme-lab.ejs`, preview only) for comparing alternatives.
+- Templates load images through `opt_img(src, width)` (build-time WebP); never reference a raw
+  image in a template or commit resized copies. See the guide's "Images, link previews and theme".
 - Research papers carry color-coded `keywords` from `source/_data/keywords.yml`; Stranger
   Stats posts take 1-2 topic tags from `source/_data/tags.yml`. Never invent new ones casually.
 - Preview using `node tools/preview.cjs server`, build with `node tools/preview.cjs build`,
@@ -51,7 +53,7 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
   research-card descriptions, redundant Research hero button or public provenance notes.
   Paper images themselves open full-size; do not add source/full-size caption links.
 - Preserve the original logo/favicon, color portrait, 2020–2026 PhD dates, all contact
-  links and the CV preview/download. Footer: `Hexo · Matery`.
+  links and the CV preview/download. Footer: copyright and "Back to top" only (no theme credit).
 
 - Stranger Stats covers are 13:7 (e.g. 1950x1050), the same frame as research cards.
 - Stranger Stats cards use the exact Markdown `title`, with no summary/subheading. Remove all diagonal arrows from website UI, including navigation, banners and contact links.

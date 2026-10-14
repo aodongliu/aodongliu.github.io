@@ -7,7 +7,7 @@
     <p class="pub-year-label"><%= year %></p>
     <ol class="pub-rows"><% page.papers.filter(p => p.year === year).forEach(paper => { %>
       <li class="pub-row">
-        <a class="pub-thumb" href="/research/<%= paper.id %>/" tabindex="-1" aria-hidden="true"><% if (paper.image) { %><img src="<%= paper.image %>" alt="" loading="lazy"><% } %></a>
+        <a class="pub-thumb" href="/research/<%= paper.id %>/" tabindex="-1" aria-hidden="true"><% if (paper.image) { %><img src="<%= opt_img(paper.image, 480) %>" alt="" loading="lazy"><% } %></a>
         <div class="pub-copy">
           <h3><a href="/research/<%= paper.id %>/"><%= paper.title %></a></h3>
           <p class="pub-authors"><%- author_list(paper.authors) %></p>

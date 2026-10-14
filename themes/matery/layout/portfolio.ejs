@@ -1,18 +1,18 @@
 <section class="hero site-wrap">
   <div class="hero-copy"><h1>Aodong Liu.<br><span>Computational chemist.</span></h1><p class="hero-description">Postdoctoral Scholar at the University of Washington. I develop quantum chemistry methods and scientific software.<br>Train by day, data-driven blog by night, all day!</p><div class="hero-actions"><a class="button button-quiet" href="/about/">A little about me <span aria-hidden="true">→</span></a></div></div>
-  <figure class="hero-art"><img class="hero-portrait" src="/images/headshot_lincolnPark.png" width="585" height="1028" alt="Aodong Liu at Lincoln Park"></figure>
+  <figure class="hero-art"><picture><source media="(max-width: 720px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><img class="hero-portrait" src="<%- opt_img('/images/headshot_lincolnPark.png', 960) %>" width="585" height="1028" alt="Aodong Liu at Lincoln Park"></picture></figure>
 </section>
 <section class="portfolio-group site-wrap" aria-labelledby="research-title">
   <a class="section-banner research-banner" href="/research/">
     <div class="section-banner-copy"><h2 id="research-title">Research</h2><p>Quantum chemistry and scientific computing.</p><ul class="banner-kw kw-pills"><% (site.data.portfolio.research.banner_keywords || []).forEach(word => { %><li class="kw kw-<%= (site.data.keywords.keywords || {})[word] %>"><%= word %></li><% }); %></ul><span>All <%= page.papers.length %> papers</span></div>
-    <img src="<%= site.data.portfolio.research.banner_image %>" alt="<%= site.data.portfolio.research.banner_alt %>" loading="lazy">
+    <img src="<%= opt_img(site.data.portfolio.research.banner_image, 1600) %>" alt="<%= site.data.portfolio.research.banner_alt %>" loading="lazy">
   </a>
 </section>
 <% const projects = site.data.portfolio.projects || []; if (projects.length) { %>
 <section class="portfolio-group site-wrap" aria-labelledby="projects-title">
   <h2 id="projects-title" class="projects-heading">Side projects</h2>
   <div class="project-banners"><% projects.forEach(item => { %>
-    <a class="project-banner" href="<%= item.link %>"><img src="<%= item.image %>" alt="<%= item.image_alt %>" loading="lazy"><span class="project-banner-copy"><span class="project-banner-title"><%= item.title %></span><span class="project-banner-text"><%= item.text %></span><span class="project-banner-link"><%= item.link_label || 'Open' %></span></span></a>
+    <a class="project-banner" href="<%= item.link %>"><img src="<%= opt_img(item.image, 960) %>" alt="<%= item.image_alt %>" loading="lazy"><span class="project-banner-copy"><span class="project-banner-title"><%= item.title %></span><span class="project-banner-text"><%= item.text %></span><span class="project-banner-link"><%= item.link_label || 'Open' %></span></span></a>
   <% }); %></div>
 </section>
 <% } %>

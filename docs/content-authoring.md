@@ -137,6 +137,26 @@ templates changes. Keep the text to one plain line. Projects hosted from their o
 repos (AlleyLoop at `aodongliu/alleyloop`) are linked by full URL, since their files are not
 part of this site's build.
 
+## Images, link previews and theme
+
+**Images are optimized at build time.** `themes/matery/scripts/images.js` serves every image in
+`source/images/` and `themes/matery/source/portfolio/` as WebP at 96, 480, 960 and 1600 px wide
+(`/optimized/w480/images/...webp`), cached in `.cache/optimized`. Templates must use
+`opt_img(src, width)` for every `<img>` instead of the original path; images written in post
+Markdown are rewritten to the 1600 px version automatically. Originals stay published for
+full-size links (paper figures). Add images in their original quality; never commit resized
+copies. The same script generates the browser and home-screen icons from `al_logo.png`.
+
+**Link previews** (Open Graph): the homepage and other pages use `source/images/og/home.jpg`,
+Research uses `research.jpg`, Stranger Stats uses `stranger-stats.jpg`, posts use their
+`cover`, and paper pages use their figure. Regenerate the three cards with
+`node tools/make-og.cjs` after changing the portrait, banners or section titles.
+
+**Light/dark theme** follows the visitor's device setting until they press the toggle; their
+choice is then remembered (`aodong-theme-v2`, shared with AlleyLoop).
+
+**List pages** (Stranger Stats, Tags, Categories, Archives) all use `_partial/post-row.ejs`.
+
 ## Keywords and tags
 
 **Research keywords** are color-coded pills (blue Computing, violet Math, green Science) on the
@@ -296,8 +316,8 @@ explicit action; neither a feature flag nor a request to write content authorize
   newest first. The existing weight-loss article is included. Future meet-preparation
   posts use the same category; drafts remain drafts until ready.
 - Edit public contact/profile links in `source/_data/portfolio.yml` under `contact_links`.
-  Email follows the supplied current CV. Instagram and WeChat were removed at Aodong's
-  request (Oct 2026); don't add them back.
+  Email follows the supplied current CV. Footer links (Oct 2026): Email, LinkedIn, Google
+  Scholar, GitHub, Instagram. WeChat and ORCID were removed at Aodong's request.
 - `/cv/` is an HTML preview with an explicit PDF download. This avoids the in-app
   browser's blank PDF-viewer behavior. When replacing `source/files/aodongliu_cv.pdf`,
   regenerate `source/images/cv/page-*.png` using `pdftoppm -scale-to 1600 -png
@@ -357,8 +377,8 @@ has one wide clickable image banner, with matching sans-serif titles, followed b
 own cards. Research cards show only image, year/topic and title; longer descriptions
 belong on detail pages. Keep card proportions consistent across collections. Do not add
 slogans, numbered labels, a Recent posts row, a redundant research hero button, circular
-image arrow badges, or provenance captions. Keep the About hero link. The footer reads
-`Hexo · Matery`. Preserve the author-approved introduction and original-color portrait.
+image arrow badges, or provenance captions. Keep the About hero link. The footer shows
+the copyright and "Back to top" only, with no theme credit. Preserve the author-approved introduction and original-color portrait.
 
 For a future collection, add real content and a route first, then reuse the existing
 banner/card pattern; do not create an empty showcase or imply unfinished projects work.
@@ -376,7 +396,7 @@ To replace a post cover manually:
 
 To change the logo, replace `source/images/al_logo.png` deliberately and verify the
 header/favicon in both modes. Edit profile links in `source/_data/portfolio.yml`, preserving
-Email, LinkedIn, Google Scholar, GitHub and ORCID unless asked to remove
+Email, LinkedIn, Google Scholar, GitHub and Instagram unless asked to remove
 one. The Training category and page are permanent parts of the site; its navigation link returns
 when the page is ready.
 

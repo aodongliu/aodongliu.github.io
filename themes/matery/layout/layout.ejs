@@ -6,8 +6,8 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="site-wrap header-inner">
-    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/images/al_logo.png" width="48" height="48" alt=""><span>Aodong Liu</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">＋</span></button>
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="<%- opt_img('/images/al_logo.png', 96) %>" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="/research/" <%- page.path && page.path.startsWith('research/') ? 'aria-current="page"' : '' %>>Research</a>
       <a href="/strangerStats/" <%- page.path && page.path.startsWith('strangerStats/') ? 'aria-current="page"' : '' %>>Stranger Stats</a>
@@ -33,7 +33,7 @@
 <main id="main" class="site-main"><%- body %></main>
 <footer class="site-footer site-wrap">
   <nav class="contact-links" aria-label="Contact and profiles"><% (site.data.portfolio.contact_links || []).forEach(link => { %><a href="<%= link.url %>"><%= link.label %></a><% }); %></nav>
-  <div class="footer-bottom"><span>© <%= new Date().getFullYear() %> Aodong Liu</span><span>Hexo · Matery</span><a href="#main">Back to top ↑</a></div>
+  <div class="footer-bottom"><span>© <%= new Date().getFullYear() %> Aodong Liu</span><a href="#main">Back to top ↑</a></div>
 </footer>
 <script src="/js/site.js" defer></script>
 </body>

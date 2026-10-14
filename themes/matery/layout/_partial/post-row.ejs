@@ -1,0 +1,12 @@
+<% /* One post as a list row: thumbnail, number/date/tag line, title, topic tags.
+      locals: post, tag ('new' | ''), short (drop the "Stranger Stats #N: " prefix; series page only). */
+   const meta = post_card(post); const isShort = typeof short !== 'undefined' && short; const flag = typeof tag !== 'undefined' ? tag : '';
+   const title = isShort ? meta.title.replace(/^Stranger Stats\s*#\d+:\s*/i, '') : meta.title; %>
+<li class="sl-row">
+  <a class="sl-thumb<%= meta.cover ? '' : ' sl-thumb--empty' %>" href="<%- url_for(post.path) %>" tabindex="-1" aria-hidden="true"><% if (meta.cover) { %><img src="<%= opt_img(meta.cover, 480) %>" alt="" loading="lazy"><% } else { %><span><%= meta.label %></span><% } %></a>
+  <div class="sl-copy">
+    <p class="sl-meta"><% if (meta.number) { %><span class="sl-no">No. <%= String(meta.number).padStart(2, '0') %></span><% } else { %><span class="sl-no"><%= meta.label %></span><% } %><time datetime="<%= date(post.date, 'YYYY-MM-DD') %>"><%= date(post.date, 'MMM D, YYYY') %></time><% if (flag) { %><span class="sl-tag sl-tag-<%= flag %>">New</span><% } %></p>
+    <h3><a href="<%- url_for(post.path) %>"><%= title %></a></h3>
+    <% if (post.tags && post.tags.length) { %><ul class="sl-tags"><% post.tags.each(function(t) { %><li><a href="<%- url_for(t.path) %>"><%= t.name %></a></li><% }); %></ul><% } %>
+  </div>
+</li>

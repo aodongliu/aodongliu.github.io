@@ -1,12 +1,13 @@
 <% const stats = page.categories && page.categories.toArray().some(c => c.name === 'Stranger Stats'); const training = page.categories && page.categories.toArray().some(c => c.name === 'Training'); const backPath = stats ? '/strangerStats/' : training ? '/training/' : '/archives/'; const backLabel = stats ? 'Stranger Stats' : training ? 'Training' : 'Writing'; const contents = String(page.toc) === 'false' ? '' : toc(page.content, {list_number: false}); %>
 <header class="article-header site-wrap">
   <a class="eyebrow" href="<%- url_for(backPath) %>">← <%= backLabel %></a>
-  <h1><%= page.title %></h1>
+  <% const series = String(page.title).match(/^(Stranger Stats #\d+):\s*(.*)$/); %>
+  <h1 class="post-title"><% if (series) { %><span class="post-series"><%= series[1] %><span class="sr-only">:</span></span> <%= series[2] %><% } else { %><%= page.title %><% } %></h1>
   <p class="article-meta"><time datetime="<%= date(page.date, 'YYYY-MM-DD') %>"><%= date(page.date, 'MMMM D, YYYY') %></time> · <%= config.author %></p>
   <%- partial('_partial/post-chips', {post: page}) %>
 </header>
 <div class="article-layout site-wrap <%= contents ? '' : 'without-toc' %>">
-  <article class="article-body"><% if (page.cover) { %><figure class="post-cover"><img src="<%= page.cover %>" alt="<%= page.cover_alt || '' %>"></figure><% } %><%- page.content %>
+  <article class="article-body"><% if (page.cover) { %><figure class="post-cover"><img src="<%= opt_img(page.cover, 1600) %>" alt="<%= page.cover_alt || '' %>"></figure><% } %><%- page.content %>
     <footer class="article-end"><a href="<%- url_for(backPath) %>">← More <%= backLabel %></a></footer>
   </article>
   <% if (contents) { %><aside class="article-toc"><nav aria-label="On this page"><p class="eyebrow">On this page</p><%- contents %></nav></aside><% } %>

@@ -289,3 +289,68 @@ body{background-image:var(--bg-pattern)}
 .sl-tags a{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;color:var(--soft);background:var(--panel-alt);border:1px solid var(--line)}
 .sl-tags a:hover{color:var(--accent);border-color:var(--accent)}
 
+/* ===== Polish (Oct 2026) ===== */
+/* Article titles in ink; the gradient stays on section pages. Series prefix as a small accent line. */
+.article-header .post-title{color:var(--ink);background:none;-webkit-background-clip:border-box;background-clip:border-box}
+.post-series{display:block;margin-bottom:10px;font-size:15px;font-weight:600;letter-spacing:0;color:var(--accent)}
+/* Menu icon (three bars, turning into an X when open). */
+.menu-icon{position:relative;display:block;width:20px;height:14px}
+.menu-icon i{position:absolute;left:0;width:20px;height:2px;border-radius:2px;background:var(--ink);transition:transform .2s,opacity .2s,top .2s}
+.menu-icon i:nth-child(1){top:0}.menu-icon i:nth-child(2){top:6px}.menu-icon i:nth-child(3){top:12px}
+.menu-toggle[aria-expanded=true] .menu-icon i:nth-child(1){top:6px;transform:rotate(45deg)}
+.menu-toggle[aria-expanded=true] .menu-icon i:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded=true] .menu-icon i:nth-child(3){top:6px;transform:rotate(-45deg)}
+@media(max-width:900px){
+ .menu-toggle{padding:10px 6px!important;line-height:0}
+ .primary-nav.is-open{flex-direction:column;align-items:stretch;flex-wrap:nowrap;gap:0!important;padding:8px 20px 18px!important;box-shadow:0 18px 30px #0f2a2e1f;background:var(--bg)}
+ .primary-nav.is-open a{padding:14px 2px;font-size:17px;color:var(--ink);border-bottom:1px solid var(--line);text-decoration:none}
+ .primary-nav.is-open a[aria-current]{color:var(--accent);font-weight:600}
+ .primary-nav.is-open .nav-cv{margin-top:14px;align-self:flex-start;border-bottom:1px solid var(--line);padding:9px 22px}
+}
+@media(prefers-reduced-motion:reduce){.menu-icon i{transition:none}}
+/* Stranger Stats rows: keep number, date and tag on one line on phones. */
+@media(max-width:720px){.sl-meta{gap:8px;font-size:12px}.sl-tags{margin-top:6px}}
+/* About: education entries. */
+.article-body .edu-list{display:grid;gap:12px;margin:8px 0 8px}
+.article-body .edu{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:18px;align-items:center;padding:16px 18px;background:var(--panel);border:var(--card-border);border-radius:12px;box-shadow:var(--shadow)}
+.article-body .edu-logo{width:64px;height:48px;object-fit:contain}
+.article-body .edu p{margin:0}
+.article-body .edu-degree{font-weight:600;font-size:17px;line-height:1.35}
+.article-body .edu-school{color:var(--muted);font-size:15px}
+.article-body .edu-note{color:var(--muted);font-size:14px;font-style:italic}
+.article-body .edu-years{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap;align-self:start}
+@media(max-width:560px){.article-body .edu{grid-template-columns:48px minmax(0,1fr);gap:14px}.article-body .edu-logo{width:48px;height:40px}.article-body .edu-years{grid-column:2;grid-row:2;align-self:start}}
+/* Footer: contact links stay on one line on phones; no theme credit row. */
+@media(max-width:720px){.contact-links{flex-wrap:nowrap;justify-content:space-between;gap:8px;font-size:13.5px;white-space:nowrap}.footer-bottom{flex-wrap:nowrap}}
+@media(max-width:350px){.contact-links{font-size:12px}}
+/* One style for the description under a page title (Research, Stranger Stats, ...). */
+:is(.intro-description,.article-header .article-intro){max-width:640px;font-size:17px;line-height:1.7;color:var(--muted)}
+.article-header .article-intro p+p{margin-top:1em}
+@media(max-width:720px){:is(.intro-description,.article-header .article-intro){font-size:15px}}
+/* Paper page: figure and abstract on the left, publication card on the right (sticky). */
+.paper-layout{grid-template-columns:minmax(0,1fr) 340px;grid-template-areas:"fig cite" "abs cite";gap:28px 56px;align-items:start}
+.paper-layout>.paper-figure{grid-area:fig}.paper-layout>.paper-citation{grid-area:cite;position:sticky;top:24px;padding:22px 24px;background:var(--panel);border:var(--card-border);border-radius:12px;box-shadow:var(--shadow)}
+.paper-layout>.paper-abstract{grid-area:abs;max-width:none;margin-top:12px;padding-top:24px}
+.paper-citation h2{font-size:19px;line-height:1.35}
+@media(max-width:900px){.paper-layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"fig" "cite" "abs"}.paper-layout>.paper-citation{position:static}}
+/* List pages (Tags, Categories, Archives) share the Stranger Stats row style. */
+.taxonomy-page>.sl-rows{margin-top:8px}
+.chip-cloud{justify-content:flex-start;gap:8px}
+.chip{gap:8px;padding:5px 6px 5px 14px;font-size:14px;background:var(--panel)!important;border:1px solid var(--line);box-shadow:none}
+.chip:hover{transform:none;border-color:var(--accent);box-shadow:none;color:var(--accent)}
+.chip-count{background:var(--panel-alt);font:600 11px/1.6 var(--font)}
+.chip[aria-current=page]{background:var(--accent)!important;border-color:var(--accent);color:var(--bg)}
+.archive-list{margin-top:8px}
+.archive-year{font-size:24px;margin:30px 0 4px}.archive-list .archive-year:first-child{margin-top:8px}
+.archive-month{font-size:13px;font-weight:600;color:var(--muted);margin:16px 0 0;letter-spacing:.02em}
+.sl-thumb--empty{display:grid;place-items:center;background:linear-gradient(135deg,var(--panel-alt),var(--tint-0))}
+.sl-thumb--empty span{font-size:13px;font-weight:600;color:var(--soft)}
+
+/* 404 page */
+.notfound{padding-block:80px 120px}
+.notfound-code{font-size:clamp(96px,16vw,180px);font-weight:700;letter-spacing:-.06em;line-height:.9;background-image:var(--title-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.notfound h1{font-size:clamp(28px,4vw,40px);margin:18px 0 14px}
+.notfound kbd{font:600 13px var(--mono);padding:1px 7px;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;background:var(--panel)}
+.notfound-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.notfound-links .button{padding:10px 20px;font-size:14px}
+.notfound-links .button:not(.button-primary){background:var(--panel)}
+@media(max-width:720px){.notfound{padding-block:48px 80px}}
