@@ -354,3 +354,6 @@ body{background-image:var(--bg-pattern)}
 .notfound-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.notfound-links .button{padding:10px 20px;font-size:14px}
 .notfound-links .button:not(.button-primary){background:var(--panel)}
 @media(max-width:720px){.notfound{padding-block:48px 80px}}
+/* Desktop header and page links: readable sizes (nav was 13px). */
+@media(min-width:901px){.primary-nav{font-size:15px;gap:26px}.nav-cv{padding:8px 17px}.brand{font-size:18px}}
+.intro-links{gap:22px;margin-top:22px}.intro-links .text-link{font-size:14px}
