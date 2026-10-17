@@ -1,0 +1,58 @@
+/* Quantum water homepage hero. All selectors are namespaced .qw-* (the site already owns .hero).
+   Layout: a tall section with a sticky, viewport-height stage; scrolling through the extra height
+   scrubs the molecule -> cluster transition, then the normal home page continues. */
+.qw { position: relative; height: 220svh; margin: 0 0 8px; }   /* ~120svh of scroll scrubs the pull-back */
+.qw { --qw-head: 102px; --qw-cap: 116px; }   /* header height (not sticky); --qw-cap: caption block reserved below the stage (phones) */
+.qw-sticky { position: sticky; top: 0; height: calc(100svh - var(--qw-head)); min-height: 440px; overflow: hidden; }
+.qw-stage {
+  position: absolute; inset: 0 0 var(--qw-cap) 0;   /* phones: the scene never draws under the captions */
+  /* the canvas is transparent: feather its edges into the page background and pattern */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 10%, #000 84%, transparent 100%),
+                      linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-composite: source-in;
+          mask-image: linear-gradient(to bottom, transparent 0, #000 10%, #000 84%, transparent 100%),
+                      linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+          mask-composite: intersect;
+}
+/* light theme: a soft cool radial backdrop for the molecule to glow against (dark theme: page as is) */
+:root:not([data-theme="dark"]) .qw-stage { background: radial-gradient(60% 62% at 50% 44%, #e3ebf2 0%, #edf2f6 45%, rgba(251, 254, 254, 0) 100%); }
+.qw-poster, .qw-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.qw-poster {
+  background: center / cover no-repeat;
+  background-image: image-set(url("poster-light.avif") type("image/avif"), url("poster-light.webp") type("image/webp"));
+  transition: opacity .7s ease;
+}
+:root[data-theme="dark"] .qw-poster {
+  background-image: image-set(url("poster-dark.avif") type("image/avif"), url("poster-dark.webp") type("image/webp"));
+}
+@media (max-aspect-ratio: 1/1) {
+  .qw-poster { background-image: image-set(url("poster-light-portrait.avif") type("image/avif"), url("poster-light-portrait.webp") type("image/webp")); }
+  :root[data-theme="dark"] .qw-poster { background-image: image-set(url("poster-dark-portrait.avif") type("image/avif"), url("poster-dark-portrait.webp") type("image/webp")); }
+}
+.qw-canvas { opacity: 0; transition: opacity .7s ease; cursor: grab; }
+.qw-canvas:active { cursor: grabbing; }
+.qw.is-live .qw-canvas { opacity: 1; }
+.qw.is-live .qw-poster { opacity: 0; }
+.qw-caption {
+  position: absolute; left: 50%; bottom: 64px; transform: translateX(-50%); width: min(680px, calc(100% - 40px));
+  margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted, #56686e); text-align: center; transition: opacity .3s;
+}
+.qw-cap-2, .qw-count { opacity: 0; }
+.qw-count { font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+.qw-actions { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); display: flex; gap: 18px; align-items: center; font-size: 12px; white-space: nowrap; }
+.qw-toggle { font: inherit; color: var(--ink, #0d1d22); background: none; border: 1px solid var(--line, #dfeced); border-radius: 999px; padding: 4px 14px; cursor: pointer; }
+.qw-toggle:hover { border-color: var(--accent, #0f7f87); color: var(--accent, #0f7f87); }
+.qw-more { color: var(--muted, #56686e); text-underline-offset: 3px; }
+.qw-more:hover { color: var(--accent, #0f7f87); }
+/* phones: same caption typography as desktop (13px / 1.6); two-line captions sit a little higher */
+@media (max-width: 720px) { .qw { --qw-head: 79px; } .qw-caption { bottom: 62px; } .qw-actions { bottom: 18px; } }
+/* Desktop / landscape (round 2): the band is a capped, vertically centred box instead of the whole
+   viewport, so the molecule stays a balanced size next to the intro and cards on large monitors.
+   Box height = viewport minus header, at most 760px; stage at most 2:1 (fewer pixels to render, and
+   the poster is never upscaled). The sticky box parks in the middle of the viewport while the extra
+   120svh of section height scrubs the pull-back. Phones (<= 720px or portrait) keep the rules above. */
+@media (min-width: 721px) and (min-aspect-ratio: 1/1) {
+  .qw { --qw-h: max(440px, min(calc(100svh - var(--qw-head)), 760px)); height: calc(var(--qw-h) + 120svh); }
+  .qw-sticky { height: var(--qw-h); min-height: 0; top: max(0px, calc((100svh - var(--qw-h)) / 2)); }
+  .qw-stage { top: 0; bottom: 0; left: 0; right: 0; margin: 0 auto; width: min(100%, calc(var(--qw-h) * 2)); }   /* desktop: full box, captions over its empty lower part */
+}

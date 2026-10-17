@@ -62,10 +62,33 @@
   <p class="search-status" aria-live="polite"></p>
   <ol id="search-dialog-results" class="search-results"></ol>
 </dialog>
-<main id="main" class="site-main"><section class="hero site-wrap">
+<main id="main" class="site-main">
+
+
+<section class="hero site-wrap">
   <div class="hero-copy"><h1>Aodong Liu.<br><span>Computational chemist.</span></h1><p class="hero-description">Postdoctoral Scholar at the University of Washington. I develop quantum chemistry methods and scientific software.<br>Train by day, data-driven blog by night, all day!</p><div class="hero-actions"><a class="button button-quiet" href="/about/">A little about me <span aria-hidden="true">→</span></a></div></div>
   <figure class="hero-art"><picture><source media="(max-width: 720px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><img class="hero-portrait" src="/optimized/w960/images/headshot_lincolnPark.webp" width="585" height="1028" alt="Aodong Liu at Lincoln Park"></picture></figure>
 </section>
+
+<section class="qw" aria-label="A water molecule whose two protons are drawn as quantum probability clouds; scrolling pulls back to a cluster of hundreds of water molecules">
+  <div class="qw-sticky">
+    <div class="qw-stage">
+      <div class="qw-poster" role="img" aria-label="Water molecule with two glowing proton probability clouds"></div>
+      <canvas class="qw-canvas" aria-hidden="true"></canvas>
+    </div>
+    <p class="qw-caption qw-cap-1">Quantum protons in a water molecule, from a real-time NEO simulation.</p>
+    <p class="qw-caption qw-count" aria-hidden="true"></p>
+    <p class="qw-caption qw-cap-2" aria-hidden="true">(H<sub>2</sub>O)<sub>250</sub>: 500 quantum protons in one NEO calculation, run on 104 MPI ranks.</p>
+    <div class="qw-actions">
+      <button class="qw-toggle" type="button" hidden>Zoom out</button>
+      <a class="qw-more" href="/research/quantum-water/">How this was made</a>
+    </div>
+  </div>
+</section>
+<link rel="stylesheet" href="/quantum-water/qw.css">
+<script type="importmap">{ "imports": { "three": "/quantum-water/vendor/three.module.min.js", "three/addons/": "/quantum-water/vendor/addons/" } }</script>
+<script type="module" src="/quantum-water/qw.js"></script>
+
 <section class="portfolio-group site-wrap" aria-labelledby="research-title">
   <a class="section-banner research-banner" href="/research/">
     <div class="section-banner-copy"><h2 id="research-title">Research</h2><p>Quantum chemistry and scientific computing.</p><ul class="banner-kw kw-pills"><li class="kw kw-compute">HPC</li><li class="kw kw-compute">Distributed Computing</li><li class="kw kw-compute">GPU</li><li class="kw kw-math">Numerical Optimization</li><li class="kw kw-science">Nuclear Quantum Effects</li></ul><span>All 8 papers</span></div>

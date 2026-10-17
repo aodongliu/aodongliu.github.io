@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+<meta charset="utf-8">
+<meta name="google-site-verification" content="a5flzZpVfwVDvjWjzh97peCzB-SgDucm7psmiDh6qxU">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulation of Nuclear Quantum Effects | Aodong Liu</title>
+<meta name="description" content="Simulating nuclear quantum effects in water: hydrogen nuclei computed as quantum clouds in a single water molecule and in a 250-molecule nanodroplet on a supercomputer, as shown in the home page animation.">
+
+<link rel="canonical" href="https://aodongliu.github.io/research/quantum-water/">
+<meta property="og:title" content="Simulation of Nuclear Quantum Effects">
+<meta property="og:site_name" content="Aodong Liu">
+<meta property="og:description" content="Simulating nuclear quantum effects in water: hydrogen nuclei computed as quantum clouds in a single water molecule and in a 250-molecule nanodroplet on a supercomputer, as shown in the home page animation.">
+<meta property="og:url" content="https://aodongliu.github.io/research/quantum-water/">
+<meta property="og:type" content="website">
+
+<meta property="og:image" content="https://aodongliu.github.io/research/quantum-water/images/labelled-still.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fbfefe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#061417" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<script>(() => { let mode = null; try { mode = localStorage.getItem('aodong-theme-v2'); } catch (_) {} if (mode !== 'light' && mode !== 'dark') mode = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; document.documentElement.dataset.theme = mode; })();</script>
+<link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/article.css">
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-wrap header-inner">
+    <a class="brand" href="/" aria-label="Aodong Liu home"><img class="brand-logo-image" src="/optimized/w96/images/al_logo.webp" width="48" height="48" alt=""><span>Aodong Liu</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="/research/" aria-current="page">Research</a>
+      <a href="/strangerStats/" >Stranger Stats</a>
+      
+      
+      <a href="/archives/" >Archives</a>
+      <a href="/about/" >About</a>
+      <a class="nav-cv" href="/cv/">CV </a>
+    </nav>
+    <button class="search-toggle" type="button" aria-label="Search this site" title="Search (/)" aria-haspopup="dialog" aria-controls="search-dialog"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch color theme"><span aria-hidden="true">◐</span></button>
+  </div>
+</header>
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <form class="search-dialog-head" method="dialog" role="search">
+    <label id="search-dialog-title" for="search-dialog-input">Search</label>
+    <input id="search-dialog-input" class="search-input" type="search" autocomplete="off" spellcheck="false" aria-controls="search-dialog-results">
+    <button class="search-close" type="button" aria-label="Close search">Esc</button>
+  </form>
+  <p class="search-status" aria-live="polite"></p>
+  <ol id="search-dialog-results" class="search-results"></ol>
+</dialog>
+<main id="main" class="site-main">
+
+<header class="article-header site-wrap"><h1>Simulation of Nuclear Quantum Effects</h1></header>
+<article class="article-body standalone-page site-wrap"><h2 id="What-you-are-looking-at"><a href="#What-you-are-looking-at" class="headerlink" title="What you are looking at"></a>What you are looking at</h2><p>The animation at the top of the <a href="/">home page</a> is a single water molecule: an oxygen atom and two hydrogen atoms. The nucleus of a hydrogen atom is a proton, and it is so light that it does not behave classically. Quantum chemistry makes it a small fuzzy cloud, showing where the proton is likely to be.</p>
+<p>The two white clouds are those protons. The red ball marks the oxygen. The glassy shell around everything is the cloud of electrons that holds the molecule together.</p>
+<figure class="paper-figure" style="margin:2.2em auto">
+<img src="/research/quantum-water/images/labelled-still.webp" width="1400" height="800" alt="Still frame of the water molecule. Two white glowing proton clouds sit at the tips of a pale translucent electron surface, and a red ball marks the oxygen. Labels name each part.">
+</figure>
+
+<p>The motion is a real simulation. We started the protons slightly pulled away from the oxygen, let them go, and computed step by step how the protons and electrons respond. (The method is called <a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jpclett.0c00701">real-time NEO</a>, short for <a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.chemrev.9b00798">nuclear–electronic orbital</a>, and we ran it in <a target="_blank" rel="noopener" href="https://github.com/xsligroup/chronusq_public">ChronusQ</a>, our group’s quantum chemistry program.) The two protons swing in and out together, the symmetric stretch familiar from infrared spectroscopy, and their clouds really do stretch and squeeze as they move. One swing takes about nine femtoseconds, nine millionths of a billionth of a second (1 fs &#x3D; 10<sup>−15</sup> s), so the animation is slowed down enormously.</p>
+<h2 id="From-a-single-water-to-a-nanodroplet"><a href="#From-a-single-water-to-a-nanodroplet" class="headerlink" title="From a single water to a nanodroplet"></a>From a single water to a nanodroplet</h2><p>As you scroll, the camera pulls back and the molecule becomes one of 250 in a small droplet of water. In a separate calculation, all 500 protons in that droplet were treated as quantum clouds at once.</p>
+<p>A calculation like this is extremely expensive. Making it affordable took both new numerical techniques, which we developed in <a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jctc.3c00686">earlier work</a>, and a supercomputer: 52 nodes of the University of Washington’s <a target="_blank" rel="noopener" href="https://hyak.uw.edu/">Hyak</a> cluster, about 10,000 processor cores working together.</p>
+<figure class="paper-figure" style="margin:2.2em auto;max-width:640px">
+<img src="/research/quantum-water/images/cluster-250.webp" width="900" height="733" loading="lazy" alt="A roughly spherical droplet of 250 water molecules drawn as red oxygen spheres and small glowing white hydrogens on a dark background, with faint dashed lines between some molecules.">
+</figure>
+
+<h2 id="Want-the-details"><a href="#Want-the-details" class="headerlink" title="Want the details?"></a>Want the details?</h2><p>The droplet calculation is described in our paper <a target="_blank" rel="noopener" href="https://doi.org/10.1063/5.0318199"><em>Nuclear–electronic orbital method at scale</em></a> (<em>APL Computational Physics</em>, 2026; <a href="/research/neo-at-scale/">summary</a>), which builds on our <a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jctc.3c00686">earlier work</a> (<em>J. Chem. Theory Comput.</em>, 2023; <a href="/research/multicomponent-cholesky/">summary</a>). For the method itself, see the <a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.chemrev.9b00798">review by Pavošević, Culpitt and Hammes-Schiffer</a> (<em>Chem. Rev.</em>, 2020) and the <a target="_blank" rel="noopener" href="https://doi.org/10.1021/acs.jpclett.0c00701">real-time NEO paper by Zhao et al.</a> (<em>J. Phys. Chem. Lett.</em>, 2020). The droplet geometry comes from <a target="_blank" rel="noopener" href="https://doi.org/10.1063/1.5006480">Reddy et al.</a> (<em>J. Chem. Phys.</em>, 2017).</p>
+<p>All of the calculations were run with <a target="_blank" rel="noopener" href="https://github.com/xsligroup/chronusq_public">ChronusQ</a>, the open-source program developed in <a target="_blank" rel="noopener" href="https://uwligroup.org/">Xiaosong Li’s group</a> (<a target="_blank" rel="noopener" href="https://doi.org/10.1002/wcms.1436">Williams-Young et al., 2020</a>).</p>
+</article>
+
+
+</main>
+<footer class="site-footer site-wrap">
+  <nav class="contact-links" aria-label="Contact and profiles"><a href="mailto:aodongliu77@gmail.com">Email</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/aodongliu/">LinkedIn</a><a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=P6BLL58AAAAJ&amp;hl=en">Google Scholar</a><a target="_blank" rel="noopener" href="https://github.com/aodongliu">GitHub</a><a target="_blank" rel="noopener" href="https://www.instagram.com/adaaaaaaaaam777/">Instagram</a></nav>
+  <div class="footer-bottom"><span>© 2026 Aodong Liu</span><a href="#main">Back to top ↑</a></div>
+</footer>
+<script src="/js/site.js" defer></script>
+</body>
+</html>
