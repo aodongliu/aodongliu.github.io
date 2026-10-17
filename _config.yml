@@ -125,6 +125,10 @@ sitemap:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:aodongliu/aodongliu.github.io.git
+  repo: https://github.com/aodongliu/aodongliu.github.io.git
   branch: master
-  message: "Deploy portfolio redesign"
+  message: "Add quantum water animation and page"
+
+# Homepage quantum water hero (themes/matery/layout/_partial/quantum-water.ejs, assets in themes/matery/source/quantum-water/)
+quantum_water:
+  placement: after_intro   # after_intro (intro first, hero band below; default) | top (hero first) | off

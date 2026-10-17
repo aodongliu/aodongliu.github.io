@@ -1,0 +1,21 @@
+<%# Quantum water homepage hero (two stages: one molecule -> a water cluster, scrubbed by scrolling
+    through this section or by the button). Included from portfolio.ejs, below the intro by default
+    (config quantum_water.placement: after_intro | top | off). Assets: themes/matery/source/quantum-water/. %>
+<section class="qw" aria-label="A water molecule whose two protons are drawn as quantum probability clouds; scrolling pulls back to a cluster of hundreds of water molecules">
+  <div class="qw-sticky">
+    <div class="qw-stage">
+      <div class="qw-poster" role="img" aria-label="Water molecule with two glowing proton probability clouds"></div>
+      <canvas class="qw-canvas" aria-hidden="true"></canvas>
+    </div>
+    <p class="qw-caption qw-cap-1">Quantum protons in a water molecule, from a real-time NEO simulation.</p>
+    <p class="qw-caption qw-count" aria-hidden="true"></p>
+    <p class="qw-caption qw-cap-2" aria-hidden="true">(H<sub>2</sub>O)<sub>250</sub>: 500 quantum protons in one NEO calculation, run on 104 MPI ranks.</p>
+    <div class="qw-actions">
+      <button class="qw-toggle" type="button" hidden>Zoom out</button>
+      <a class="qw-more" href="/research/quantum-water/">How this was made</a>
+    </div>
+  </div>
+</section>
+<link rel="stylesheet" href="/quantum-water/qw.css">
+<script type="importmap">{ "imports": { "three": "/quantum-water/vendor/three.module.min.js", "three/addons/": "/quantum-water/vendor/addons/" } }</script>
+<script type="module" src="/quantum-water/qw.js"></script>

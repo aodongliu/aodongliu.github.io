@@ -1,7 +1,11 @@
+<%# Quantum water hero. Placement via _config.yml:  quantum_water: { placement: after_intro | top | off }  (default after_intro) %>
+<% const qwPlacement = (config.quantum_water && config.quantum_water.placement) || 'after_intro'; %>
+<% if (qwPlacement === 'top') { %><%- partial('_partial/quantum-water') %><% } %>
 <section class="hero site-wrap">
   <div class="hero-copy"><h1>Aodong Liu.<br><span>Computational chemist.</span></h1><p class="hero-description">Postdoctoral Scholar at the University of Washington. I develop quantum chemistry methods and scientific software.<br>Train by day, data-driven blog by night, all day!</p><div class="hero-actions"><a class="button button-quiet" href="/about/">A little about me <span aria-hidden="true">→</span></a></div></div>
   <figure class="hero-art"><picture><source media="(max-width: 720px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><img class="hero-portrait" src="<%- opt_img('/images/headshot_lincolnPark.png', 960) %>" width="585" height="1028" alt="Aodong Liu at Lincoln Park"></picture></figure>
 </section>
+<% if (qwPlacement === 'after_intro') { %><%- partial('_partial/quantum-water') %><% } %>
 <section class="portfolio-group site-wrap" aria-labelledby="research-title">
   <a class="section-banner research-banner" href="/research/">
     <div class="section-banner-copy"><h2 id="research-title">Research</h2><p>Quantum chemistry and scientific computing.</p><ul class="banner-kw kw-pills"><% (site.data.portfolio.research.banner_keywords || []).forEach(word => { %><li class="kw kw-<%= (site.data.keywords.keywords || {})[word] %>"><%= word %></li><% }); %></ul><span>All <%= page.papers.length %> papers</span></div>
