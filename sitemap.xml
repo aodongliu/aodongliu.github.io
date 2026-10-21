@@ -4,6 +4,15 @@
   <url>
     <loc>https://aodongliu.github.io/research/quantum-water/</loc>
     
+    <lastmod>2026-10-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aodongliu.github.io/training/</loc>
+    
     <lastmod>2026-10-17</lastmod>
     
     <changefreq>monthly</changefreq>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://aodongliu.github.io/strangerStats/</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aodongliu.github.io/training/</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -65,15 +65,6 @@
   </url>
   
   <url>
-    <loc>https://aodongliu.github.io/2026/09/21/strangerStats08_bam83points/</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aodongliu.github.io/2026/02/09/strangerStats06_careerHighInDebut/</loc>
     
     <lastmod>2026-10-17</lastmod>
@@ -83,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://aodongliu.github.io/2026/09/28/strangerStats09_carriedByRefs/</loc>
+    <loc>https://aodongliu.github.io/2026/08/31/strangerStats07_cardio/</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -92,7 +83,16 @@
   </url>
   
   <url>
-    <loc>https://aodongliu.github.io/2026/08/31/strangerStats07_cardio/</loc>
+    <loc>https://aodongliu.github.io/2026/09/21/strangerStats08_bam83points/</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aodongliu.github.io/2026/09/28/strangerStats09_carriedByRefs/</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -166,64 +166,64 @@
 
   <url>
     <loc>https://aodongliu.github.io/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://aodongliu.github.io/tags/careers/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://aodongliu.github.io/tags/records/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/shooting/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aodongliu.github.io/tags/careers/</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/bad-nights/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/teams/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/scoring/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/personal/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/tags/fitness/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -232,14 +232,14 @@
   
   <url>
     <loc>https://aodongliu.github.io/categories/Stranger-Stats/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aodongliu.github.io/categories/Training/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

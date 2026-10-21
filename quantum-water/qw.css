@@ -56,3 +56,17 @@
   .qw-sticky { height: var(--qw-h); min-height: 0; top: max(0px, calc((100svh - var(--qw-h)) / 2)); }
   .qw-stage { top: 0; bottom: 0; left: 0; right: 0; margin: 0 auto; width: min(100%, calc(var(--qw-h) * 2)); }   /* desktop: full box, captions over its empty lower part */
 }
+/* Poster by STAGE shape, not viewport shape (2026-10-19): the scene frames portrait iff the stage is taller than wide,
+   but the rule above keys on the viewport. A ~1000x1000 window got the desktop band (1000x760) with the 390x650
+   phone poster cover-scaled ~2.6x until the 3D went live; 1000x1100 likewise (stage 1000x882). */
+@supports (container-type: size) {
+  .qw-stage { container-type: size; }
+  @container (min-aspect-ratio: 1/1) {
+    .qw-poster { background-image: image-set(url("poster-light.avif") type("image/avif"), url("poster-light.webp") type("image/webp")); }
+    :root[data-theme="dark"] .qw-poster { background-image: image-set(url("poster-dark.avif") type("image/avif"), url("poster-dark.webp") type("image/webp")); }
+  }
+  @container (max-aspect-ratio: 999/1000) {
+    .qw-poster { background-image: image-set(url("poster-light-portrait.avif") type("image/avif"), url("poster-light-portrait.webp") type("image/webp")); }
+    :root[data-theme="dark"] .qw-poster { background-image: image-set(url("poster-dark-portrait.avif") type("image/avif"), url("poster-dark-portrait.webp") type("image/webp")); }
+  }
+}
