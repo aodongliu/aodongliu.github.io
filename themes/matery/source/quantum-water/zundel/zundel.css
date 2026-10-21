@@ -1,0 +1,36 @@
+/* Zundel figure on /research/quantum-water/ (namespaced .qwz-*). Transparent canvas over the page, like
+   the homepage hero; poster = the same scene at the mid-swing frame, per theme and orientation. */
+.qwz { position: relative; width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--line); overflow: hidden; }
+.qwz-poster, .qwz-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.qwz-poster {
+  background: center / cover no-repeat;
+  background-image: url("/quantum-water/zundel/poster-light.webp"); background-image: image-set(url("/quantum-water/zundel/poster-light.avif") type("image/avif"), url("/quantum-water/zundel/poster-light.webp") type("image/webp"));
+  transition: opacity .7s ease;
+}
+:root[data-theme="dark"] .qwz-poster {
+  background-image: url("/quantum-water/zundel/poster-dark.webp"); background-image: image-set(url("/quantum-water/zundel/poster-dark.avif") type("image/avif"), url("/quantum-water/zundel/poster-dark.webp") type("image/webp"));
+}
+.qwz-canvas { opacity: 0; transition: opacity .7s ease; cursor: grab; }
+.qwz-canvas:active { cursor: grabbing; }
+.qwz.is-live .qwz-canvas { opacity: 1; }
+.qwz.is-live .qwz-poster { opacity: 0; }
+.qwz-play {
+  position: absolute; right: 10px; bottom: 10px; width: 30px; height: 30px; display: grid; place-items: center; padding: 0;
+  color: var(--ink, #0d1d22); background: var(--bg, #fbfefe); border: 1px solid var(--line, #dfeced); border-radius: 999px; cursor: pointer; opacity: .85;
+}
+.qwz-play:hover { border-color: var(--accent, #0f7f87); color: var(--accent, #0f7f87); opacity: 1; }
+/* download progress: a 1-px line along the bottom edge, gone once the scene is live */
+.qwz-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--accent, #0f7f87); opacity: .7;
+  transform: scaleX(0); transform-origin: left center; transition: transform .25s linear, opacity .6s ease; pointer-events: none; }
+.qwz-bar.is-done { transform: scaleX(1); opacity: 0; }
+.qwz-bar[hidden] { display: none; }
+/* ?qwdebug=1 state readout */
+.qwz-debug { position: absolute; left: 6px; top: 6px; right: 6px; font: 10px/1.4 ui-monospace, Menlo, monospace; color: var(--ink, #0d1d22);
+  background: color-mix(in srgb, var(--bg, #fbfefe) 80%, transparent); padding: 3px 6px; pointer-events: none; overflow-wrap: anywhere; }
+.qwz-play[hidden] { display: none; }
+/* phones: a near-square box, same orientation as desktop (zundel-scene.js frame-fits the camera to it) */
+@media (max-width: 600px) {
+  .qwz { aspect-ratio: 11 / 10; }   /* a touch wider than square: never takes the rolled portrait framing */
+  .qwz-poster { background-image: url("/quantum-water/zundel/poster-light-square.webp"); background-image: image-set(url("/quantum-water/zundel/poster-light-square.avif") type("image/avif"), url("/quantum-water/zundel/poster-light-square.webp") type("image/webp")); }
+  :root[data-theme="dark"] .qwz-poster { background-image: url("/quantum-water/zundel/poster-dark-square.webp"); background-image: image-set(url("/quantum-water/zundel/poster-dark-square.avif") type("image/avif"), url("/quantum-water/zundel/poster-dark-square.webp") type("image/webp")); }
+}
