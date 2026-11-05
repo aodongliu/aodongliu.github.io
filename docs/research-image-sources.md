@@ -2,10 +2,13 @@
 
 Installed September 28, 2026. All eight original `toc_` files were supplied by Aodong in Downloads and moved into `themes/matery/source/portfolio/papers/`. Bytes, colors and dimensions are unchanged. The prior extracted 2022 image has been replaced by the supplied original.
 
+Added November 5, 2026: the Chronus Quantum 1.0 TOC comes from the authors' manuscript source (`images/CQ.pdf`, labeled `fig:TOC`; it is Figure 1 of the published article). The vector PDF was rasterized at 300 dpi and only the blank white margin was trimmed; colors and artwork are unchanged.
+
 This is internal provenance, not public caption copy. The cards use contain sizing; each paper page links to the full-size original and the publication. Homepage selection remains controlled by `featured` and `featured_order` in `source/_data/research.json`.
 
 | Supplied filename | Installed filename | Dimensions | Publication |
 | --- | --- | --- | --- |
+| `images/CQ.pdf` (manuscript Figure 1, `fig:TOC`) | `chronus-quantum.png` | 2352 × 1798 | [10.1063/5.0356458](https://doi.org/10.1063/5.0356458) |
 | `toc_pccp26.png` | `two-spinor-ehrenfest.png` | 1890 × 904 | [10.1039/D6CP02263D](https://doi.org/10.1039/D6CP02263D) |
 | `toc_jcp26_2.jpeg` | `strong-field-ionization.jpeg` | 520 × 264 | [10.1063/5.0320154](https://doi.org/10.1063/5.0320154) |
 | `toc_apl26.jpg` | `neo-at-scale.jpg` | 3250 × 1750 | [10.1063/5.0318199](https://doi.org/10.1063/5.0318199) |
@@ -18,6 +21,7 @@ This is internal provenance, not public caption copy. The cards use contain sizi
 ## SHA-256 of unchanged originals
 
 ```text
+6a34ee9f64b85ef9bbbf9d04c3f153ccca783ef95622716f5277da74c092b442  chronus-quantum.png
 d1627dc6f8dbae5d2943233a956588417902a9c2730b9baeb1f87a265f51789f  two-spinor-ehrenfest.png
 a8d5b9c59fd5f00f15d8cf1c024bd8457e9fcd32c950c3b13b20f345522a445c  strong-field-ionization.jpeg
 4014607ca26c214c8c244135942df3b5517b4ab23d45de6841d6c345de13ae72  neo-at-scale.jpg

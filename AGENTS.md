@@ -13,7 +13,7 @@ Read [AGENT_NOTES.md](AGENT_NOTES.md) for Stranger Stats analysis and voice deta
   requested; preserve existing selections.
 - Use original author-supplied TOC/graphical abstracts or verified publication imagery
   with provenance. Preserve colors. Never generate or invent substitute paper images.
-  All eight author-supplied TOCs are installed; see docs/research-image-sources.md.
+  All nine author-supplied TOCs are installed; see docs/research-image-sources.md.
 - The site uses the Lagoon palette (Oct 2026): near-white with soft teal/blue glows, a deep
   teal-black dark mode, and a teal-to-indigo gradient on the hero line and page titles. Its
   tokens are the first lines of `site.css`. Keep original-color imagery. The preview has a

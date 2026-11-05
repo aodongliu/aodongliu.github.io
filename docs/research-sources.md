@@ -4,7 +4,7 @@ Verified on September 28, 2026. Data lives in `source/_data/research.json`.
 
 ## Inventory and editorial choices
 
-The authoritative inventory is the updated academic CV supplied by the author, `/Users/aodongliu/Downloads/aodong_liu_academic_cv_2026.pdf`. It confirms exactly the eight peer-reviewed articles in the data file. The [Li Research Group author page](https://uwligroup.org/people/aodong-liu/) and primary publisher records independently corroborate that inventory. All eight DOI links match the updated CV. The older January 2026 CV is superseded for content decisions.
+The authoritative inventory is the updated academic CV supplied by the author, `/Users/aodongliu/Downloads/aodong_liu_academic_cv_2026.pdf`. It confirmed the original eight peer-reviewed articles; Chronus Quantum 1.0 (APL Comput. Phys. 2, 046102, published November 3, 2026) was added from the published article PDF. The [Li Research Group author page](https://uwligroup.org/people/aodong-liu/) and primary publisher records independently corroborate that inventory. All eight DOI links match the updated CV. The older January 2026 CV is superseded for content decisions.
 
 The updated CV separately lists four pending manuscripts: Chronus Quantum 1.0 (submitted, 2026), Vibrational Bonding in Brµ·Br (in preparation), Forming the Bound Electron (in preparation), and the Gaussian NEO tutorial (in preparation). These are excluded from the public published-paper inventory. They should never be counted as peer-reviewed articles unless their status changes.
 
@@ -12,7 +12,7 @@ The updated CV agrees with the publisher author lists, including Tanner Culpitt 
 
 Headlines and summaries are original plain-language descriptions of each paper, not publisher abstracts. They describe the work collectively and do not infer Aodong's individual contribution from author order. The equal-contribution note on the 2025 magnetic-field article is explicitly confirmed by ACS. Other personal contribution descriptions should be added only after author review.
 
-Only authentic publication imagery is used. Original-color paper images open full-size when clicked. Publication DOI links remain on paper pages; image provenance is recorded internally, without public acquisition/source captions. All eight current images were supplied by the author; see [image provenance](research-image-sources.md) for mappings and checksums. Unavailable images are omitted; generated substitutes are not permitted.
+Only authentic publication imagery is used. Original-color paper images open full-size when clicked. Publication DOI links remain on paper pages; image provenance is recorded internally, without public acquisition/source captions. All nine current images were supplied by the author; see [image provenance](research-image-sources.md) for mappings and checksums. Unavailable images are omitted; generated substitutes are not permitted.
 
 ## Primary sources
 

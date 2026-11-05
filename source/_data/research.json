@@ -3,6 +3,34 @@
   "verified_on": "2026-09-28",
   "papers": [
     {
+      "id": "chronus-quantum",
+      "title": "Chronus Quantum 1.0: A unified framework for relativistic, time-dependent, and multicomponent electronic structure theory",
+      "authors": "Tianyuan Zhang, Aodong Liu, Shiv Upadhyay, Hang Hu, Ryan A. Beck, Jonathan Bersson, Nicholas Boyer, Tanner Culpitt, Scott Garner, Mikael Kovtun, Run R. Li, Can Liao, Lixin Lu, Rajat Majumder, Martijn Oele, Alexandros A. Peltekis, Alessio Petrone, Agam Shayit, Shichao Sun, Diandong Tang, Tian Wang, Andrew Wildman, David Williams-Young, Stephen H. Yuwono, Luning Zhao, Eleftherios Lambros, Chad E. Hoyer, Edward F. Valeev, A. Eugene DePrince, Sharon Hammes-Schiffer, Xiaosong Li",
+      "year": 2026,
+      "venue": "APL Computational Physics",
+      "citation": "2, 046102",
+      "doi": "10.1063/5.0356458",
+      "headline": "An open-source toolkit for building new quantum chemistry methods",
+      "summary": "ChronusQ is open-source software for simulating molecules where heavy elements, magnetic fields, moving electrons or quantum protons matter. This paper describes version 1.0 and how its shared building blocks let new methods be developed and combined quickly.",
+      "abstract": "We present Chronus Quantum (ChronusQ) 1.0, an open-source software platform for modern electronic structure theory with particular emphasis on the molecular Dirac–Coulomb–Breit Hamiltonian, relativistic many-body methods, multicomponent quantum chemistry, and time-dependent phenomena. Rather than serving as another general-purpose quantum chemistry package, ChronusQ is designed to develop and disseminate new theoretical methodologies through reusable, interoperable, and extensible software frameworks. At the heart of the software is a unified relativistic infrastructure spanning the molecular Dirac–Coulomb–Breit Hamiltonian, exact two-component methods, atomic-orbital integral engines, Cholesky decomposition, finite-magnetic-field gauge-including atomic orbitals, and distributed tensor computations. Building upon these shared components, ChronusQ provides relativistic self-consistent-field and density functional theory, multiconfigurational methods based on the small-tensor-product distributed active space framework, relativistic coupled-cluster theory, nuclear–electronic orbital methods, and real-time quantum dynamics. This article presents the scientific capabilities, software architecture, and development philosophy of ChronusQ, illustrating how interoperable software infrastructures can accelerate the development of modern electronic structure methods while providing a flexible and sustainable platform for future advances in molecular quantum science.",
+      "topic": "Scientific software",
+      "keywords": [
+        "Distributed Computing",
+        "Matrix Factorization",
+        "Relativistic Effects",
+        "Nuclear Quantum Effects",
+        "Quantum Dynamics"
+      ],
+      "featured": false,
+      "url": "https://doi.org/10.1063/5.0356458",
+      "status": "Published",
+      "featured_order": 100,
+      "image": "/portfolio/papers/chronus-quantum.png",
+      "image_alt": "ChronusQ 1.0 at the center of its relativistic, coupled-cluster, multiconfigurational, magnetic-field, nuclear–electronic and real-time dynamics frameworks, above its computing infrastructure and applications.",
+      "image_source": "https://doi.org/10.1063/5.0356458",
+      "image_type": "Author-supplied TOC image"
+    },
+    {
       "id": "two-spinor-ehrenfest",
       "title": "Ab initio two-spinor Ehrenfest dynamics with magnetic field",
       "authors": "Diandong Tang, Aodong Liu, Tanner Culpitt, Xiaosong Li",

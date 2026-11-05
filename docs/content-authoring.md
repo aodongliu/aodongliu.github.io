@@ -223,7 +223,7 @@ When the real TOC is available, add:
 
 Use the author's original TOC/graphical abstract or a verified source, preserve its
 colors, and record provenance. A numbered figure is not a TOC and must not silently
-replace one. The eight author-supplied originals are installed; their filename mapping
+replace one. The nine author-supplied originals are installed; their filename mapping
 and checksums are in [research-image-sources.md](research-image-sources.md). Keep `image_type` and `image_source` as internal provenance metadata; never render
 acquisition notes such as “author-supplied” as public captions. Paper images are clickable
 links to the full-size original; do not show separate image-source or full-size caption
