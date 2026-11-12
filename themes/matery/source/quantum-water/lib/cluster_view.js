@@ -29,6 +29,25 @@ export const CLUSTER_THEMES = {
     hbond: { color: [0.16, 0.23, 0.33], alpha: 0.34 },
     fogColor: 0xfbfefe,
   },
+  // 'quantum proton cloud' looks (match the hero's NEO proton densities): every hydrogen is a soft cloud,
+  // luminous core -> slate-blue rim with a Gaussian falloff, no solid core ball. `sizes` = end radii (A)
+  // of the pull-back (cluster_transition SIZES[*][1]); core/rimw = shader core radius and rim width.
+  cloud: {   // white page
+    oxygen: { color: 0x9a0d16, roughness: 0.4, clearcoat: 0.2, emissive: 0x000000, edge: 0.25 },
+    hcore: { color: 0xf4f4f0, emissive: 0x000000, emissiveIntensity: 0, roughness: 0.6, edge: 0.0 },
+    halo: { color: [0.40, 0.48, 0.60], gain: 1.0, additive: false, cloud: true, core: 0.33, rimw: 0.38, coreColor: [0.975, 0.975, 0.96] },
+    hbond: { color: [0.30, 0.38, 0.50], alpha: 0.30 },
+    sizes: { oxygen: 0.27, hydrogen: 0, halo: 0.50 },
+    fogColor: 0xfbfefe,
+  },
+  cloudDark: {   // teal-black page: the dark hero's warm-white core and grey-blue halo
+    oxygen: { color: 0xb3121c, roughness: 0.3, clearcoat: 0.25, emissive: 0x3a0306 },
+    hcore: { color: 0xd4dbe4, emissive: 0xe8efff, emissiveIntensity: 0.16, roughness: 0.4 },
+    halo: { color: [0.36, 0.42, 0.52], gain: 0.85, additive: false, cloud: true, core: 0.30, rimw: 0.38, coreColor: [0.92, 0.91, 0.88] },
+    hbond: { color: [0.55, 0.66, 0.82], alpha: 0.12 },
+    sizes: { oxygen: 0.27, hydrogen: 0, halo: 0.50 },
+    fogColor: 0x061417,
+  },
 };
 
 export class ClusterView {
@@ -40,7 +59,7 @@ export class ClusterView {
       uORadius: { value: oRadius }, uHRadius: { value: hRadius }, uHaloR: { value: haloRadius },
       uHaloGain: { value: 0.55 }, uHeroGlow: { value: 1.0 }, uHaloCol: { value: new THREE.Color() },
       uFog: { value: new THREE.Vector2(1e4, 2e4) }, uHbAlpha: { value: 0.22 }, uHbCol: { value: new THREE.Color() },
-      uFade: { value: 1 }, uEdgeO: { value: 0 }, uEdgeH: { value: 0 },
+      uFade: { value: 1 }, uCloud: { value: 0 }, uCore: { value: 0.33 }, uRimW: { value: 0.38 }, uCoreCol: { value: new THREE.Color() }, uEdgeO: { value: 0 }, uEdgeH: { value: 0 },
     };
     const N = this.N;
     this.dist = new Float32Array(N);       // per molecule, distance (A) of its O from the reveal origin
@@ -77,9 +96,18 @@ export class ClusterView {
           gl_Position = projectionMatrix * (c + vec4(position.xy * uHaloR * k * max(s, 0.001), 0.0, 0.0));
         }`,
       fragmentShader: /* glsl */`
-        uniform vec3 uHaloCol; uniform float uHaloGain, uFade; in vec2 vP; in float vA;
+        uniform vec3 uHaloCol, uCoreCol; uniform float uHaloGain, uFade, uCloud, uCore, uRimW; in vec2 vP; in float vA;
         void main() {
           float r2 = dot(vP, vP); if (r2 > 1.0) discard;
+          if (uCloud > 0.5) {   // proton cloud: luminous core -> rim colour, Gaussian rim falloff, no core sphere
+            float r = sqrt(r2);
+            vec3 col = mix(uCoreCol, uHaloCol, smoothstep(uCore * 0.35, uCore + 0.10, r));
+            float core = 1.0 - smoothstep(uCore - 0.06, uCore + 0.10, r);
+            float a = max(core, 0.74 * exp(-pow(max(r - uCore + 0.06, 0.0) / uRimW, 2.0)));
+            a *= smoothstep(1.0, 0.85, r);
+            a = clamp(a * uHaloGain * vA, 0.0, 1.0) * uFade;
+            gl_FragColor = vec4(col * a, a); return;
+          }
           float a = (exp(-r2 * 4.5) - 0.011) * uHaloGain * vA * uFade;
           gl_FragColor = vec4(uHaloCol * a, a);   // premultiplied
         }`,
@@ -141,6 +169,8 @@ export class ClusterView {
     this.oMat.color.set(T.oxygen.color); this.oMat.roughness = T.oxygen.roughness; this.oMat.clearcoat = T.oxygen.clearcoat; this.oMat.emissive.set(T.oxygen.emissive); this.uniforms.uEdgeO.value = T.oxygen.edge ?? 0; this.uniforms.uEdgeH.value = T.hcore.edge ?? 0;
     this.hMat.color.set(T.hcore.color); this.hMat.emissive.set(T.hcore.emissive); this.hMat.emissiveIntensity = T.hcore.emissiveIntensity; this.hMat.roughness = T.hcore.roughness;
     this.uniforms.uHaloCol.value.setRGB(...T.halo.color); this.uniforms.uHaloGain.value = T.halo.gain;
+    this.uniforms.uCloud.value = T.halo.cloud ? 1 : 0; this.uniforms.uCore.value = T.halo.core ?? 0.33; this.uniforms.uRimW.value = T.halo.rimw ?? 0.38;
+    this.uniforms.uCoreCol.value.setRGB(...(T.halo.coreColor ?? [1, 1, 1])); this.sizes = T.sizes ?? null;
     this.haloMat.blendDst = T.halo.additive ? THREE.OneFactor : THREE.OneMinusSrcAlphaFactor; this.haloMat.needsUpdate = true;
     this.uniforms.uHbCol.value.setRGB(...T.hbond.color); this.uniforms.uHbAlpha.value = this.hbondsOn ? T.hbond.alpha : 0;
     this.fogColor = new THREE.Color(T.fogColor);

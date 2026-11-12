@@ -80,7 +80,7 @@ export function createClusterScene(opt = {}) {
       if (!tr) return;
       t = Math.min(1, Math.max(0, t_));
       if (theme_ !== theme) {
-        theme = theme_; view.setTheme(theme === 'light' ? 'light' : 'dark');
+        theme = theme_; view.setTheme(theme === 'light' ? 'cloud' : 'cloudDark');   // proton-cloud looks (CLUSTER_THEMES)
         const c = sceneConfig(theme === 'light' ? 'light' : 'dark');
         tr.look = { shellGain: c.shellGain, hazeGain: c.hazeGain, oxygenGlow: c.oxygenGlow };
       }

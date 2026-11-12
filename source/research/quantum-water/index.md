@@ -31,7 +31,7 @@ The quantum nature of the proton is easiest to see when a proton is shared betwe
 Liquid water is many molecules bonded to their neighbours. Treating every proton as a quantum cloud, rather than a point, brings the simulation closer to how water really behaves. On the [home page](/), as you scroll, the camera pulls back and the single molecule becomes one of 250 in a small droplet, where nuclear quantum effects can have significant impact.
 
 <figure class="paper-figure" style="margin:2.2em auto;max-width:640px">
-<img src="/research/quantum-water/images/cluster-250.webp" width="900" height="733" loading="lazy" alt="A roughly spherical droplet of 250 water molecules drawn as red oxygen spheres and small glowing white hydrogens on a dark background, with faint dashed lines between some molecules.">
+<img src="/research/quantum-water/images/cluster-250.webp" width="1350" height="1100" loading="lazy" alt="A roughly spherical droplet of 250 water molecules drawn as red oxygen spheres, with every hydrogen a soft glowing proton cloud, on a dark background, with faint dashed lines between some molecules.">
 </figure>
 
 ## Making the calculation affordable

@@ -8,7 +8,7 @@
 //  - lost WebGL context (iOS discards background tabs' contexts), bfcache restore, or a stalled render loop: the
 //    scene is rebuilt on a fresh canvas from the in-memory data (only GPU uploads)
 //  - no WebGL2: poster + retry button;  prefers-reduced-motion: poster + play button, no drift
-//  - theme follows <html data-theme> live (as the homepage hero's qw.js), else prefers-color-scheme
+//  - always the dark look on a dark panel, whatever the site theme (matches the page's other figures)
 //  - ?qwdebug=1: a one-line state readout over the figure (for screenshots from a phone)
 const root = document.querySelector('.qwz');
 const btn = root && root.querySelector('.qwz-play');
@@ -27,11 +27,8 @@ const ICON = {
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const S = { stage: 'idle', tries: 0, lost: 0, rebuilds: 0, err: '', gl: '' };   // state, shown by ?qwdebug=1
 
-const themeNow = () => {
-  const t = document.documentElement.dataset.theme;
-  if (t === 'light' || t === 'dark') return t;
-  return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
+// The figure always uses its dark look on a dark panel (zundel.css), matching the page's other dark figures.
+const themeNow = () => 'dark';
 function capable() {
   if (navigator.connection && navigator.connection.saveData) { S.err = 'save-data'; return false; }
   try {
@@ -142,11 +139,6 @@ if (root) {
     if (f === lastFrames) rebuild(scene.lost ? 'context lost' : 'render loop stalled');
     lastFrames = f;
   }, 2500);
-
-  // ---- theme -------------------------------------------------------------------------------------------------
-  const sync = () => scene && scene.setTheme(themeNow());
-  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sync);
 
   // ---- debug readout -----------------------------------------------------------------------------------------
   if (new URLSearchParams(location.search).get('qwdebug') === '1') {

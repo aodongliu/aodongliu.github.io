@@ -229,9 +229,11 @@ export class ClusterTransition {
     for (const m of p.protons) { m.material.uniforms.uFade.value = dens; m.visible = dens > 0.002; }
     if (p.glow) p.glow.mesh.material.uniforms.uGain.value = L.oxygenGlow * glow;
     // sizes
-    const g = ss(...T.grow, t), rO = lerp(SIZES.oxygen[0], SIZES.oxygen[1], g);
+    // end radii: the view's theme may override SIZES[*][1] (cloud looks); start radii never change
+    const Z = view.sizes, end = k => Z?.[k] ?? SIZES[k][1];
+    const g = ss(...T.grow, t), rO = lerp(SIZES.oxygen[0], end('oxygen'), g);
     const heroIn = ss(...T.heroIn, t);
-    view.set({ oRadius: rO, hRadius: lerp(...SIZES.hydrogen, g), haloRadius: lerp(...SIZES.halo, g), heroScale: heroIn,
+    view.set({ oRadius: rO, hRadius: lerp(SIZES.hydrogen[0], end('hydrogen'), g), haloRadius: lerp(SIZES.halo[0], end('halo'), g), heroScale: heroIn,
       heroGlow: lerp(1, 1.35, ss(0.8, 1, t)) });
     // density oxygen: stays (and grows with the cluster radius) until the instanced one is fully in
     if (p.oxygen) {
